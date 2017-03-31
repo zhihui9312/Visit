@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/actionBar"
+        layout="@layout/layout_action_bar"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        app:tabTextAppearance="@style/evnAqTextView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y25"
+        android:layout_below="@id/actionBar"/>
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabLayout"/>
+
+</RelativeLayout>

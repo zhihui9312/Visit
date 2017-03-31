@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/x10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x10"
+        android:orientation="vertical">
+        <!-- 姓名、性别、出生日期-->
+
+        <LinearLayout style="@style/layout_visit_stysle">
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/name" />
+
+            <EditText
+                android:id="@+id/name"
+                style="@style/edit"
+                android:editable="false" />
+
+            <include layout="@layout/layout_interval" />
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/sex" />
+
+            <EditText
+                android:id="@+id/sex"
+                style="@style/edit"
+                android:editable="false" />
+
+            <include layout="@layout/layout_interval" />
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/birthday" />
+
+            <EditText
+                android:id="@+id/birth_date"
+                style="@style/edit"
+                android:editable="false" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/layout_visit_stysle">
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/birth_week" />
+
+            <EditText
+                android:id="@+id/birth_week"
+                style="@style/edit"
+                android:editable="false" />
+
+            <include layout="@layout/layout_interval" />
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/birth_week_days" />
+
+            <EditText
+                android:id="@+id/birth_week_days"
+                style="@style/edit"
+                android:editable="false" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/layout_visit_stysle">
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/bodylong" />
+
+            <EditText
+                android:id="@+id/bodylong"
+                style="@style/edit"
+                android:editable="false" />
+
+            <include layout="@layout/layout_interval" />
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/born_weight" />
+
+            <EditText
+                android:id="@+id/born_weight"
+                style="@style/edit"
+                android:editable="false" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/layout_visit_stysle">
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/father_name" />
+
+            <EditText
+                android:id="@+id/father_name"
+                style="@style/edit"
+                android:editable="false" />
+
+            <include layout="@layout/layout_interval" />
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/father_telephone" />
+
+            <EditText
+                android:id="@+id/father_telephone"
+                style="@style/edit"
+                android:editable="false" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/layout_visit_stysle">
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/mother_name" />
+
+            <EditText
+                android:id="@+id/mother_name"
+                style="@style/edit"
+                android:editable="false" />
+
+            <include layout="@layout/layout_interval" />
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/mother_telephone" />
+
+            <EditText
+                android:id="@+id/mother_telephone"
+                style="@style/edit"
+                android:editable="false" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/layout_visit_stysle">
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/address" />
+
+            <EditText
+                android:id="@+id/address_str"
+                style="@style/edit"
+                android:editable="false" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

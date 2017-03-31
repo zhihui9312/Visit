@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_action_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginRight="@dimen/x10"
+            android:orientation="vertical">
+
+            <!-- 姓名、随访日期 -->
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/name" />
+
+                <EditText
+                    android:id="@+id/name"
+                    style="@style/edit"
+                    android:editable="false" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/visit_date" />
+
+                <EditText
+                    android:id="@+id/visit_date"
+                    style="@style/edit"
+                    android:editable="false" />
+            </LinearLayout>
+            <!-- 症状-->
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/symptom" />
+
+                <EditText
+                    android:id="@+id/symptom"
+                    style="@style/edit"
+                    android:editable="false" />
+            </LinearLayout>
+            <!-- 其他症状 -->
+
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/symptom_other" />
+
+                <EditText
+                    android:id="@+id/symptom_other"
+                    style="@style/edit" />
+            </LinearLayout>
+            <!-- 危险性、自知力 -->
+
+            <LinearLayout
+
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/danger_grade" />
+
+                <Spinner
+                    android:id="@+id/danger_grade"
+                    style="@style/evnSpinner"
+                    android:entries="@array/danger_grade_array" />
+
+                <include layout="@layout/layout_interval" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/insight_appraise" />
+
+                <Spinner
+                    android:id="@+id/insight_appraise"
+                    style="@style/evnSpinner"
+                    android:entries="@array/insight_appraise_array" />
+            </LinearLayout>
+            <!-- 睡眠状况、饮食情况 -->
+
+            <LinearLayout
+
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/sleep_type" />
+
+                <Spinner
+                    android:id="@+id/sleep_type"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_class" />
+
+                <include layout="@layout/layout_interval" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/diet_type" />
+
+                <Spinner
+                    android:id="@+id/diet_type"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_class" />
+            </LinearLayout>
+            <!-- 个人生活、家务劳动 -->
+
+            <LinearLayout
+
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/living" />
+
+                <Spinner
+                    android:id="@+id/living"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_class" />
+
+                <include layout="@layout/layout_interval" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/housework" />
+
+                <Spinner
+                    android:id="@+id/housework"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_class" />
+            </LinearLayout>
+            <!-- 劳动工作、学习能力 -->
+
+            <LinearLayout
+
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/work" />
+
+                <Spinner
+                    android:id="@+id/work"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_work" />
+
+                <include layout="@layout/layout_interval" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/study" />
+
+                <Spinner
+                    android:id="@+id/study"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_class" />
+            </LinearLayout>
+            <!-- 社会人际交往 -->
+
+            <LinearLayout
+
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/sociality" />
+
+                <Spinner
+                    android:id="@+id/sociality"
+                    style="@style/evnSpinner"
+                    android:layout_weight="1"
+                    android:entries="@array/array_class" />
+            </LinearLayout>
+            <!-- 轻度滋事、肇事 -->
+
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/affray" />
+
+                <EditText
+                    android:id="@+id/affray"
+                    style="@style/edit" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once" />
+
+                <include layout="@layout/layout_interval" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/cause_trouble" />
+
+                <EditText
+                    android:id="@+id/cause_trouble"
+                    style="@style/edit" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once" />
+
+            </LinearLayout>
+            <!-- 肇祸、自伤 -->
+
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/disaster" />
+
+                <EditText
+                    android:id="@+id/disaster"
+                    style="@style/edit" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once" />
+
+                <include layout="@layout/layout_interval" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/autolesion" />
+
+                <EditText
+                    android:id="@+id/autolesion"
+                    style="@style/edit" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once" />
+            </LinearLayout>
+            <!-- 自杀未遂、关锁情况 -->
+
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/attempted_suicide" />
+
+                <EditText
+                    android:id="@+id/attempted_suicide"
+                    style="@style/edit" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once" />
+
+                <include layout="@layout/layout_interval" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/close_lock" />
+
+                <Spinner
+                    android:id="@+id/captivity"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_captivity" />
+            </LinearLayout>
+            <!-- 住院情况 -->
+
+            <LinearLayout
+
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/in_hospital" />
+
+                <Spinner
+                    android:id="@+id/in_hospital"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_in_hospital" />
+            </LinearLayout>
+            <!-- 末次出院时间 -->
+
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/leave_hospital_time" />
+
+                <EditText
+                    android:id="@+id/leave_hospital_time"
+                    style="@style/edit"
+                    android:editable="false" />
+            </LinearLayout>
+            <!-- 实验室检查标志 -->
+
+            <LinearLayout
+
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/laboratory_abn" />
+
+                <Spinner
+                    android:id="@+id/laboratory_abn"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_no_yes" />
+            </LinearLayout>
+            <!-- 实验室检情况 -->
+
+            <LinearLayout
+                android:id="@+id/layout_laboratory_examination"
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/laboratory_examination" />
+
+                <EditText
+                    android:id="@+id/laboratory_examination"
+                    style="@style/edit" />
+            </LinearLayout>
+            <!-- 服药依从、药物不良反应 -->
+            <LinearLayout
+
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/rule_dose" />
+
+                <Spinner
+                    android:id="@+id/rule_dose"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_rule_dose" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug_side_effect" />
+
+                <Spinner
+                    android:id="@+id/drug_side_effect"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_no_yes" />
+            </LinearLayout>
+            <!-- 药物不良反应说明 -->
+            <LinearLayout
+                android:id="@+id/layout_drug_side_effects"
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug_side_effects" />
+
+                <EditText
+                    android:id="@+id/drug_side_effects"
+                    style="@style/edit" />
+            </LinearLayout>
+
+            <!-- 治疗效果、转诊 -->
+            <LinearLayout
+
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/anamnesis_tr_type" />
+
+                <Spinner
+                    android:id="@+id/anamnesis_tr_type"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_anamnesis_tr_type" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/transfert" />
+
+                <Spinner
+                    android:id="@+id/transfert"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_no_yes" />
+            </LinearLayout>
+            <!-- 转诊科室 -->
+            <LinearLayout
+                android:id="@+id/layout_transfert_dept"
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/transfert_dept" />
+
+                <EditText
+                    android:id="@+id/transfert_dept"
+                    style="@style/edit" />
+            </LinearLayout>
+            <!-- 药物1名称 -->
+
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug1_name" />
+
+                <EditText
+                    android:id="@+id/drug1_name"
+                    style="@style/edit" />
+            </LinearLayout>
+            <!-- 药物1 用法:每日、次每次 -->
+
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug1_fn" />
+
+                <EditText
+                    android:id="@+id/drug1_fn"
+                    style="@style/edit"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once" />
+
+                <View
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug1_dosage_one" />
+
+                <EditText
+                    android:id="@+id/drug1_dosage_one"
+                    style="@style/edit"
+                    android:inputType="number" />
+
+                <Spinner
+                    android:id="@+id/drug1_dosage_unit"
+                    style="@style/evnAqTextView"
+                    android:entries="@array/drug2_dosage_unit" />
+            </LinearLayout>
+            <!-- 药物2名称 -->
+
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug2_name" />
+
+                <EditText
+                    android:id="@+id/drug2_name"
+                    style="@style/edit" />
+            </LinearLayout>
+            <!-- 药物2 用法:每日、次每次 -->
+
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug2_fn" />
+
+                <EditText
+                    android:id="@+id/drug2_fn"
+                    style="@style/edit"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once" />
+
+                <View
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug1_dosage_one" />
+
+                <EditText
+                    android:id="@+id/drug2_dosage_one"
+                    style="@style/edit"
+                    android:inputType="number" />
+
+                <Spinner
+                    android:id="@+id/drug2_dosage_unit"
+                    style="@style/evnSpinner"
+                    android:entries="@array/drug2_dosage_unit" />
+            </LinearLayout>
+            <!-- 药物3名称 -->
+
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug3_name" />
+
+                <EditText
+                    android:id="@+id/drug3_name"
+                    style="@style/edit" />
+            </LinearLayout>
+            <!-- 药物3 用法:每日、次每次 -->
+
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug3_fn" />
+
+                <EditText
+                    android:id="@+id/drug3_fn"
+                    style="@style/edit"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once" />
+
+                <View
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/drug1_dosage_one" />
+
+                <EditText
+                    android:id="@+id/drug3_dosage_one"
+                    style="@style/edit"
+                    android:inputType="number" />
+
+                <Spinner
+                    android:id="@+id/drug3_dosage_unit"
+                    style="@style/evnSpinner"
+                    android:entries="@array/drug2_dosage_unit" />
+            </LinearLayout>
+            <!-- 康复措施 -->
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/health_guide_adv" />
+
+                <EditText
+                    android:id="@+id/health_guide_adv"
+                    style="@style/edit"
+                    android:editable="false" />
+            </LinearLayout>
+            <!-- 下次随访日期 -->
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/next_visit_date" />
+
+                <EditText
+                    android:id="@+id/next_visit_date"
+                    style="@style/edit"
+                    android:editable="false" />
+            </LinearLayout>
+            <!-- 随访分类、随访医师 -->
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/visit_appraise" />
+
+                <Spinner
+                    android:id="@+id/visit_class"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_visit_class" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/visit_doctor" />
+
+                <EditText
+                    android:id="@+id/visit_doctor"
+                    style="@style/edit"
+                    android:editable="false" />
+            </LinearLayout>
+            <!-- 中医指导、知道内容 -->
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/cm_guidance" />
+
+                <Spinner
+                    android:id="@+id/cm_guidance"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_no_yes" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/cm_guidance_str" />
+
+                <EditText
+                    android:id="@+id/cm_guidance_str"
+                    style="@style/edit" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

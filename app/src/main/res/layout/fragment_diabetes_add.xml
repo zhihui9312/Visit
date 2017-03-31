@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_action_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/x5"
+            android:paddingRight="@dimen/x5">
+            <!-- 姓名、随访日期 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/name"/>
+
+                <EditText
+                    android:id="@+id/name"
+                    style="@style/edit"
+                    android:editable="false"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/visit_date"/>
+
+                <EditText
+                    android:id="@+id/visit_date"
+                    style="@style/edit"
+                    android:editable="false"/>
+            </LinearLayout>
+            <!-- 症状 -->
+
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/symptom"/>
+
+                <EditText
+                    android:id="@+id/symptom"
+                    style="@style/edit"
+                    android:editable="false"/>
+            </LinearLayout>
+            <!-- 其他症状 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/symptom_other"/>
+
+                <EditText
+                    android:id="@+id/symptom_other"
+                    style="@style/edit"/>
+            </LinearLayout>
+            <!-- 收缩压、收缩压目标 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/systolic_pressure"/>
+
+
+                <EditText
+                    android:id="@+id/systolic_pressure"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/systolic_pressure_unit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:layout_width="@dimen/x20"
+                    android:gravity="center"
+                    android:text="@string/backslash"/>
+
+
+                <EditText
+                    android:id="@+id/systolic_pressure_target"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/systolic_pressure_unit"/>
+            </LinearLayout>
+            <!-- 舒张压、舒张压目标 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/diastolic_pressure"/>
+
+                <EditText
+                    android:id="@+id/diastolic_pressure"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/systolic_pressure_unit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:layout_width="@dimen/x20"
+                    android:gravity="center"
+                    android:text="@string/backslash"/>
+
+
+                <EditText
+                    android:id="@+id/diastolic_pressure_target"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/systolic_pressure_unit"/>
+            </LinearLayout>
+            <!-- 体重 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/weight"/>
+
+                <EditText
+                    android:id="@+id/weight"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/weight_unit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:layout_width="@dimen/x20"
+                    android:gravity="center"
+                    android:text="@string/backslash"/>
+
+                <EditText
+                    android:id="@+id/weight_target"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/weight_unit"/>
+            </LinearLayout>
+            <!-- 身高、BIM -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/height"/>
+
+                <EditText
+                    android:id="@+id/height"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/height_unit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:layout_width="@dimen/x20"
+                    android:gravity="center"
+                    android:text="@string/backslash"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/BIM"/>
+
+                <EditText
+                    android:id="@+id/BIM"
+                    style="@style/edit"
+                    android:editable="false"/>
+            </LinearLayout>
+            <!-- 其他体征 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/objective_sign_other"/>
+
+                <EditText
+                    android:id="@+id/objective_sign_other"
+                    style="@style/edit"
+                    android:inputType="text"/>
+            </LinearLayout>
+
+            <!-- 日吸烟量、日吸烟量目标 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/smoking_dnum"/>
+
+                <EditText
+                    android:id="@+id/smoking_dnum"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/smoking_unit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:layout_width="@dimen/x20"
+                    android:gravity="center"
+                    android:text="@string/backslash"/>
+
+                <EditText
+                    android:id="@+id/smoking_dnum_target"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/smoking_unit"/>
+            </LinearLayout>
+            <!-- 日饮酒量、日饮酒量目标 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drinking_dnum"/>
+
+                <EditText
+                    android:id="@+id/drinking_dnum"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drinking_dnum_unit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:layout_width="@dimen/x20"
+                    android:gravity="center"
+                    android:text="@string/backslash"/>
+
+
+                <EditText
+                    android:id="@+id/drinking_dnum_target"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drinking_dnum_unit"/>
+
+            </LinearLayout>
+            <!-- 周运行次数、周运动次数目标 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/sport_weeknum"/>
+
+                <EditText
+                    android:id="@+id/sport_weeknum"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:layout_width="@dimen/x20"
+                    android:gravity="center"
+                    android:text="@string/backslash"/>
+
+                <EditText
+                    android:id="@+id/sport_weeknum_target"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once"/>
+            </LinearLayout>
+            <!-- 周运动时间、周运动时间目标 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/sport_times"/>
+
+                <EditText
+                    android:id="@+id/sport_times"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/minute"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:layout_width="@dimen/x20"
+                    android:gravity="center"
+                    android:text="@string/backslash"/>
+
+                <EditText
+                    android:id="@+id/sport_times_target"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/minute"/>
+            </LinearLayout>
+            <!-- 主食(克/日)、主食(克/日)（目标） -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/eday_main_food"/>
+
+                <EditText
+                    android:id="@+id/eday_main_food"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/eday_main_food_unit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:layout_width="@dimen/x20"
+                    android:gravity="center"
+                    android:text="@string/backslash"/>
+
+                <EditText
+                    android:id="@+id/eday_main_food_target"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/eday_main_food_unit"/>
+            </LinearLayout>
+            <!-- 心理调整、遵医行为 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/mental_adjust"/>
+
+                <Spinner
+                    android:id="@+id/mental_adjust"
+                    style="@style/evnSpinner"
+                    android:layout_width="fill_parent"
+                    android:layout_weight="2"
+                    android:entries="@array/array_class"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/compiance"/>
+
+                <Spinner
+                    android:id="@+id/compiance"
+                    style="@style/evnSpinner"
+                    android:layout_width="fill_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="2"
+                    android:entries="@array/array_class"/>
+            </LinearLayout>
+            <!-- 空腹血糖、随机血糖 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/fasting_blood_glucose"/>
+
+                <EditText
+                    android:id="@+id/begin_blood_sugar"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/mmol_L"/>
+
+                <View
+                    android:layout_width="@dimen/x10"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/random_blood_sugar"/>
+
+                <EditText
+                    android:id="@+id/eatend_blood_sugar"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/mmol_L"/>
+            </LinearLayout>
+            <!-- 糖化血红蛋白值、检查日期(糖化血红蛋白值) -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/blood_ghb"/>
+
+
+                <EditText
+                    android:id="@+id/blood_ghb"
+                    style="@style/edit"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/percent"/>
+
+                <View
+                    android:layout_width="@dimen/x10"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/mtest_date"/>
+
+                <EditText
+                    android:id="@+id/mtest_date"
+                    style="@style/edit"
+                    android:editable="false"/>
+            </LinearLayout>
+
+            <!-- 其他检查1 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/other_mtest1"/>
+
+                <EditText
+                    android:id="@+id/other_mtest1"
+                    style="@style/edit"
+                    android:inputType="text"/>
+            </LinearLayout>
+            <!-- 其他检查2 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/other_mtest2"/>
+
+                <EditText
+                    android:id="@+id/other_mtest2"
+                    style="@style/edit"
+                    android:inputType="text"/>
+            </LinearLayout>
+            <!-- 其他检查3 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/other_mtest3"/>
+
+                <EditText
+                    android:id="@+id/other_mtest3"
+                    style="@style/edit"
+                    android:inputType="text"/>
+            </LinearLayout>
+            <!-- 足背动脉博动 -->
+            <!-- 服药依从 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/dorsalis_pedis"/>
+
+                <Spinner
+                    android:id="@+id/dorsalis_pedis"
+                    style="@style/evnSpinner"
+                    android:entries="@array/dorsalis_pedis_array"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/rule_dose"/>
+
+                <Spinner
+                    android:id="@+id/rule_dose"
+                    style="@style/evnSpinner"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:entries="@array/array_rule_dose"/>
+            </LinearLayout>
+            <!-- 药物不良反应标志 -->
+            <!-- 药物不良反应内容 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug_side_effect"/>
+
+                <Spinner
+                    android:id="@+id/drug_side_effect"
+                    style="@style/evnSpinner"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:entries="@array/array_no_yes"
+                    android:prompt="@string/drug_side_effect"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug_side_effects"/>
+
+                <EditText
+                    android:id="@+id/drug_side_effects"
+                    style="@style/edit"
+                    android:inputType="text"/>
+            </LinearLayout>
+
+            <!-- 低血糖反应、随访分类 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/glucopenia"/>
+
+                <Spinner
+                    android:id="@+id/glucopenia"
+                    style="@style/evnSpinner"
+                    android:layout_width="fill_parent"
+                    android:layout_weight="2"
+                    android:entries="@array/glucopenia"
+                    android:prompt="@string/glucopenia"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/visit_appraise"/>
+
+                <Spinner
+                    android:id="@+id/visit_appraise"
+                    style="@style/evnSpinner"
+                    android:layout_width="fill_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="2"
+                    android:entries="@array/array_visit_appraise"/>
+            </LinearLayout>
+
+            <!-- 药物1名称 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug1_name"/>
+
+                <EditText
+                    android:id="@+id/drug1_name"
+                    style="@style/edit"
+                    android:inputType="text"/>
+            </LinearLayout>
+            <!-- 药物1 用法:每日、次每次 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug1_fn"/>
+
+                <EditText
+                    android:id="@+id/drug1_fn"
+                    style="@style/edit"
+                    android:inputType="number"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once"/>
+
+                <View
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug1_dosage_one"/>
+
+                <EditText
+                    android:id="@+id/drug1_dosage_one"
+                    style="@style/edit"
+                    android:inputType="number"/>
+
+                <Spinner
+                    android:id="@+id/drug1_dosage_unit"
+                    style="@style/evnAqTextView"
+                    android:entries="@array/drug2_dosage_unit"/>
+            </LinearLayout>
+            <!-- 药物2名称 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug2_name"/>
+
+                <EditText
+                    android:id="@+id/drug2_name"
+                    style="@style/edit"/>
+            </LinearLayout>
+            <!-- 药物2 用法:每日、次每次 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug2_fn"/>
+
+                <EditText
+                    android:id="@+id/drug2_fn"
+                    style="@style/edit"
+                    android:inputType="number"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once"/>
+
+                <View
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug1_dosage_one"/>
+
+                <EditText
+                    android:id="@+id/drug2_dosage_one"
+                    style="@style/edit"
+                    android:inputType="number"/>
+
+                <Spinner
+
+                    android:id="@+id/drug2_dosage_unit"
+                    style="@style/evnSpinner"
+                    android:entries="@array/drug2_dosage_unit"/>
+            </LinearLayout>
+            <!-- 药物3名称 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug3_name"/>
+
+                <EditText
+                    android:id="@+id/drug3_name"
+                    style="@style/edit"/>
+            </LinearLayout>
+            <!-- 药物3 用法:每日、次每次 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/drug3_fn"/>
+
+                <EditText
+                    android:id="@+id/drug3_fn"
+                    style="@style/edit"
+                    android:inputType="number"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once"/>
+
+                <View
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/drug1_dosage_one"/>
+
+                <EditText
+                    android:id="@+id/drug3_dosage_one"
+                    style="@style/edit"
+                    android:inputType="number"/>
+
+                <Spinner
+                    android:id="@+id/drug3_dosage_unit"
+                    style="@style/evnSpinner"
+                    android:entries="@array/drug2_dosage_unit"/>
+            </LinearLayout>
+            <!-- 胰岛素用药 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/insulin_drug"/>
+
+                <EditText
+                    android:id="@+id/insulin_drug"
+                    style="@style/edit"
+                    android:inputType="text"/>
+            </LinearLayout>
+            <!-- 转诊原因 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/transfert_cause"/>
+
+                <EditText
+                    android:id="@+id/transfert_cause"
+                    style="@style/edit"
+                    android:inputType="text"/>
+            </LinearLayout>
+            <!-- 转诊科别 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/transfert_dept"/>
+
+                <EditText
+                    android:id="@+id/transfert_dept"
+                    style="@style/edit"
+                    android:inputType="text"/>
+            </LinearLayout>
+
+            <!-- 下次随访日期 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/next_visit_date"/>
+
+                <EditText
+                    android:id="@+id/next_visit_date"
+                    style="@style/edit"
+                    android:editable="false"/>
+            </LinearLayout>
+            <!-- 随访方式 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/visit_doctor"/>
+
+                <EditText
+                    android:id="@+id/visit_doctor"
+                    style="@style/edit"
+                    android:editable="false"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/visit_mode"/>
+
+                <Spinner
+                    android:id="@+id/visit_mode"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_visit_moding"/>
+            </LinearLayout>
+            <!-- 中医指导、指导内容 -->
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/cm_guidance_str"/>
+
+                <EditText
+                    android:id="@+id/cm_guidance_str"
+                    style="@style/edit"
+                    android:inputType="text"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/cm_guidance"/>
+
+                <Spinner
+                    android:id="@+id/cm_guidance"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_no_yes"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

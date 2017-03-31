@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_action_bar"/>
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginRight="@dimen/x10"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- 姓名、随访日期 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/name"/>
+
+                <EditText
+                    android:id="@+id/name"
+                    style="@style/edit"
+                    android:editable="false"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/visit_date"/>
+
+                <EditText
+                    android:id="@+id/visit_date"
+                    style="@style/edit"
+                    android:editable="false"/>
+            </LinearLayout>
+            <!-- 孕次、产次 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/cyesis"/>
+
+                <EditText
+                    android:id="@+id/cyesis"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/parturient"/>
+
+                <EditText
+                    android:id="@+id/parturient"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once"/>
+            </LinearLayout>
+            <!-- 自然分娩、刨宫产 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/eutocia"/>
+
+                <EditText
+                    android:id="@+id/eutocia"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/caesarean"/>
+
+                <EditText
+                    android:id="@+id/caesarean"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once"/>
+            </LinearLayout>
+            <!-- 末次月经、预产期 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/menses_over_date"/>
+
+                <EditText
+                    android:id="@+id/menses_over_date"
+                    style="@style/edit"
+                    android:editable="false"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/due_birth_date"/>
+
+                <EditText
+                    android:id="@+id/due_birth_date"
+                    style="@style/edit"
+                    android:editable="false"/>
+            </LinearLayout>
+            <!-- 孕周、孕天 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/birth_week"/>
+
+                <EditText
+                    android:id="@+id/birth_week"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/week"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/birth_week_days"/>
+
+                <EditText
+                    android:id="@+id/birth_week_days"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/day"/>
+            </LinearLayout>
+            <!-- 既往病史 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/anamnesis"/>
+
+                <EditText
+                    android:id="@+id/anamnesis"
+                    style="@style/edit"
+                    android:editable="false"/>
+
+            </LinearLayout>
+            <!-- 既往病史 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/anamnesis_other"/>
+
+                <EditText
+                    android:id="@+id/anamnesis_other"
+                    style="@style/edit"/>
+
+            </LinearLayout>
+            <!-- 家族疾病史 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/family_disease"/>
+
+                <EditText
+                    android:id="@+id/family_disease"
+                    style="@style/edit"
+                    android:editable="false"/>
+
+            </LinearLayout>
+            <!--其它家族疾病史 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/family_disease_other"/>
+
+                <EditText
+                    android:id="@+id/family_disease_other"
+                    style="@style/edit"/>
+
+            </LinearLayout>
+            <!--个人史 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/personal_history"/>
+
+                <EditText
+                    android:id="@+id/personal_history"
+                    style="@style/edit"/>
+
+            </LinearLayout>
+            <!--其它个人史 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/personal_history_other"/>
+
+                <EditText
+                    android:id="@+id/personal_history_other"
+                    style="@style/edit"/>
+
+            </LinearLayout>
+            <!--妇科手术史 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/gynaecology_operation_mark"/>
+
+                <Spinner
+                    android:id="@+id/gynaecology_operation_mark"
+                    style="@style/evnSpinner"
+                    android:layout_weight="0"
+                    android:entries="@array/array_no_yes"/>
+
+            </LinearLayout>
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/gynaecology_operation_mark"/>
+
+                <EditText
+                    android:id="@+id/gynaecology_operation"
+                    style="@style/edit"/>
+
+            </LinearLayout>
+            <!--其它妇科手术史 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/gynaecology_other"/>
+
+                <EditText
+                    android:id="@+id/gynaecology_other"
+                    style="@style/edit"/>
+
+            </LinearLayout>
+            <!-- 流产、死胎 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/abort"/>
+
+                <EditText
+                    android:id="@+id/abort"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/die_foetus"/>
+
+                <EditText
+                    android:id="@+id/die_foetus"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once"/>
+            </LinearLayout>
+            <!-- 死产、新生儿死亡 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/die_birth"/>
+
+                <EditText
+                    android:id="@+id/die_birth"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/die_newbron"/>
+
+                <EditText
+                    android:id="@+id/die_newbron"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/once"/>
+            </LinearLayout>
+            <!--出生缺陷儿 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/handicapped"/>
+
+                <EditText
+                    android:id="@+id/handicapped"
+                    style="@style/edit"/>
+            </LinearLayout>
+            <!-- 身高、体重 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/height"/>
+
+                <EditText
+                    android:id="@+id/height"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/height_unit"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/weight"/>
+
+                <EditText
+                    android:id="@+id/weight"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/weight_unit"/>
+            </LinearLayout>
+            <!-- 收缩压、舒张压 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/systolic_pressure"/>
+
+                <EditText
+                    android:id="@+id/systolic_pressure"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/systolic_pressure_unit"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/diastolic_pressure"/>
+
+                <EditText
+                    android:id="@+id/diastolic_pressure"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/systolic_pressure_unit"/>
+            </LinearLayout>
+            <!--心脏听诊、听诊异常 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/heart_result"/>
+
+                <Spinner
+                    android:id="@+id/heart_result"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_exception"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/heart_result"/>
+
+                <EditText
+                    android:id="@+id/heart_str"
+                    style="@style/edit"/>
+            </LinearLayout>
+            <!--肺部听诊、听诊异常 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/lung_result"/>
+
+                <Spinner
+                    android:id="@+id/lung_result"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_exception"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/lung_result"/>
+
+                <EditText
+                    android:id="@+id/lung_str"
+                    style="@style/edit"/>
+            </LinearLayout>
+            <!--外阴检查、检查异常 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/pudendum_result"/>
+
+                <Spinner
+                    android:id="@+id/pudendum_result"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_exception"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/pudendum_result"/>
+
+                <EditText
+                    android:id="@+id/pudendum_str"
+                    style="@style/edit"/>
+            </LinearLayout>
+            <!--阴道检查、阴道异常 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/cunt_result"/>
+
+                <Spinner
+                    android:id="@+id/cunt_result"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_exception"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/cunt_result"/>
+
+                <EditText
+                    android:id="@+id/cunt_str"
+                    style="@style/edit"/>
+            </LinearLayout>
+            <!--宫颈检查、宫颈异常 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/cervical_result"/>
+
+                <Spinner
+                    android:id="@+id/cervical_result"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_exception"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/cervical_result"/>
+
+                <EditText
+                    android:id="@+id/cervical_str"
+                    style="@style/edit"/>
+            </LinearLayout>
+            <!--子宫检查、子宫异常 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/uterus_result"/>
+
+                <Spinner
+                    android:id="@+id/uterus_result"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_exception"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/uterus_result"/>
+
+                <EditText
+                    android:id="@+id/uterus_str"
+                    style="@style/edit"/>
+            </LinearLayout>
+            <!--附件检查、附件异常 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/appendage_result"/>
+
+                <Spinner
+                    android:id="@+id/appendage_result"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_exception"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/appendage_result"/>
+
+                <EditText
+                    android:id="@+id/appendage_str"
+                    style="@style/edit"/>
+            </LinearLayout>
+            <!--血红蛋白值、血细胞计数 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/blood_hb"/>
+
+                <EditText
+                    android:id="@+id/blood_hb"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/blood_hb_unit"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/leukocyte"/>
+
+                <EditText
+                    android:id="@+id/leukocyte"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/leukocyte_unit"/>
+            </LinearLayout>
+            <!--血小板计数 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/blood_plt"/>
+
+                <EditText
+                    android:id="@+id/blood_plt"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/leukocyte_unit"/>
+            </LinearLayout>
+            <!--血常规-其它 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/blood_other"/>
+
+                <EditText
+                    android:id="@+id/blood_other"
+                    style="@style/edit"/>
+
+            </LinearLayout>
+            <!--血糖、尿蛋白 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/blood_sugar"/>
+
+                <EditText
+                    android:id="@+id/blood_sugar"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/mmol_L"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/upro_value"/>
+
+                <EditText
+                    android:id="@+id/upro_value"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/upro_value_unit"/>
+            </LinearLayout>
+            <!--尿糖定量检测尿酮体 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/glu_value"/>
+
+                <EditText
+                    android:id="@+id/glu_value"
+                    style="@style/edit"/>
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/mmol_L"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/qualitative_name"/>
+
+                <Spinner
+                    android:id="@+id/qualitative_name"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_qualitative_name"/>
+            </LinearLayout>
+            <!--尿潜血、尿常规-其它 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/occultblood_name"/>
+
+                <Spinner
+                    android:id="@+id/occultblood_name"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_occultblood_name"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/urine_other"/>
+
+                <EditText
+                    android:id="@+id/urine_other"
+                    style="@style/edit"/>
+            </LinearLayout>
+            <!--血清谷丙转氨酶、血清谷草转氨酶 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/serum_alt"/>
+
+                <EditText
+                    android:id="@+id/serum_alt"
+                    style="@style/edit"
+                    android:entries="@array/array_occultblood_name"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/serum_alt_unit"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/serum_got"/>
+
+                <EditText
+                    android:id="@+id/serum_got"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/serum_alt_unit"/>
+            </LinearLayout>
+            <!--血蛋白浓度、总胆红素值 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/albumin_chroma"/>
+
+                <EditText
+                    android:id="@+id/albumin_chroma"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/blood_hb_unit"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/total_bilirubin"/>
+
+                <EditText
+                    android:id="@+id/total_bilirubin"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/umol_l"/>
+            </LinearLayout>
+            <!--结合胆红素值、血清肌酐 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/conjugated_bilirubin"/>
+
+                <EditText
+                    android:id="@+id/conjugated_bilirubin"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/umol_l"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/blood_creatinine"/>
+
+                <EditText
+                    android:id="@+id/blood_creatinine"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/umol_l"/>
+            </LinearLayout>
+            <!--血尿素氨、乙型肝炎表面抗原 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/blood_un"/>
+
+                <EditText
+                    android:id="@+id/blood_un"
+                    style="@style/edit"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/umol_l"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/hbs_ag"/>
+
+                <Spinner
+                    android:id="@+id/hbs_ag"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_masculine"/>
+            </LinearLayout>
+            <!--乙型肝炎表面抗体、乙型肝炎e抗原 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/hbs_ab"/>
+
+                <Spinner
+                    android:id="@+id/hbs_ab"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_masculine"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/hbe_ag"/>
+
+                <Spinner
+                    android:id="@+id/hbe_ag"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_masculine"/>
+            </LinearLayout>
+            <!--乙型肝炎e抗体、乙型肝炎核心抗体 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/hbe_ab"/>
+
+                <Spinner
+                    android:id="@+id/hbe_ab"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_masculine"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/hbc_ab"/>
+
+                <Spinner
+                    android:id="@+id/hbc_ab"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_masculine"/>
+            </LinearLayout>
+            <!--阴道清洁度 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/cunt_secretion"/>
+
+                <Spinner
+                    android:id="@+id/cunt_secretion"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_cunt_secretion"/>
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/vagina_cleanliness"/>
+
+                <Spinner
+                    android:id="@+id/vagina_cleanliness"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_vagina_cleanliness"/>
+            </LinearLayout>
+            <!--阴道分泌物其它 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/cunt_secretion_other"/>
+
+                <EditText
+                    android:id="@+id/cunt_secretion_other"
+                    style="@style/edit"/>
+            </LinearLayout>
+            <!--梅毒血清实验、HIV抗体检测 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/syphilis_serology"/>
+
+                <Spinner
+                    android:id="@+id/syphilis_serology"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_masculine"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/hiv"/>
+
+                <Spinner
+                    android:id="@+id/hiv"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_masculine"/>
+            </LinearLayout>
+            <!--、B超 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/b_us"/>
+
+                <EditText
+                    android:id="@+id/b_us"
+                    style="@style/edit"/>
+            </LinearLayout>
+            <!--、总体评估 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/evaluate_mark"/>
+
+                <Spinner
+                    android:id="@+id/evaluate_mark"
+                    style="@style/evnSpinner"
+                    android:entries="@array/array_exception"/>
+            </LinearLayout>
+            <!--、总体评估 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/evaluate_mark"/>
+
+                <EditText
+                    android:id="@+id/evaluate"
+                    style="@style/edit"/>
+            </LinearLayout>
+            <!--、保健指导 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/health_guide_str"/>
+
+                <EditText
+                    android:id="@+id/health_guide_str"
+                    style="@style/edit"
+                    android:editable="false"/>
+            </LinearLayout>
+            <!--、其它保健指导 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/health_guide_other"/>
+
+                <EditText
+                    android:id="@+id/health_guide_other"
+                    style="@style/edit"/>
+            </LinearLayout>
+            <!--、转诊 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/transfert"/>
+
+                <Spinner
+                    android:id="@+id/transfert_mark"
+                    style="@style/edit"
+                    android:entries="@array/array_no_yes"/>
+            </LinearLayout>
+            <!--、转诊科别 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/transfert_dept"/>
+
+                <EditText
+                    android:id="@+id/transfert_dept"
+                    style="@style/edit"/>
+            </LinearLayout>
+            <!--、转诊原因 -->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/transfert_cause"/>
+
+                <EditText
+                    android:id="@+id/transfert_cause"
+                    style="@style/edit"/>
+            </LinearLayout>
+            <!--、下次随访日期-->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/next_visit_date"/>
+
+                <EditText
+                    android:id="@+id/next_visit_date"
+                    style="@style/edit"
+                    android:editable="false"/>
+
+                <include layout="@layout/layout_interval"/>
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/visit_doctor"/>
+
+                <EditText
+                    android:id="@+id/visit_doctor"
+                    style="@style/edit"
+                    android:editable="false"/>
+            </LinearLayout>
+            <!--、下次随访日期-->
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/education_prescribe"/>
+
+                <EditText
+                    android:id="@+id/education_prescribe"
+                    style="@style/edit"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

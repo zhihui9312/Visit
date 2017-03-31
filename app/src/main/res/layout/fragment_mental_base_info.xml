@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:paddingLeft="@dimen/x10"
+        android:paddingRight="@dimen/x10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 姓名、性别-->
+        <LinearLayout
+            style="@style/layout_visit_stysle">
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/name"/>
+
+            <EditText
+                android:id="@+id/name"
+                style="@style/edit"
+                android:editable="false"/>
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/sex"/>
+
+            <EditText
+                android:id="@+id/sex"
+                style="@style/edit"
+                android:editable="false"/>
+        </LinearLayout>
+
+        <!-- 监护人姓名-->
+        <LinearLayout
+            style="@style/layout_visit_stysle">
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/guardian_name"/>
+
+            <EditText
+                android:id="@+id/guardian_name"
+                style="@style/edit"
+                android:editable="false"/>
+        </LinearLayout>
+        <!-- 监护人电话-->
+        <LinearLayout
+            style="@style/layout_visit_stysle">
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/guardian_telephone"/>
+
+            <EditText
+                android:id="@+id/guardian_telephone"
+                style="@style/edit"
+                android:editable="false"/>
+        </LinearLayout>
+        <!-- 村委联系人，电话-->
+        <LinearLayout
+            style="@style/layout_visit_stysle">
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/village_info"/>
+
+            <EditText
+                android:id="@+id/village_info"
+                style="@style/edit"
+                android:editable="false"/>
+        </LinearLayout>
+        <!-- 主要症状-->
+        <LinearLayout
+            style="@style/layout_visit_stysle">
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/spirit_state"/>
+
+            <EditText
+                android:id="@+id/spirit_state"
+                style="@style/edit"
+                android:editable="false"/>
+        </LinearLayout>
+        <!-- 诊断-->
+        <LinearLayout
+            style="@style/layout_visit_stysle">
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/diagnose_name"/>
+
+            <EditText
+                android:id="@+id/diagnose_name"
+                style="@style/edit"
+                android:editable="false"/>
+        </LinearLayout>
+        <!-- 确诊医院-->
+        <LinearLayout
+            style="@style/layout_visit_stysle">
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/diagnose_hospital"/>
+
+            <EditText
+                android:id="@+id/diagnose_hospital"
+                style="@style/edit"
+                android:editable="false"/>
+        </LinearLayout>
+        <!-- 确诊日期-->
+        <LinearLayout
+            style="@style/layout_visit_stysle">
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/diagnose_date"/>
+
+            <EditText
+                android:id="@+id/diagnose_date"
+                style="@style/edit"
+                android:editable="false"/>
+        </LinearLayout>
+        <!-- 轻度滋事、肇事 -->
+
+        <LinearLayout
+            style="@style/layout_visit_stysle">
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/affray"/>
+
+            <EditText
+                android:id="@+id/affray"
+                style="@style/edit"
+                android:editable="false"/>
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/once"/>
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/cause_trouble"/>
+
+            <EditText
+                android:id="@+id/cause_trouble"
+                style="@style/edit"
+                android:editable="false"/>
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/once"/>
+        </LinearLayout>
+        <!-- 肇祸、自伤 -->
+
+        <LinearLayout
+            style="@style/layout_visit_stysle">
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/disaster"/>
+
+            <EditText
+                android:id="@+id/disaster"
+                style="@style/edit"
+                android:editable="false"/>
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/once"/>
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/autolesion"/>
+
+            <EditText
+                android:id="@+id/autolesion"
+                style="@style/edit"
+                android:editable="false"/>
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/once"/>
+        </LinearLayout>
+        <!-- 自杀未遂、关锁情况 -->
+
+        <LinearLayout
+            style="@style/layout_visit_stysle">
+
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/attempted_suicide"/>
+
+            <EditText
+                android:id="@+id/attempted_suicide"
+                style="@style/edit"
+                android:editable="false"/>
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/once"/>
+            <TextView
+                style="@style/evnAqTextView"
+                android:text="@string/close_lock"/>
+
+            <EditText
+                android:id="@+id/close_lock"
+                style="@style/edit"
+                android:editable="false"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

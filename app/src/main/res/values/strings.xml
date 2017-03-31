@@ -1,0 +1,1093 @@
+<resources>
+    <string name="app_name">公卫随访</string>
+    <string name="action_settings">Settings</string>
+    <string name="click_two_exit">再按一次退出程序</string>
+    <string name="login">登录</string>
+    <string name="phone_number">账号</string>
+    <string name="chanage_org">单位选择</string>
+    <string name="register">注册</string>
+    <string name="back">返回</string>
+    <string name="unit_org_filter">单位过虑查询</string>
+    <string name="account_not_null">账号格式不正确</string>
+    <string name="psssword_not_null">密码格式不正确</string>
+    <string name="is_landing">正在登录...</string>
+    <string name="org_is_not_null">请选择机构</string>
+    <string name="register_success">注册成功</string>
+    <string name="home_page">主页</string>
+    <string name="archives_query">建档查询</string>
+    <string name="hypertension_visit">高血压随访</string>
+    <string name="hypertension_query">高血压随访查询</string>
+    <string name="diabetes_visit">糖尿病随访</string>
+    <string name="diabetes_visit_query">糖尿病随访</string>
+    <string name="psychosis_visit">精神病随访</string>
+    <string name="pregnant_visit">孕妇随访</string>
+    <string name="child_visit">儿童随访</string>
+    <string name="workload_statistics">工作量统计</string>
+    <string name="task_remind">任务提醒</string>
+    <string name="archives_entry">档案录入</string>
+    <string name="number_hit">输入账号</string>
+    <string name="password">密码</string>
+    <string name="password_hint">请输入密码</string>
+    <string name="show_password">显示密码</string>
+    <string name="remember_password">记住密码</string>
+    <string name="new_user_register">新用户注册</string>
+    <string name="un_org">未匹配到相关的单位</string>
+    <string name="org_name">单位名称</string>
+    <string name="register_phonenumber">手机号码</string>
+    <string name="register_password">登陆密码</string>
+    <string name="network_error">网络错误，请检查网络设置</string>
+    <string name="server_error">服务器错误</string>
+    <string name="search_content">请输入搜索内容</string>
+    <string name="input_content_not_null">输入内容不能为空</string>
+    <string name="is_loading_please_waite">正在加载，请稍后...</string>
+    <string name="name">姓名</string>
+    <string name="resident">常住类型</string>
+    <string name="ehr_id">档案号</string>
+    <string name="crid_code">身份证号</string>
+    <string name="work_unit">工作单位</string>
+    <string name="address">地址</string>
+    <string name="telephone">电话</string>
+    <string name="cr_org_code">建档机构</string>
+    <string name="search_result">搜索结果</string>
+    <string name="sex">性别</string>
+    <string name="birthday">出生日期</string>
+    <string name="disease_status">疾病状态</string>
+    <string name="diagnose_date">确诊日期</string>
+    <string name="source_flag">病例来源</string>
+    <string name="height">身高</string>
+    <string name="weight">体重</string>
+    <string name="systolic_pressure">收缩压</string>
+    <string name="diastolic_pressure">舒张压</string>
+    <string name="visit_date">随访日期</string>
+    <string name="symptom">症状</string>
+    <string name="symptom_other">其他症状</string>
+    <string name="systolic_pressure1">血压</string>
+    <string name="systolic_pressure_unit">mmHg</string>
+    <string name="backslash">/</string>
+    <string name="weight_unit">kg</string>
+    <string name="height_unit">cm</string>
+    <string name="heart_rate">心率</string>
+    <string name="heart_time_unit">次/分钟</string>
+    <string name="objective_sign_other">其他体征</string>
+    <string name="smoking_dnum">日吸烟量</string>
+    <string name="smoking_unit">支</string>
+    <string name="drinking_dnum">日饮酒量</string>
+    <string name="drinking_dnum_unit">两</string>
+    <string name="sport_weeknum">周运动次数</string>
+    <string name="once">次</string>
+    <string name="sport_times">周活动时间</string>
+    <string name="minute">分钟</string>
+    <string name="absorbsalt_case">摄盐情况</string>
+    <string name="BIM">BIM</string>
+    <string name="aid_mtest_result">辅助检查</string>
+    <string name="drug_side_effect">药物不良反应</string>
+    <string name="drug_side_effects">不良反应内容</string>
+    <string name="mental_adjust">心态调整</string>
+    <string name="compiance">遵医行为</string>
+    <string name="rule_dose">服药依从</string>
+    <string name="visit_appraise">随访类别</string>
+    <string name="drug1_name">药物1名称</string>
+    <string name="drug1_fn">药物1用法:每日</string>
+    <string name="drug1_dosage_one">每次</string>
+    <string name="drug2_name">药物2名称</string>
+    <string name="drug2_fn">药物2用法:每日</string>
+    <string name="drug2_usagetext">药物2用法:</string>
+    <string name="drug3_name">药物3名称</string>
+    <string name="drug3_fn">药物3用法:每日</string>
+    <string name="drug3_usagetext">药物3用法</string>
+    <string name="transfert_cause">转诊原因</string>
+    <string name="transfert_dept">转诊科别</string>
+    <string name="next_visit_date">下次随访日期</string>
+    <string name="visit_moding">拜访模式</string>
+    <string name="visit_doctor">随访医师</string>
+    <string name="cm_guidance">中医指导</string>
+    <string name="cm_guidance_str">指导内容</string>
+    <string name="add_visit">添加随访记录</string>
+    <string name="choose_date">选择日期</string>
+    <string name="ok">确认</string>
+    <string name="cancel">取消</string>
+    <string name="not_more_current_time">不能大于当前时间</string>
+    <string name="add_success">添加成功</string>
+    <string name="diagnose_time">确诊时间</string>
+    <string name="case_source">病例来源</string>
+    <string name="case_type">病例种类</string>
+    <string name="diabetes_family_history">糖尿病家族史</string>
+    <string name="cards_blood_glucose_level">建卡时血糖水平</string>
+    <string name="not_find">没有找到该人员标识信息</string>
+    <string name="dorsalis_pedis">足背动脉博动</string>
+    <string name="eday_main_food">主&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;食</string>
+    <string name="eday_main_food_unit">克/日</string>
+    <string name="fasting_blood_glucose">空腹血糖</string>
+    <string name="random_blood_sugar">随机血糖</string>
+    <string name="mmol_L">mmol/L</string>
+    <string name="blood_ghb">糖化血红蛋白值</string>
+    <string name="percent">%</string>
+    <string name="mtest_date">检查日期</string>
+    <string name="other_mtest1">其他检查1</string>
+    <string name="other_mtest2">其他检查2</string>
+    <string name="other_mtest3">其他检查3</string>
+    <string name="glucopenia">低血糖反应</string>
+    <string name="insulin_drug">胰岛素用药</string>
+    <string name="visit_mode">随访方式</string>
+    <string name="illegal">选择不合法</string>
+    <string name="danger_grade">危险性</string>
+    <string name="insight_appraise">自知力</string>
+    <string name="sleep_type">睡眠状况</string>
+    <string name="diet_type">饮食情况</string>
+    <string name="living">个人生活</string>
+    <string name="housework">家务劳动</string>
+    <string name="work">劳动工作</string>
+    <string name="study">学习能力</string>
+    <string name="sociality">社会人际交往</string>
+    <string name="affray">轻度滋事</string>
+    <string name="cause_trouble">肇事</string>
+    <string name="guardian_name">监护人姓名</string>
+    <string name="guardian_telephone">监护人电话</string>
+    <string name="village_info">村委联系人、电话</string>
+    <string name="spirit_state">主要症状</string>
+    <string name="diagnose_name">诊断</string>
+    <string name="diagnose_hospital">确诊医院</string>
+    <string name="disaster">肇祸</string>
+    <string name="autolesion">自伤</string>
+    <string name="attempted_suicide">自杀未遂</string>
+    <string name="close_lock">关锁情况</string>
+    <string name="in_hospital">住院情况</string>
+    <string name="leave_hospital_time">末次出院时间</string>
+    <string name="laboratory_abn">实验室检查标志</string>
+    <string name="laboratory_examination">实验室检查情况</string>
+    <string name="transfert">转诊</string>
+    <string name="anamnesis_tr_type">治疗效果</string>
+    <string name="health_guide_adv">康复措施</string>
+    <string name="menses_over_date">末次月经</string>
+    <string name="is_high_risk">是否高危</string>
+    <string name="high_score">高危分值</string>
+    <string name="create_week_days">创建周天</string>
+    <string name="create_week">创建孕周</string>
+    <string name="birth_date">出生日期</string>
+    <string name="manual_ehr_id">保健手册号码</string>
+    <string name="due_birth_date">预产期</string>
+    <string name="add_maunal">添加手册</string>
+    <string name="commint">提交</string>
+    <string name="cyesis">孕次</string>
+    <string name="parturient">产次</string>
+    <string name="eutocia">自然分娩</string>
+    <string name="caesarean">刨宫产</string>
+    <string name="birth_week">出生孕周</string>
+    <string name="birth_week_days">出生孕天</string>
+    <string name="anamnesis">既往病史</string>
+    <string name="anamnesis_other">其它病史</string>
+    <string name="family_disease">家族疾病史</string>
+    <string name="family_disease_other">其它家族疾病史</string>
+    <string name="personal_history">个人病史</string>
+    <string name="personal_history_other">其它个人病史</string>\
+    <string name="gynaecology_operation_mark">妇科手术史</string>
+    <string name="gynaecology_other">其它妇科手术史</string>
+    <string name="week">周</string>
+    <string name="day">天</string>
+    <string name="abort">流产</string>
+    <string name="die_foetus">死胎</string>
+    <string name="die_birth">死产</string>
+    <string name="die_newbron">新生儿死亡</string>
+    <string name="handicapped">出生缺陷儿</string>
+    <string name="heart_result">心脏听诊</string>
+    <string name="lung_result">肺部听诊</string>
+    <string name="pudendum_result">外阴检查</string>
+    <string name="cunt_result">阴道检查</string>
+    <string name="cervical_result">宫颈检查</string>
+    <string name="uterus_result">子宫检查</string>
+    <string name="appendage_result">附件检查</string>
+    <string name="blood_hb">血红蛋白值</string>
+    <string name="blood_hb_unit">g/L</string>
+    <string name="leukocyte">血细胞计数</string>
+    <string name="leukocyte_unit">10^9/L</string>
+    <string name="blood_plt">血小板计数</string>
+    <string name="blood_other">血常规-其它</string>
+    <string name="blood_sugar">血糖</string>
+    <string name="upro_value">尿蛋白</string>
+    <string name="upro_value_unit">mg/24h</string>
+    <string name="qualitative_name">尿糖定量检测尿酮体</string>
+    <string name="occultblood_name">尿潜血</string>
+    <string name="urine_other">尿常规-其它</string>
+    <string name="serum_alt">血清谷丙转氨酶</string>
+    <string name="serum_got">血清谷草转氨酶</string>
+    <string name="serum_alt_unit">U/L</string>
+    <string name="umol_l">umol/L</string>
+    <string name="albumin_chroma">血蛋白浓度</string>
+    <string name="total_bilirubin">总胆红素值</string>
+    <string name="conjugated_bilirubin">结合胆红素值</string>
+    <string name="blood_creatinine">血清肌酐</string>
+    <string name="blood_un">血尿素氨</string>
+    <string name="hbs_ag">乙型肝炎表面抗原</string>
+    <string name="hbs_ab">乙型肝炎表面抗体</string>
+    <string name="hbe_ag">乙型肝炎e抗原</string>
+    <string name="hbe_ab">乙型肝炎e抗体</string>
+    <string name="hbc_ab">乙型肝炎核心抗体</string>
+    <string name="vagina_cleanliness">阴道清洁度</string>
+    <string name="cunt_secretion_other">阴道分泌物其它</string>
+    <string name="syphilis_serology">梅毒血清试验</string>
+    <string name="hiv">HIV抗体检测</string>
+    <string name="b_us">B超</string>
+    <string name="evaluate_mark">总体评估</string>
+    <string name="health_guide_str">健康指导</string>
+    <string name="health_guide_other">其它健康指导</string>
+    <string name="education_prescribe">教育处方</string>
+    <string name="glu_value">尿糖定量检测</string>
+    <string name="cunt_secretion">阴道分泌物</string>
+    <string name="chief_complaint">主诉</string>
+    <string name="fundus">宫底高度</string>
+    <string name="fetal_position">胎位</string>
+    <string name="abd_cir">腹围</string>
+    <string name="emb_heart_rate_time">胎心率</string>
+    <string name="other_mtest">其他检查</string>
+    <string name="visit_class">随访分类</string>
+    <string name="visit_class_abn">随访异常</string>
+    <string name="guidance">指导</string>
+    <string name="stop_women">档案封存</string>
+    <string name="stop_why">封存原因</string>
+    <string name="pregnant_one">第1次产前随访</string>
+    <string name="pregnant_25">产前2~5次随访</string>
+    <string name="pregnant_after">产后随访</string>
+    <string name="pregnant_after42">产后42天随访</string>
+    <string name="isSubmitting">正在提交...</string>
+    <string name="childbirth_date">分娩日期</string>
+    <string name="childbirth_address">分娩地点</string>
+    <string name="temperature">体温</string>
+    <string name="health_flag">健康情况</string>
+    <string name="mental_flag">心理状态</string>
+    <string name="breast">乳房</string>
+    <string name="lochia">恶露</string>
+    <string name="uterus">子宫</string>
+    <string name="trauma">伤口</string>
+    <string name="other">其他</string>
+    <string name="guidance_other">其他指导</string>
+    <string name="memo">备注</string>
+    <string name="deal_with">处理</string>
+    <string name="bodylong">出生身长</string>
+    <string name="born_weight">身重</string>
+    <string name="father_name">父亲姓名</string>
+    <string name="father_telephone">父亲电话</string>
+    <string name="mother_name">母亲姓名</string>
+    <string name="mother_telephone">母亲电话</string>
+    <string name="gdisease">母亲妊娠期患病</string>
+    <string name="asphyxia">新生儿窒息</string>
+    <string name="grade">Apgar评分</string>
+    <string name="deformity">是否右畸形</string>
+    <string name="deformity_comments">畸形说明</string>
+    <string name="left_hearing_screen">左耳</string>
+    <string name="right_hearing_screen">右耳</string>
+    <string name="illness_screen">新生儿筛查</string>
+    <string name="feed_manner_code">喂养方式</string>
+    <string name="suckle_quantity">吃奶量</string>
+    <string name="suckle_time">吃奶次数</string>
+    <string name="ml">ml/次</string>
+    <string name="once_day">次/日</string>
+    <string name="puke">呕吐</string>
+    <string name="defecate">大便</string>
+    <string name="defecate_time">次数</string>
+    <string name="pulse_rate">脉率</string>
+    <string name="breathing_fn">呼吸频率</string>
+    <string name="jaundice_part">黄疸部位</string>
+    <string name="complexion">面色</string>
+    <string name="fontanel_x">横径</string>
+    <string name="fontanel_y">纵径</string>
+    <string name="fontanel_status">前卤</string>
+    <string name="eye">眼睛</string>
+    <string name="ear">耳朵</string>
+    <string name="nose">鼻子</string>
+    <string name="nonnasality">口腔</string>
+    <string name="heart_lung">心肺</string>
+    <string name="abdomen">腹部</string>
+    <string name="limbs">四肢</string>
+    <string name="neck">颈部包块</string>
+    <string name="skin">皮肤</string>
+    <string name="anus">肛门</string>
+    <string name="genitalia">生殖器</string>
+    <string name="backbone">脊柱</string>
+    <string name="umbilical">脐带</string>
+    <string name="next_visit_site">下次随访地点</string>
+    <string name="child_new">新生儿</string>
+    <string name="child_one">一岁以内</string>
+    <string name="child_2">1~2岁</string>
+    <string name="child_three">3~6岁</string>
+    <string name="current_agem">月龄</string>
+    <string name="head_girth">头围</string>
+    <string name="weight_grade">体重等级</string>
+    <string name="height_grade">身高等级</string>
+    <string name="ear_result">听力</string>
+    <string name="rachitis_symptom">佝偻病症状</string>
+    <string name="rachitis_sign">佝偻病体征</string>
+    <string name="anus_genitalia">肛门/外生殖器</string>
+    <string name="tooth_start_num">出牙数</string>
+    <string name="hour_day">小时/日</string>
+    <string name="outdoor_activities">户外活动</string>
+    <string name="IU">IU/月</string>
+    <string name="vitamin_amount">服用维生素D</string>
+    <string name="growth">发育评估</string>
+    <string name="between_disease">两次随访患病</string>
+    <string name="tooth_decayed">龋齿</string>
+    <string name="tooth_unit">颗</string>
+    <string name="gait">步态</string>
+    <string name="current_agey">随访年龄</string>
+    <string name="physique">体格发育评价</string>
+    <string name="ue_myopia_left">左视力</string>
+    <string name="ue_myopia_right">右视力</string>
+    <string name="tooth">牙齿</string>
+    <string name="growth_action">行为</string>
+    <string name="growth_gam">社交</string>
+    <string name="irritability">过敏史</string>
+    <string name="is_pneumonia_sum">肺炎次数</string>
+    <string name="is_diarrheaih_sum">腹泻住院次数</string>
+    <string name="is_traumaih_sum">受伤住院次数</string>
+    <string name="is_other_con">其他疾病</string>
+    <string name="query">搜索</string>
+    <string name="org_code">建档机构</string>
+    <string name="nation_code">名族</string>
+    <string name="census_register">常住类型</string>
+    <string name="telephone_linkman">联系人姓名</string>
+    <string name="telephone_no">联系人电话</string>
+    <string name="blood_type">血型</string>
+    <string name="education_code">文化程度</string>
+    <string name="job_type">职业</string>
+    <string name="marriage_code">婚姻状况</string>
+    <string name="pay_type">支付方式</string>
+    <string name="pay_type_str">支付说明</string>
+    <string name="blood_rh">RH阴性</string>
+    <string name="expose">暴露史</string>
+    <string name="disease1">疾病一</string>
+    <string name="disease2">疾病二</string>
+    <string name="disease3">疾病三</string>
+    <string name="disease4">疾病四</string>
+    <string name="disease5">疾病五</string>
+    <string name="disease6">疾病六</string>
+    <string name="disease_time">确诊时间</string>
+    <string name="operation1">手术一</string>
+    <string name="operation2">手术二</string>
+    <string name="operation_name">手术名称</string>
+    <string name="time">时间</string>
+    <string name="trauma1">外伤一</string>
+    <string name="trauma2">外伤二</string>
+    <string name="trauma_name">外伤名称</string>
+    <string name="transfuse1">输血一</string>
+    <string name="transfuse2">输血二</string>
+    <string name="reason">原因</string>
+    <string name="familys_f">父亲家族史</string>
+    <string name="familys_m">母亲家族史</string>
+    <string name="familys_s">兄妹家族史</string>
+    <string name="familys_c">子女家族史</string>
+    <string name="hinherit">遗传病史</string>
+    <string name="exhaust_equipment">厨房排风设备</string>
+    <string name="deformity1">残疾一</string>
+    <string name="deformity2">残疾二</string>
+    <string name="deformity3">残疾三</string>
+    <string name="deformity4">残疾四</string>
+    <string name="deformity5">残疾五</string>
+    <string name="deformity6">残疾六</string>
+    <string name="deformity_crid">残疾证号</string>
+    <string name="fuel_type">燃料类型</string>
+    <string name="drinking_water">饮水</string>
+    <string name="livestock_column">禽兽栏</string>
+    <string name="toilet">厕所</string>
+    <string name="medicalEntry">体检录入</string>
+    <string name="medical_date">体检日期</string>
+    <string name="doctor_name">责任医生</string>
+    <string name="blood_pressure_left">左侧血压</string>
+    <string name="degrees_celsius">℃</string>
+    <string name="mmHg">mmHg</string>
+    <string name="waistline">腰围</string>
+    <string name="old_health_status">老年人健康状态评估</string>
+    <string name="old_lifeself">老年人生活自理能力评估</string>
+    <string name="old_cognizefun">老年人认知功能</string>
+    <string name="total_score">总分</string>
+    <string name="old_sensibility">老年人情感状态</string>
+    <string name="physical_exercise_fre">锻炼频率</string>
+    <string name="physical_exercise_minute">每次锻炼时间</string>
+    <string name="year">年</string>
+    <string name="physical_exercise_year">坚持锻炼时间</string>
+    <string name="exercise_way">锻炼方式</string>
+    <string name="diet_habit_abn">饮食习惯</string>
+    <string name="smoke_situation">吸烟情况</string>
+    <string name="smoke_qty">平均日吸烟量</string>
+    <string name="year_old">岁</string>
+    <string name="begin_smoke_age">开始吸烟年龄</string>
+    <string name="stop_smoke_age">戒烟年龄</string>
+    <string name="drink_frequency">饮酒情况</string>
+    <string name="drink_measure_day">日饮酒量</string>
+    <string name="if_stopdrink_flage">是否戒酒</string>
+    <string name="stop_drink_age">戒酒年龄</string>
+    <string name="begin_drink_age">开始饮酒年龄</string>
+    <string name="in_one_year_intoxication">近一年内是否曾醉酒</string>
+    <string name="drink_type">饮酒种类</string>
+    <string name="job_mark">职业病接触史</string>
+    <string name="job_occupation">工种</string>
+    <string name="job_year">从业时间</string>
+    <string name="dust">粉尘</string>
+    <string name="dust_protect">防护措施</string>
+    <string name="dust_abn">防护措施描述</string>
+    <string name="ray">放射性物质</string>
+    <string name="pest">物理因素</string>
+    <string name="chemicla">毒物种类</string>
+    <string name="the_new_version_is_visible">发现新版本，请立即升级</string>
+    <string name="ibm_unit">kg/m²</string>
+    <string-array name="array_drink_type">
+        <item>白酒</item>
+        <item>啤酒</item>
+        <item>红酒</item>
+        <item>黄酒</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="array_symptom">
+        <item>无症状</item>
+        <item>头痛</item>
+        <item>头晕</item>
+        <item>心悸</item>
+        <item>胸闷</item>
+        <item>胸痛</item>
+        <item>慢性咳嗽</item>
+        <item>咳痰</item>
+        <item>呼吸困难</item>
+        <item>多饮</item>
+        <item>多尿</item>
+        <item>体重下降</item>
+        <item>乏力</item>
+        <item>关节肿痛</item>
+        <item>视力模糊</item>
+        <item>手脚麻木</item>
+        <item>尿急</item>
+        <item>尿痛</item>
+        <item>便秘</item>
+        <item>腹泻</item>
+        <item>恶心呕吐</item>
+        <item>眼花</item>
+        <item>耳鸣</item>
+        <item>乳房胀痛</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="array_in_one_year_intoxication">
+        <item>是</item>
+        <item>否</item>
+    </string-array>
+    <string-array name="array_if_stopdrink_flage">
+        <item>未戒酒</item>
+        <item>已戒酒</item>
+    </string-array>
+    <string-array name="array_drink_frequency">
+        <item>从不</item>
+        <item>偶尔</item>
+        <item>经常</item>
+        <item>每天</item>
+    </string-array>
+    <string-array name="array_smoke_situation">
+        <item>从不吸烟</item>
+        <item>已戒烟</item>
+        <item>吸烟</item>
+    </string-array>
+    <string-array name="array_diet_habit_abn">
+        <item>荤素均衡</item>
+        <item>荤食为主</item>
+        <item>素食为主</item>
+        <item>嗜盐</item>
+        <item>嗜油</item>
+        <item>嗜糖</item>
+    </string-array>
+    <string-array name="array_physical_exercise_fre">
+        <item>每天</item>
+        <item>每周一次以上</item>
+        <item>偶尔</item>
+        <item>不锻炼</item>
+    </string-array>
+    <string-array name="array_old_sensibility">
+        <item>粗筛阴性</item>
+        <item>粗筛阳性</item>
+    </string-array>
+    <string-array name="array_old_cognizefun">
+        <item>粗筛阴性</item>
+        <item>粗筛阳性</item>
+    </string-array>
+    <string-array name="array_old_lifeself">
+        <item>可自理（0~3分）</item>
+        <item>轻度依赖（4~8分）</item>
+        <item>中度依赖（9~18分）</item>
+        <item>不能自理（≥19分）</item>
+    </string-array>
+    <string-array name="array_old_health_status">
+        <item>满意</item>
+        <item>基本满意</item>
+        <item>说不清楚</item>
+        <item>不太满意</item>
+        <item>不满意</item>
+    </string-array>
+    <string-array name="array_familys">
+        <item>无</item>
+        <item>高血压</item>
+        <item>糖尿病</item>
+        <item>冠心病</item>
+        <item>慢性阻塞性肺疾病</item>
+        <item>恶性肿瘤</item>
+        <item>脑卒中</item>
+        <item>重性精神疾病</item>
+        <item>结核病</item>
+        <item>肝炎</item>
+        <item>先天畸形</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="array_expose">
+        <item>无</item>
+        <item>化学品</item>
+        <item>毒物</item>
+        <item> 射线</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="array_deformity">
+        <item>无残疾</item>
+        <item>视力残疾</item>
+        <item>听力残疾</item>
+        <item>言语残疾</item>
+        <item>肢体残疾</item>
+        <item>智力残疾</item>
+        <item>精神残疾</item>
+        <item>其他残疾</item>
+    </string-array>
+    <string-array name="array_toilet">
+        <item>卫生厕所</item>
+        <item>一格或二格粪池式</item>
+        <item>马桶</item>
+        <item>露天粪坑</item>
+        <item>简易棚厕</item>
+    </string-array>
+    <string-array name="array_livestock_column">
+        <item>单设</item>
+        <item>室内</item>
+        <item>室外</item>
+    </string-array>
+    <string-array name="array_drinking_water">
+        <item>自来水</item>
+        <item>经净化过滤的水</item>
+        <item>井水</item>
+        <item>河湖水</item>
+        <item>塘水</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="array_exhaust_equipment">
+        <item>无</item>
+        <item>油烟机</item>
+        <item>换气扇</item>
+        <item>烟囱</item>
+    </string-array>
+    <string-array name="array_fuel_type">
+        <item>液化气</item>
+        <item>煤</item>
+        <item>天然气</item>
+        <item>沼气</item>
+        <item>柴火</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="array_disease">
+        <item>无</item>
+        <item>高血压</item>
+        <item>糖尿病</item>
+        <item>冠心病</item>
+        <item>慢性阻塞性肺疾病</item>
+        <item>恶性肿瘤</item>
+        <item>脑卒中</item>
+        <item>重性精神疾病</item>
+        <item>结核病</item>
+        <item>肝炎</item>
+        <item>其他法定传染病</item>
+        <item>其它</item>
+        <item>肺心病</item>
+        <item>职业病</item>
+    </string-array>
+    <string-array name="array_irritability">
+        <item>无</item>
+        <item>青霉素</item>
+        <item>磺胺</item>
+        <item>链霉素</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="array_pay_type">
+        <item>城镇职工基本医疗保险</item>
+        <item>城镇居民基本医疗保险</item>
+        <item>新型农村合作医疗</item>
+        <item>贫困救助</item>
+        <item>商业医疗保险</item>
+        <item>全公费</item>
+        <item>全自费</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="array_job_type">
+        <item>国家机关、党群组织、企业、事业单位负责人</item>
+        <item>专业技术人员</item>
+        <item>办事人员和有关人员</item>
+        <item>商业、服务员人员</item>
+        <item>农、林、牧、渔、水利业生产人员</item>
+        <item>生产、运输设备操作人员及有关人员</item>
+        <item>军人</item>
+        <item>不便分类的其他从业人员</item>
+    </string-array>
+    <string-array name="array_blood_rh">
+        <item>否</item>
+        <item>是</item>
+        <item>未知</item>
+    </string-array>
+    <string-array name="array_marriage_code">
+        <item>未婚</item>
+        <item>已婚</item>
+        <item>丧偶</item>
+        <item>离婚</item>
+        <item>未知</item>
+    </string-array>
+    <string-array name="array_education_code">
+        <item>文盲及半文盲</item>
+        <item>小学</item>
+        <item>初中</item>
+        <item>高中/技校/中专</item>
+        <item>大学专科及以上</item>
+        <item>未知</item>
+    </string-array>
+    <string-array name="array_blood_type">
+        <item>A型</item>
+        <item>B型</item>
+        <item>O型</item>
+        <item>AB型</item>
+        <item>未知</item>
+    </string-array>
+    <string-array name="array_nation_code">
+        <item>汉族</item>
+        <item>壮族</item>
+        <item>满族</item>
+        <item>回族</item>
+        <item>苗族</item>
+        <item>维吾尔族</item>
+        <item>土家族</item>
+        <item>彝族</item>
+        <item>蒙古族</item>
+        <item>藏族</item>
+        <item>布依族</item>
+        <item>侗族</item>
+        <item>瑶族</item>
+        <item>朝鲜族</item>
+        <item>白族</item>
+        <item>哈尼族</item>
+        <item>哈萨克族</item>
+        <item>黎族</item>
+        <item>傣族</item>
+        <item>畲族</item>
+        <item>傈僳族</item>
+        <item>仡佬族</item>
+        <item>东乡族</item>
+        <item>高山族</item>
+        <item>拉祜族</item>
+        <item>水族</item>
+        <item>佤族</item>
+        <item>纳西族</item>
+        <item>羌族</item>
+        <item>土族</item>
+        <item>仫佬族</item>
+        <item>锡伯族</item>
+        <item>柯尔克孜族</item>
+        <item>达斡尔族</item>
+        <item>景颇族</item>
+        <item>毛南族</item>
+        <item>撒拉族</item>
+        <item>布朗族</item>
+        <item>塔吉克族</item>
+        <item>阿昌族</item>
+        <item>普米族</item>
+        <item>鄂温克族</item>
+        <item>怒族</item>
+        <item>京族</item>
+        <item>基诺族</item>
+        <item>德昂族</item>
+        <item>保安族</item>
+        <item>俄罗斯族</item>
+        <item>裕固族</item>
+        <item>乌孜别克族</item>
+        <item>门巴族</item>
+        <item>鄂伦春族</item>
+        <item>独龙族</item>
+        <item>塔塔尔族</item>
+        <item>赫哲族</item>
+        <item>珞巴族</item>
+    </string-array>
+    <string-array name="array_sex">
+        <item>未知</item>
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <string-array name="array_census_register">
+        <item>户籍</item>
+        <item>非户籍</item>
+    </string-array>
+    <string-array name="array_complexion36">
+        <item></item>
+        <item>红润</item>
+        <item>异常</item>
+    </string-array>
+    <string-array name="array_pneumonia_memo">
+        <item>无</item>
+        <item>肺炎</item>
+        <item>麻疹</item>
+        <item>贫血</item>
+        <item>营养不良</item>
+        <item>佝偻病</item>
+    </string-array>
+    <string-array name="array_physique">
+        <item>正常</item>
+        <item>低体重</item>
+        <item>消瘦</item>
+        <item>发育迟缓</item>
+        <item>超重</item>
+    </string-array>
+    <string-array name="array_current_agey">
+        <item></item>
+        <item>3岁</item>
+        <item>4岁</item>
+        <item>5岁</item>
+        <item>6岁</item>
+    </string-array>
+    <string-array name="array_guidance_con">
+        <item>科学喂养</item>
+        <item>生长发育</item>
+        <item>疾病预防</item>
+        <item>预防意外伤害</item>
+        <item>口腔保健</item>
+    </string-array>
+    <string-array name="array_rachitis_sign">
+        <item>无</item>
+        <item>颅骨软化</item>
+        <item>方颅</item>
+        <item>枕秃</item>
+        <item>肋串珠</item>
+        <item>肋外翻</item>
+        <item>肋软骨沟</item>
+        <item>鸡胸</item>
+        <item>手镯征</item>
+        <item>O型腿</item>
+        <item>X型腿</item>
+    </string-array>
+    <string-array name="array_rachitis_symptom">
+        <item>无</item>
+        <item>夜惊</item>
+        <item>多汗</item>
+        <item>烦躁</item>
+    </string-array>
+    <string-array name="array_fontanel_close">
+        <item></item>
+        <item>闭合</item>
+        <item>未闭合</item>
+    </string-array>
+    <string-array name="array_between_disease">
+        <item></item>
+        <item>未患病</item>
+        <item>患病</item>
+    </string-array>
+    <string-array name="array_growth">
+        <item></item>
+        <item>通过</item>
+        <item>未通过</item>
+    </string-array>
+    <string-array name="array_weight_grade">
+        <item></item>
+        <item>上</item>
+        <item>中</item>
+        <item>下</item>
+    </string-array>
+    <string-array name="array_current_agem1">
+        <item></item>
+        <item>满月</item>
+        <item>3月</item>
+        <item>6月</item>
+        <item>8月</item>
+    </string-array>
+    <string-array name="array_child_visit">
+        <item>儿童-新生儿</item>
+        <item>儿童-一岁以内</item>
+        <item>儿童-1~2岁</item>
+        <item>儿童-3~6岁</item>
+    </string-array>
+    <string-array name="array_guidance_memo">
+        <item>喂养指导</item>
+        <item>发育指导</item>
+        <item>防病指导</item>
+        <item>预防伤害指导</item>
+        <item>口腔保健指导</item>
+    </string-array>
+    <string-array name="array_fontanel_status">
+        <item></item>
+        <item>正常</item>
+        <item>膨隆</item>
+        <item>凹陷</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="array_complexion">
+        <item></item>
+        <item>红润</item>
+        <item>黄染</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="array_jaundice_part">
+        <item></item>
+        <item>面部</item>
+        <item>躯干</item>
+        <item>四肢</item>
+        <item>手足</item>
+    </string-array>
+    <string-array name="array_defecate">
+        <item></item>
+        <item>糊状</item>
+        <item>稀</item>
+    </string-array>
+    <string-array name="array_feed_manner_code">
+        <item></item>
+        <item>纯母乳</item>
+        <item>混合</item>
+        <item>人工</item>
+    </string-array>
+    <string-array name="array_hearing_screen">
+        <item></item>
+        <item>通过</item>
+        <item>未通过</item>
+        <item>未筛查</item>
+        <item>不详</item>
+    </string-array>
+    <string-array name="array_grade">
+        <item></item>
+        <item>1分</item>
+        <item>5分</item>
+        <item>不详</item>
+    </string-array>
+    <string-array name="array_gdisease">
+        <item></item>
+        <item>糖尿病</item>
+        <item>妊娠期高血压</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="array_after42_guidance">
+        <item>性保健</item>
+        <item>避孕</item>
+        <item>纯母乳喂养6个月</item>
+        <item>其它</item>
+    </string-array>
+    <string-array name="array_after42_transfert_mark">
+        <item></item>
+        <item>已恢复</item>
+        <item>未恢复</item>
+    </string-array>
+    <string-array name="array_deal_with">
+        <item></item>
+        <item>结案</item>
+        <item>转诊</item>
+    </string-array>
+    <string-array name="array_guidance_after">
+        <item>个人卫生</item>
+        <item>心理</item>
+        <item>营养</item>
+        <item>母乳喂养</item>
+        <item>新生儿护理与喂养</item>
+    </string-array>
+    <string-array name="array_guidance">
+        <item>个人卫生</item>
+        <item>膳食</item>
+        <item>心理</item>
+        <item>运动</item>
+        <item>自我监护</item>
+        <item>分娩准备</item>
+        <item>母乳喂养</item>
+    </string-array>
+    <string-array name="array_pregnant">
+        <item>第1次产前随访</item>
+        <item>产前2~5次随访</item>
+        <item>产后随访</item>
+        <item>产后42天随访</item>
+    </string-array>
+    <string-array name="array_fetal_position">
+        <item>头位</item>
+        <item>臀位</item>
+        <item>横位</item>
+    </string-array>
+    <string-array name="dorsalis_pedis_array">
+        <item></item>
+        <item>未触及</item>
+        <item>触及</item>
+    </string-array>
+    <string-array name="absorbsalt_case">
+        <item></item>
+        <item>轻</item>
+        <item>中</item>
+        <item>重</item>
+    </string-array>
+    <string-array name="glucopenia">
+        <item></item>
+        <item>无</item>
+        <item>偶尔</item>
+        <item>频繁</item>
+    </string-array>
+    <string-array name="array_class">
+        <item></item>
+        <item>良好</item>
+        <item>一般</item>
+        <item>差</item>
+    </string-array>
+    <string-array name="array_rule_dose">
+        <item></item>
+        <item>规律服药</item>
+        <item>间断服药</item>
+        <item>不服药</item>
+    </string-array>
+    <string-array name="array_visit_appraise">
+        <item></item>
+        <item>控制满意</item>
+        <item>控制不满意</item>
+        <item>副作用</item>
+        <item>并发症</item>
+    </string-array>
+    <string-array name="array_visit_moding">
+        <item></item>
+        <item>门诊</item>
+        <item>家庭</item>
+        <item>电话</item>
+        <item>自测</item>
+    </string-array>
+    <string-array name="drug2_dosage_unit">
+        <item></item>
+        <item>mg</item>
+        <item>mm</item>
+        <item>片</item>
+        <item>粒</item>
+    </string-array>
+    <string-array name="array_yes_no">
+        <item></item>
+        <item>有</item>
+        <item>无</item>
+    </string-array>
+    <string-array name="array_no_yes">
+        <item></item>
+        <item>无</item>
+        <item>有</item>
+    </string-array>
+    <!-- 危险性 -->
+    <string-array name="danger_grade_array">
+        <item></item>
+        <item>0级</item>
+        <item>1级</item>
+        <item>2级</item>
+        <item>3级</item>
+        <item>4级</item>
+        <item>5级</item>
+    </string-array>
+    <string-array name="insight_appraise_array">
+        <item></item>
+        <item>自知力完全</item>
+        <item>自知力不全</item>
+        <item>自知力缺失</item>
+    </string-array>
+    <!-- 住院情况 -->
+    <string-array name="array_in_hospital">
+        <item></item>
+        <item>从未住院</item>
+        <item>目前正在住院</item>
+        <item>既往住院，现未住院</item>
+    </string-array>
+    <string-array name="array_anamnesis_tr_type">
+        <item></item>
+        <item>痊愈</item>
+        <item>好转</item>
+        <item>无变化</item>
+        <item>加重</item>
+    </string-array>
+    <string-array name="array_visit_class">
+        <item></item>
+        <item>稳定</item>
+        <item>不稳定</item>
+        <item>基本稳定</item>
+    </string-array>
+    <string-array name="array_captivity">
+        <item></item>
+        <item>无关锁</item>
+        <item>关锁</item>
+        <item>关锁用已解除</item>
+    </string-array>
+    <string-array name="array_work">
+        <item></item>
+        <item>良好</item>
+        <item>一般</item>
+        <item>较差</item>
+        <item>此项不适用</item>
+    </string-array>
+    <string-array name="array_exception">
+        <item></item>
+        <item>未见异常</item>
+        <item>异常</item>
+    </string-array>
+    <string-array name="array_qualitative_name">
+        <item></item>
+        <item>-</item>
+        <item>±</item>
+        <item>+</item>
+        <item>++</item>
+        <item>+++</item>
+        <item>++++</item>
+    </string-array>
+    <string-array name="array_occultblood_name">
+        <item></item>
+        <item>-</item>
+        <item>±</item>
+        <item>+</item>
+        <item>++</item>
+        <item>+++</item>
+        <item>++++</item>
+        <item>++++以上</item>
+    </string-array>
+    <string-array name="array_masculine">
+        <item></item>
+        <item>阴性</item>
+        <item>阳性</item>
+    </string-array>
+    <string-array name="array_vagina_cleanliness">
+        <item></item>
+        <item>Ⅰ度</item>
+        <item>Ⅱ度</item>
+        <item>Ⅲ度</item>
+        <item>Ⅳ度</item>
+    </string-array>
+    <string-array name="array_anamnesis">
+        <item>无</item>
+        <item>心脏病</item>
+        <item>肾脏疾病</item>
+        <item>肝脏疾病</item>
+        <item>高血压</item>
+        <item>贫血</item>
+        <item>糖尿病</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="array_family_disease">
+        <item>遗传性疾病史</item>
+        <item>精神疾病史</item>
+        <item>其它</item>
+    </string-array>
+    <string-array name="array_personal_history">
+        <item>吸烟</item>
+        <item>饮酒</item>
+        <item>服用药物</item>
+        <item>接触有毒有害物质</item>
+        <item>接触放射线</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="array_cunt_secretion">
+        <item>未见异常</item>
+        <item>滴虫</item>
+        <item>假丝酵母菌</item>
+        <item>其它</item>
+    </string-array>
+    <string-array name="array_health_guide">
+        <item>个人卫生</item>
+        <item>心理</item>
+        <item>营养</item>
+        <item>避免致畸因素和疾病对胚胎的不良影响</item>
+        <item>产前筛查宣传告知</item>
+        <item>其他</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

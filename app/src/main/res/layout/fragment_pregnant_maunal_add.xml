@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_action_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/x20"
+            android:paddingBottom="@dimen/x10"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10">
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/manual_ehr_id"/>
+
+                <EditText
+                    android:id="@+id/manual_ehr_id"
+                    style="@style/edit"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/menses_over_date"/>
+
+                <EditText
+                    android:editable="false"
+                    android:id="@+id/menses_over_date"
+                    style="@style/edit"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/due_birth_date"/>
+
+                <EditText
+                    android:editable="false"
+                    android:id="@+id/due_birth_date"
+                    style="@style/edit"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/create_week"/>
+
+                <EditText
+                    android:id="@+id/create_week"
+                    style="@style/edit"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/create_week_days"/>
+
+                <EditText
+                    android:id="@+id/create_week_days"
+                    style="@style/edit"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/is_high_risk"/>
+
+                <Spinner
+                    android:entries="@array/array_yes_no"
+                    android:id="@+id/is_high_risk"
+                    style="@style/evnSpinner"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/high_score"/>
+
+                <EditText
+                    android:id="@+id/high_score"
+                    style="@style/edit"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

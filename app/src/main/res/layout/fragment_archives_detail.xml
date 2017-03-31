@@ -1,0 +1,225 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hypertension_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_action_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginRight="@dimen/x10"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/name" />
+
+                <EditText
+                    android:id="@+id/tv_name"
+                    style="@style/edit"
+                    android:editable="false" />
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/resident" />
+
+                <EditText
+                    android:id="@+id/tv_census_register"
+                    style="@style/edit"
+                    android:editable="false" />
+            </LinearLayout>
+
+            <!-- 档案号 -->
+
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/ehr_id" />
+
+                <EditText
+                    android:id="@+id/tv_ehr_id"
+                    style="@style/edit"
+                    android:editable="false" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/crid_code" />
+
+                <EditText
+                    android:id="@+id/tv_crid_code"
+                    style="@style/edit"
+                    android:editable="false" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/work_unit" />
+
+                <EditText
+                    android:id="@+id/tv_work_unit"
+                    style="@style/edit"
+                    android:editable="false" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/address" />
+
+                <EditText
+                    android:id="@+id/tv_address"
+                    style="@style/edit"
+                    android:editable="false" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/telephone" />
+
+                <EditText
+                    android:id="@+id/tv_telephone"
+                    style="@style/edit"
+                    android:editable="false" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/layout_visit_stysle">
+
+                <TextView
+                    style="@style/evnAqTextView"
+                    android:text="@string/cr_org_code" />
+
+                <EditText
+                    android:id="@+id/tv_cr_org_code"
+                    style="@style/edit"
+                    android:editable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y10"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/table4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*">
+
+                    <TableRow android:clipToPadding="true">
+
+                        <LinearLayout
+                            android:id="@+id/ll_hypertension"
+                            android:layout_height="@dimen/y25"
+                            android:layout_margin="@dimen/x2"
+                            android:background="@drawable/selector_button_active"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/hypertension_visit"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/x14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_diabetes"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/x2"
+                            android:background="@drawable/selector_button_active"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/diabetes_visit"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/x14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_mental_illness"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/x2"
+                            android:background="@drawable/selector_button_active"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/psychosis_visit"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/x14" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow android:clipToPadding="true">
+
+                        <LinearLayout
+                            android:id="@+id/ll_maternal"
+                            android:layout_height="@dimen/y25"
+                            android:layout_margin="@dimen/x2"
+                            android:background="@drawable/selector_button_active"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pregnant_visit"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/x14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_children"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/x2"
+                            android:background="@drawable/selector_button_active"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/child_visit"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/x14" />
+                        </LinearLayout>
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvMedicalEntry"
+                style="@style/BlueButton"
+                android:layout_marginTop="@dimen/y5"
+                android:text="@string/medicalEntry" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
