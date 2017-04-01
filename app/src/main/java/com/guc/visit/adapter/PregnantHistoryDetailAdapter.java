@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.guc.visit.R;
 import com.guc.visit.base.GucBaseAdapter;
 import com.guc.visit.domain.PregnantInDTO;
+import com.guc.visit.utils.StrUtil;
 
 import java.util.ArrayList;
 
@@ -40,7 +41,7 @@ public class PregnantHistoryDetailAdapter extends GucBaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
         PregnantInDTO dto = data.get(position);
-        viewHolder.visit_date.setText(dto.getVisit_date());
+        viewHolder.visit_date.setText(StrUtil.getFormatDateStr(dto.getVisit_date()));
         viewHolder.doctor.setText(dto.getDoctor());
         viewHolder.drug.setText(dto.getDrug());
         return convertView;

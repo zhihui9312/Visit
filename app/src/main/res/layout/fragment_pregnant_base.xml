@@ -5,112 +5,112 @@
               android:padding="@dimen/x10"
               android:orientation="vertical">
 
-    <LinearLayout style="@style/layout_visit_stysle">
+    <LinearLayout style="@style/LayoutAline">
 
         <TextView
-            style="@style/evnAqTextView"
+            style="@style/SmallTextView"
             android:text="@string/name"/>
 
         <EditText
             android:id="@+id/name"
-            style="@style/edit"
+            style="@style/SmallEditText"
             android:editable="false"/>
 
         <TextView
-            style="@style/evnAqTextView"
+            style="@style/SmallTextView"
             android:text="@string/sex"/>
 
         <EditText
             android:id="@+id/sex"
-            style="@style/edit"
+            style="@style/SmallEditText"
             android:editable="false"/>
     </LinearLayout>
 
-    <LinearLayout style="@style/layout_visit_stysle">
+    <LinearLayout style="@style/LayoutAline">
 
         <TextView
-            style="@style/evnAqTextView"
+            style="@style/SmallTextView"
             android:text="@string/menses_over_date"/>
 
         <EditText
             android:id="@+id/menses_over_date"
-            style="@style/edit"
+            style="@style/SmallEditText"
             android:editable="false"/>
 
     </LinearLayout>
 
-    <LinearLayout style="@style/layout_visit_stysle">
+    <LinearLayout style="@style/LayoutAline">
 
         <TextView
-            style="@style/evnAqTextView"
+            style="@style/SmallTextView"
             android:text="@string/is_high_risk"/>
 
         <EditText
             android:id="@+id/is_high_risk"
-            style="@style/edit"
+            style="@style/SmallEditText"
             android:editable="false"/>
 
         <TextView
-            style="@style/evnAqTextView"
+            style="@style/SmallTextView"
             android:text="@string/high_score"/>
 
         <EditText
             android:id="@+id/high_score"
-            style="@style/edit"
+            style="@style/SmallEditText"
             android:editable="false"/>
 
     </LinearLayout>
-    <LinearLayout style="@style/layout_visit_stysle">
+    <LinearLayout style="@style/LayoutAline">
 
         <TextView
-            style="@style/evnAqTextView"
+            style="@style/SmallTextView"
             android:text="@string/create_week_days"/>
 
         <EditText
             android:id="@+id/create_week_days"
-            style="@style/edit"
+            style="@style/SmallEditText"
             android:editable="false"/>
 
         <TextView
-            style="@style/evnAqTextView"
+            style="@style/SmallTextView"
             android:text="@string/create_week"/>
 
         <EditText
             android:id="@+id/create_week"
-            style="@style/edit"
+            style="@style/SmallEditText"
             android:editable="false"/>
 
     </LinearLayout>
-    <LinearLayout style="@style/layout_visit_stysle">
+    <LinearLayout style="@style/LayoutAline">
 
         <TextView
-            style="@style/evnAqTextView"
+            style="@style/SmallTextView"
             android:text="@string/blood_rh"/>
 
         <EditText
             android:id="@+id/blood_rh"
-            style="@style/edit"
+            style="@style/SmallEditText"
             android:editable="false"/>
 
         <TextView
-            style="@style/evnAqTextView"
+            style="@style/SmallTextView"
             android:text="@string/birth_date"/>
 
         <EditText
             android:id="@+id/birth_date"
-            style="@style/edit"
+            style="@style/SmallEditText"
             android:editable="false"/>
 
     </LinearLayout>
-    <LinearLayout style="@style/layout_visit_stysle">
+    <LinearLayout style="@style/LayoutAline">
 
         <TextView
-            style="@style/evnAqTextView"
+            style="@style/SmallTextView"
             android:text="@string/address"/>
 
         <EditText
             android:id="@+id/address_str"
-            style="@style/edit"
+            style="@style/SmallEditText"
             android:editable="false"/>
 
     </LinearLayout>

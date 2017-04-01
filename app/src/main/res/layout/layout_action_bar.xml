@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/y27"
-                android:background="@color/holo_blue_bright">
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y28"
+    android:background="@color/holo_blue_bright">
 
     <LinearLayout
         android:id="@+id/ll_back"
@@ -16,9 +16,9 @@
 
         <ImageView
             android:id="@+id/back"
-            android:layout_width="@dimen/x22"
-            android:layout_height="@dimen/x20"
-            android:src="@mipmap/ic_back"/>
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/y10"
+            android:src="@mipmap/ic_back" />
 
         <TextView
             android:id="@+id/tv_back"
@@ -30,8 +30,8 @@
             android:maxLines="1"
             android:text=""
             android:textColor="@color/white"
-            android:textSize="@dimen/x16"
-            android:textStyle="normal"/>
+            android:textSize="@dimen/x14"
+            android:textStyle="normal" />
     </LinearLayout>
 
 
@@ -48,7 +48,7 @@
         android:maxLines="1"
         android:text=""
         android:textColor="@color/white"
-        android:textSize="@dimen/x16"/>
+        android:textSize="@dimen/x14" />
 
     <LinearLayout
         android:id="@+id/right_layout"
@@ -63,20 +63,19 @@
         <ImageView
             android:id="@+id/iv_add"
             android:layout_width="@dimen/x20"
-            android:layout_height="@dimen/x20"
+            android:layout_height="@dimen/y10"
             android:layout_marginEnd="@dimen/x5"
             android:layout_marginRight="@dimen/x10"
-            android:src="@mipmap/ic_add"/>
+            android:src="@mipmap/ic_add" />
 
         <TextView
-
             android:id="@+id/tv_right"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginRight="@dimen/x10"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/x16"/>
+            android:textSize="@dimen/x14" />
     </LinearLayout>
 
 </RelativeLayout>

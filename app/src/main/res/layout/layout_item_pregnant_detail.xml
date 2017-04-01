@@ -1,51 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/x10">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingEnd="0dp"
-        android:paddingLeft="@dimen/x10"
-        android:paddingRight="0dp"
-        android:paddingStart="@dimen/x10"
-        android:paddingTop="@dimen/x10">
+    <LinearLayout style="@style/LayoutAline">
+
 
         <TextView
-            android:textSize="@dimen/x17"
-            android:id="@+id/visit_date"
-            style="@style/evnAqTextView"
-            android:textStyle="bold"/>
-
-        <TextView
-            style="@style/evnAqTextView"
-            android:text="医师："/>
+            style="@style/SmallTextView"
+            android:text="医师：" />
 
         <TextView
             android:id="@+id/doctor"
-            style="@style/evnAqTextView"/>
-    </LinearLayout>
+            style="@style/SmallTextView" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="@dimen/x10"
-        android:paddingEnd="@dimen/x10"
-        android:paddingLeft="@dimen/x10"
-        android:paddingRight="0dp"
-        android:paddingStart="@dimen/x10">
+        <include layout="@layout/layout_interval" />
 
         <TextView
-            style="@style/evnAqTextView"
-            android:text="用药详情："/>
+            android:id="@+id/visit_date"
+            style="@style/SmallTextView" />
+    </LinearLayout>
+
+
+    <LinearLayout style="@style/LayoutAline">
+
+        <TextView
+            style="@style/SmallTextView"
+            android:text="用药详情：" />
 
         <TextView
             android:id="@+id/drug"
-            style="@style/evnAqTextView"/>
+            style="@style/SmallTextView" />
     </LinearLayout>
 </LinearLayout>
 

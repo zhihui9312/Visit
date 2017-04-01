@@ -19,98 +19,98 @@
             android:layout_marginRight="@dimen/x10"
             android:orientation="vertical">
 
-            <LinearLayout style="@style/layout_visit_stysle">
+            <LinearLayout style="@style/LayoutAline">
 
                 <TextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/name" />
 
                 <EditText
                     android:id="@+id/tv_name"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
 
                 <TextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/resident" />
 
                 <EditText
                     android:id="@+id/tv_census_register"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
             </LinearLayout>
 
             <!-- 档案号 -->
 
-            <LinearLayout style="@style/layout_visit_stysle">
+            <LinearLayout style="@style/LayoutAline">
 
                 <TextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/ehr_id" />
 
                 <EditText
                     android:id="@+id/tv_ehr_id"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
             </LinearLayout>
 
-            <LinearLayout style="@style/layout_visit_stysle">
+            <LinearLayout style="@style/LayoutAline">
 
                 <TextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/crid_code" />
 
                 <EditText
                     android:id="@+id/tv_crid_code"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
             </LinearLayout>
 
-            <LinearLayout style="@style/layout_visit_stysle">
+            <LinearLayout style="@style/LayoutAline">
 
                 <TextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/work_unit" />
 
                 <EditText
                     android:id="@+id/tv_work_unit"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
             </LinearLayout>
 
-            <LinearLayout style="@style/layout_visit_stysle">
+            <LinearLayout style="@style/LayoutAline">
 
                 <TextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/address" />
 
                 <EditText
                     android:id="@+id/tv_address"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
             </LinearLayout>
 
-            <LinearLayout style="@style/layout_visit_stysle">
+            <LinearLayout style="@style/LayoutAline">
 
                 <TextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/telephone" />
 
                 <EditText
                     android:id="@+id/tv_telephone"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
             </LinearLayout>
 
-            <LinearLayout style="@style/layout_visit_stysle">
+            <LinearLayout style="@style/LayoutAline">
 
                 <TextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/cr_org_code" />
 
                 <EditText
                     android:id="@+id/tv_cr_org_code"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
             </LinearLayout>
 

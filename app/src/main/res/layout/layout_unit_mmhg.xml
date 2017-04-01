@@ -5,7 +5,7 @@
               android:orientation="vertical">
 
     <TextView
-        style="@style/evnAqTextView"
+        style="@style/SmallTextView"
         android:gravity="bottom"
         android:layout_height="match_parent"
         android:layout_gravity="bottom"

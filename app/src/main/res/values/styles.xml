@@ -8,79 +8,23 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="evnAqTextView">
+    <style name="SmallTextView">
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">@dimen/x12</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_gravity">center</item>
-    </style>
-    <!-- Aq随访内容行布局样式layout -->
-    <!--<style name="layout_Aqvisit_stysle" parent="@style/envText">-->
-        <!--<item name="android:layout_width">match_parent</item>-->
-        <!--<item name="android:layout_height">wrap_content</item>-->
-        <!--<item name="android:gravity">center_vertical</item>-->
-        <!--<item name="android:orientation">horizontal</item>-->
-        <!--<item name="android:layout_marginBottom">0dp</item>-->
-        <!--<item name="android:layout_marginLeft">0dp</item>-->
-        <!--<item name="android:layout_marginRight">0dp</item>-->
-        <!--<item name="android:layout_marginTop">0dp</item>-->
-    <!--</style>-->
-    <!-- 文本编辑框 -->
-    <style name="evnAqTextEdit" parent="@style/evnAqTextView">
-
-        <!--<item name="android:background">@drawable/selector_edit_bg</item>-->
-    </style>
-    <!-- 文本字体样式 -->
-    <style name="envText" parent="@android:style/TextAppearance.Widget.TextView">
-        <item name="android:textSize">@dimen/x15</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:layout_gravity">left|center_vertical</item>
     </style>
 
-    <style name="envRow" parent="@style/envText">
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:textColor">@color/black</item>
+    <style name="SmallEditText" parent="@style/SmallTextView">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
     </style>
 
-    <style name="evnNextOpen" parent="@style/envText">
-        <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">35dp</item>
-        <item name="android:paddingLeft">5dp</item>
-        <item name="android:paddingRight">6dp</item>
-        <item name="android:paddingTop">0dp</item>
-        <item name="android:paddingBottom">0dp</item>
-        <item name="android:textStyle">normal</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:background">@drawable/selector_spinner</item>
-    </style>
-
-    <style name="evnAqTextViewUnit" parent="@style/envText">
-        <item name="android:textColor">@color/darker_gray</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:layout_alignParentRight">true</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textStyle">normal</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">match_parent</item>
-    </style>
-
-    <style name="layout_visit_stysle">
+    <style name="LayoutAline">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">horizontal</item>
-    </style>
-
-    <style name="evnSpinner" parent="@style/evnAqTextView"></style>
-
-    <style name="edit" parent="@style/evnAqTextView">
-        <item name="android:layout_weight">1</item>
-        <item name="android:layout_width">0dp</item>
     </style>
 
     <style name="BlueButton">
@@ -89,6 +33,49 @@
         <item name="android:background">@drawable/selector_blue</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">@dimen/x14</item>
+        <item name="android:textSize">@dimen/x13</item>
     </style>
+
+    <style name="evnSpinner" parent="@style/SmallTextView"></style>
+
+    <!--&lt;!&ndash; 文本字体样式 &ndash;&gt;-->
+    <!--<style name="envText" parent="@android:style/TextAppearance.Widget.TextView">-->
+    <!--<item name="android:textSize">@dimen/x15</item>-->
+    <!--<item name="android:textColor">@color/black</item>-->
+    <!--<item name="android:gravity">left|center_vertical</item>-->
+    <!--</style>-->
+
+    <!--<style name="envRow" parent="@style/envText">-->
+    <!--<item name="android:layout_height">wrap_content</item>-->
+    <!--<item name="android:textSize">18sp</item>-->
+    <!--<item name="android:singleLine">true</item>-->
+    <!--<item name="android:textColor">@color/black</item>-->
+    <!--</style>-->
+
+    <!--<style name="evnNextOpen" parent="@style/envText">-->
+    <!--<item name="android:textSize">18sp</item>-->
+    <!--<item name="android:textColor">@color/black</item>-->
+    <!--<item name="android:layout_width">wrap_content</item>-->
+    <!--<item name="android:layout_height">35dp</item>-->
+    <!--<item name="android:paddingLeft">5dp</item>-->
+    <!--<item name="android:paddingRight">6dp</item>-->
+    <!--<item name="android:paddingTop">0dp</item>-->
+    <!--<item name="android:paddingBottom">0dp</item>-->
+    <!--<item name="android:textStyle">normal</item>-->
+    <!--<item name="android:singleLine">true</item>-->
+    <!--<item name="android:background">@drawable/selector_spinner</item>-->
+    <!--</style>-->
+
+    <!--<style name="evnAqTextViewUnit" parent="@style/envText">-->
+    <!--<item name="android:textColor">@color/darker_gray</item>-->
+    <!--<item name="android:textSize">18sp</item>-->
+    <!--<item name="android:layout_alignParentRight">true</item>-->
+    <!--<item name="android:gravity">center</item>-->
+    <!--<item name="android:textStyle">normal</item>-->
+    <!--<item name="android:singleLine">true</item>-->
+    <!--<item name="android:layout_width">wrap_content</item>-->
+    <!--<item name="android:layout_height">match_parent</item>-->
+    <!--</style>-->
+
+
 </resources>

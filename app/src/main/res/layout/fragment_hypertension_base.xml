@@ -15,25 +15,25 @@
             android:layout_height="@dimen/y30">
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:text="@string/name" />
 
             <EditText
                 android:id="@+id/tv_name"
-                style="@style/evnAqTextEdit"
+                style="@style/SmallEditText"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:editable="false"
                 android:textColor="@color/black" />
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:layout_marginLeft="5dp"
                 android:text="@string/sex" />
 
             <EditText
                 android:id="@+id/tv_sex"
-                style="@style/evnAqTextEdit"
+                style="@style/SmallEditText"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:editable="false"
@@ -46,25 +46,25 @@
             android:layout_height="@dimen/y30">
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:text="@string/birthday" />
 
             <EditText
                 android:id="@+id/tv_birth_date"
-                style="@style/evnAqTextEdit"
+                style="@style/SmallEditText"
                 android:layout_width="fill_parent"
                 android:layout_weight="2"
                 android:editable="false"
                 android:textColor="@color/black" />
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:layout_marginLeft="5dp"
                 android:text="@string/disease_status" />
 
             <EditText
                 android:id="@+id/tv_disease_status"
-                style="@style/evnAqTextEdit"
+                style="@style/SmallEditText"
                 android:layout_width="fill_parent"
                 android:layout_weight="2"
                 android:editable="false"
@@ -76,12 +76,12 @@
             android:layout_height="@dimen/y30">
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:text="@string/diagnose_date" />
 
             <EditText
                 android:id="@+id/tv_diagnose_date"
-                style="@style/evnAqTextEdit"
+                style="@style/SmallEditText"
                 android:layout_width="fill_parent"
                 android:editable="false"
                 android:textColor="@color/black" />
@@ -93,12 +93,12 @@
             android:layout_height="@dimen/y30">
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:text="@string/source_flag" />
 
             <EditText
                 android:id="@+id/tv_source_flag"
-                style="@style/evnAqTextEdit"
+                style="@style/SmallEditText"
                 android:layout_width="fill_parent"
                 android:editable="false"
                 android:textColor="@color/black" />
@@ -111,25 +111,25 @@
             android:layout_height="@dimen/y30">
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:text="@string/height" />
 
             <EditText
                 android:id="@+id/tv_height"
-                style="@style/evnAqTextEdit"
+                style="@style/SmallEditText"
                 android:layout_width="fill_parent"
                 android:layout_weight="2"
                 android:editable="false"
                 android:textColor="@color/black" />
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:layout_marginLeft="5dp"
                 android:text="@string/weight" />
 
             <EditText
                 android:id="@+id/tv_weight"
-                style="@style/evnAqTextEdit"
+                style="@style/SmallEditText"
                 android:layout_width="fill_parent"
                 android:layout_weight="2"
                 android:editable="false"
@@ -143,25 +143,25 @@
             android:layout_height="@dimen/y30">
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:text="@string/systolic_pressure" />
 
             <EditText
                 android:id="@+id/tv_systolic_pressure"
-                style="@style/evnAqTextEdit"
+                style="@style/SmallEditText"
                 android:layout_width="fill_parent"
                 android:layout_weight="2"
                 android:editable="false"
                 android:textColor="@color/black" />
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:layout_marginLeft="5dp"
                 android:text="@string/diastolic_pressure" />
 
             <EditText
                 android:id="@+id/tv_diastolic_pressure"
-                style="@style/evnAqTextEdit"
+                style="@style/SmallEditText"
                 android:layout_width="fill_parent"
                 android:layout_weight="2"
                 android:editable="false"

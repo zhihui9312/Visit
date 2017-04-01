@@ -11,26 +11,26 @@
 
         <!-- 姓名、性别、出生日期-->
 
-        <LinearLayout style="@style/layout_visit_stysle">
+        <LinearLayout style="@style/LayoutAline">
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:text="@string/name" />
 
             <EditText
                 android:id="@+id/name"
-                style="@style/edit"
+                style="@style/SmallEditText"
                 android:editable="false" />
 
             <include layout="@layout/layout_interval" />
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:text="@string/sex" />
 
             <EditText
                 android:id="@+id/sex"
-                style="@style/edit"
+                style="@style/SmallEditText"
                 android:editable="false" />
 
             <include layout="@layout/layout_interval" />
@@ -38,112 +38,112 @@
 
         </LinearLayout>
 
-        <LinearLayout style="@style/layout_visit_stysle">
+        <LinearLayout style="@style/LayoutAline">
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:text="@string/birthday" />
 
             <EditText
                 android:id="@+id/birth_date"
-                style="@style/edit"
+                style="@style/SmallEditText"
                 android:editable="false" />
         </LinearLayout>
         <!-- 疾病状态、地址-->
-        <LinearLayout style="@style/layout_visit_stysle">
+        <LinearLayout style="@style/LayoutAline">
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:text="@string/disease_status" />
 
             <EditText
                 android:id="@+id/disease_status"
-                style="@style/edit"
+                style="@style/SmallEditText"
                 android:editable="false" />
 
 
         </LinearLayout>
 
-        <LinearLayout style="@style/layout_visit_stysle">
+        <LinearLayout style="@style/LayoutAline">
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:text="@string/address" />
 
             <EditText
                 android:id="@+id/address_str"
-                style="@style/edit"
+                style="@style/SmallEditText"
                 android:editable="false" />
         </LinearLayout>
         <!-- 病例来源 -->
 
-        <LinearLayout style="@style/layout_visit_stysle">
+        <LinearLayout style="@style/LayoutAline">
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:text="@string/diagnose_time" />
 
             <EditText
                 android:id="@+id/diagnose_date"
-                style="@style/edit"
+                style="@style/SmallEditText"
                 android:editable="false" />
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:text="@string/case_source" />
 
             <EditText
                 android:id="@+id/source_flag"
-                style="@style/edit"
+                style="@style/SmallEditText"
                 android:editable="false" />
         </LinearLayout>
         <!-- 病例种类、身高 -->
 
-        <LinearLayout style="@style/layout_visit_stysle">
+        <LinearLayout style="@style/LayoutAline">
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:text="@string/case_type" />
 
             <EditText
                 android:id="@+id/diabetes_type"
-                style="@style/edit"
+                style="@style/SmallEditText"
                 android:editable="false" />
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:layout_marginLeft="5dp"
                 android:text="@string/height" />
 
             <EditText
                 android:id="@+id/height"
-                style="@style/edit"
+                style="@style/SmallEditText"
                 android:editable="false" />
         </LinearLayout>
         <!-- 糖尿病家族史 -->
 
-        <LinearLayout style="@style/layout_visit_stysle">
+        <LinearLayout style="@style/LayoutAline">
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:text="@string/diabetes_family_history" />
 
             <EditText
                 android:id="@+id/family_diabetes"
-                style="@style/edit"
+                style="@style/SmallEditText"
                 android:editable="false" />
         </LinearLayout>
         <!-- 建卡登记时血糖水平 -->
 
-        <LinearLayout style="@style/layout_visit_stysle">
+        <LinearLayout style="@style/LayoutAline">
 
             <TextView
-                style="@style/evnAqTextView"
+                style="@style/SmallTextView"
                 android:text="@string/cards_blood_glucose_level" />
 
             <EditText
                 android:id="@+id/blood_sugar"
-                style="@style/edit"
+                style="@style/SmallEditText"
                 android:editable="false" />
         </LinearLayout>
     </LinearLayout>

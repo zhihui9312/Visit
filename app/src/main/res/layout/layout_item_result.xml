@@ -8,15 +8,9 @@
 
     <TextView
         android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="@dimen/x15" />
+        style="@style/SmallTextView" />
 
     <TextView
         android:id="@+id/tv_address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="@dimen/x14" />
+        style="@style/SmallTextView" />
 </LinearLayout>

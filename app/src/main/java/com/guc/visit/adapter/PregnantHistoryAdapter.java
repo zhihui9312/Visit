@@ -11,6 +11,7 @@ import com.guc.visit.base.GucBaseAdapter;
 import com.guc.visit.domain.PregnantBaseDTO;
 import com.guc.visit.domain.PregnantInDTO;
 import com.guc.visit.domain.PregnantOutDTO;
+import com.guc.visit.utils.StrUtil;
 
 import org.w3c.dom.Text;
 
@@ -54,7 +55,7 @@ public class PregnantHistoryAdapter extends GucBaseAdapter {
         viewHolder.create_week_days.setText(dto.getCreate_week_days());
         viewHolder.high_score.setText(dto.getHigh_score());
         viewHolder.is_high_risk.setText(dto.getIs_high_risk());
-        viewHolder.due_birth_date.setText(dto.getDue_birth_date());
+        viewHolder.due_birth_date.setText(StrUtil.getFormatDateStr(dto.getDue_birth_date()));
         viewHolder.record_code.setText(dto.getRecord_code());
         return convertView;
     }

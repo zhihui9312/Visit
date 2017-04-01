@@ -20,20 +20,20 @@
             android:orientation="vertical">
 
             <!-- 姓名、性别 -->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/name" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/name"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
 
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/sex" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -42,89 +42,89 @@
                     android:entries="@array/array_sex" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!-- 出生日期 -->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/birth_date" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/birth_date"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!-- 身份证号-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/crid_code" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/crid_code"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!-- 工作单位-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/work_unit" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/work_unit"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!-- 本人电话-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/telephone" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/telephone"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!-- 联系姓名-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/telephone_linkman" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/telephone_linkman"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!-- 联系人电话-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/telephone_no" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/telephone_no"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!-- 建党机构-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/org_code" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/org_code"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!-- 户籍   民族-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/census_register" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -135,19 +135,19 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/nation_code" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/nation_code"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!-- 血型 rh阴阳性-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/blood_type" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -158,7 +158,7 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/blood_rh" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -168,10 +168,10 @@
             </android.support.v7.widget.LinearLayoutCompat>
 
             <!--文化程度  -->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/education_code" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -182,10 +182,10 @@
 
             </android.support.v7.widget.LinearLayoutCompat>
             <!--职业 -->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/job_type" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -196,10 +196,10 @@
             </android.support.v7.widget.LinearLayoutCompat>
 
             <!--婚姻状况 医疗费用支付方式 -->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/marriage_code" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -210,7 +210,7 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/pay_type" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -219,55 +219,55 @@
                     android:entries="@array/array_pay_type" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!--医疗费用支付方式 其他 -->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/pay_type_str" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/pay_type_str"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!--药物过敏史 -->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/irritability" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/irritability"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
 
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/other" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/irritability_other"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!--暴露史 -->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/expose" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/expose"
-                    style="@style/edit"/>
+                    style="@style/SmallEditText"/>
 
             </android.support.v7.widget.LinearLayoutCompat>
             <!--疾病1 -->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/disease1" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -278,35 +278,35 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/disease_time" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/disease1_time"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
             <android.support.v7.widget.LinearLayoutCompat
                 android:id="@+id/layout_disease1_other"
-                style="@style/layout_visit_stysle"
+                style="@style/LayoutAline"
                 android:visibility="gone">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/other" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/disease1_other"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
             <!--疾病2 -->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/disease2" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -318,35 +318,35 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/disease_time" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/disease2_time"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
             <android.support.v7.widget.LinearLayoutCompat
                 android:id="@+id/layout_disease2_other"
-                style="@style/layout_visit_stysle"
+                style="@style/LayoutAline"
                 android:visibility="gone">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/other" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/disease2_other"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
 
             <!--疾病3 -->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/disease3" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -358,35 +358,35 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/disease_time" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/disease3_time"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
             <android.support.v7.widget.LinearLayoutCompat
                 android:id="@+id/layout_disease3_other"
-                style="@style/layout_visit_stysle"
+                style="@style/LayoutAline"
                 android:visibility="gone">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/other" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/disease3_other"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
 
             <!--疾病4 -->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/disease4" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -398,34 +398,34 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/disease_time" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/disease4_time"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
             <android.support.v7.widget.LinearLayoutCompat
                 android:id="@+id/layout_disease4_other"
-                style="@style/layout_visit_stysle"
+                style="@style/LayoutAline"
                 android:visibility="gone">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/other" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/disease4_other"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!--疾病5 -->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/disease5" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -437,35 +437,35 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/disease_time" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/disease5_time"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
             <android.support.v7.widget.LinearLayoutCompat
                 android:id="@+id/layout_disease5_other"
-                style="@style/layout_visit_stysle"
+                style="@style/LayoutAline"
                 android:visibility="gone">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/other" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/disease5_other"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
 
             <!--疾病6 -->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/disease6" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -477,34 +477,34 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/disease_time" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/disease6_time"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
             <android.support.v7.widget.LinearLayoutCompat
                 android:id="@+id/layout_disease6_other"
-                style="@style/layout_visit_stysle"
+                style="@style/LayoutAline"
                 android:visibility="gone">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/other" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/disease6_other"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!--手术1-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/operation1" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -516,31 +516,31 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/time" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/operation1_time"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/operation_name" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/operation1_name"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!--手术2-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/operation2" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -552,32 +552,32 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/time" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/operation2_time"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/operation_name" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/operation2_name"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
 
             <!--外伤1-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/trauma1" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -589,32 +589,32 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/time" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/trauma1_time"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/trauma_name" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/trauma1_name"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
 
             <!--外伤2-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/trauma2" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -626,32 +626,32 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/time" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/trauma2_time"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/trauma_name" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/trauma2_name"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
 
             <!--输血1-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/transfuse1" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -663,31 +663,31 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/time" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/transfuse1_time"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/reason" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/transfuse1_name"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!--输血2-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/transfuse2" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -699,141 +699,141 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/time" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/transfuse2_time"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/reason" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/transfuse2_name"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
 
 
             <!--父亲家族史-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/familys_f" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/familys_f"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
 
                 <include layout="@layout/layout_interval" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/other" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/familys_fother"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
 
             <!--母亲家族史-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/familys_m" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/familys_m"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
 
                 <include layout="@layout/layout_interval" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/other" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/familys_mother"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
 
             <!--兄妹家族史-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/familys_s" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/familys_s"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
 
                 <include layout="@layout/layout_interval" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/other" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/familys_sother"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
 
             <!--子女家族史-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/familys_c" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/familys_c"
-                    style="@style/edit"
+                    style="@style/SmallEditText"
                     android:editable="false" />
 
                 <include layout="@layout/layout_interval" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/other" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/familys_cother"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
 
             <!--遗传病史-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/hinherit" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -844,19 +844,19 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/other" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/hinherit_disease"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
 
             <!--残疾1-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/deformity1" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -867,19 +867,19 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/deformity_crid" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/deformity1_crid"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
             <!--残疾2-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/deformity2" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -890,19 +890,19 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/deformity_crid" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/deformity2_crid"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
             <!--残疾3-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/deformity3" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -913,19 +913,19 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/deformity_crid" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/deformity3_crid"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
             <!--残疾4-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/deformity4" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -936,19 +936,19 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/deformity_crid" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/deformity4_crid"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
             <!--残疾5-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/deformity5" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -959,19 +959,19 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/deformity_crid" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/deformity5_crid"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
             <!--残疾6-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/deformity6" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -982,20 +982,20 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/deformity_crid" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/deformity6_crid"
-                    style="@style/edit" />
+                    style="@style/SmallEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
             <!--厨房排风设备 、燃料 -->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/exhaust_equipment" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -1006,7 +1006,7 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/fuel_type" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -1016,11 +1016,11 @@
 
             </android.support.v7.widget.LinearLayoutCompat>
             <!--饮水、禽兽栏-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/drinking_water" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -1031,7 +1031,7 @@
                 <include layout="@layout/layout_interval" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/livestock_column" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -1041,10 +1041,10 @@
 
             </android.support.v7.widget.LinearLayoutCompat>
             <!--厕所-->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/layout_visit_stysle">
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/toilet" />
 
                 <android.support.v7.widget.AppCompatSpinner

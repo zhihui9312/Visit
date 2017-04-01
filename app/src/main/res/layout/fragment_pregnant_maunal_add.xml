@@ -20,73 +20,73 @@
             android:paddingRight="@dimen/x10">
 
             <LinearLayout
-                style="@style/layout_visit_stysle">
+                style="@style/LayoutAline">
 
                 <TextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/manual_ehr_id"/>
 
                 <EditText
                     android:id="@+id/manual_ehr_id"
-                    style="@style/edit"/>
+                    style="@style/SmallEditText"/>
             </LinearLayout>
 
             <LinearLayout
-                style="@style/layout_visit_stysle">
+                style="@style/LayoutAline">
 
                 <TextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/menses_over_date"/>
 
                 <EditText
                     android:editable="false"
                     android:id="@+id/menses_over_date"
-                    style="@style/edit"/>
+                    style="@style/SmallEditText"/>
             </LinearLayout>
 
             <LinearLayout
-                style="@style/layout_visit_stysle">
+                style="@style/LayoutAline">
 
                 <TextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/due_birth_date"/>
 
                 <EditText
                     android:editable="false"
                     android:id="@+id/due_birth_date"
-                    style="@style/edit"/>
+                    style="@style/SmallEditText"/>
             </LinearLayout>
 
             <LinearLayout
-                style="@style/layout_visit_stysle">
+                style="@style/LayoutAline">
 
                 <TextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/create_week"/>
 
                 <EditText
                     android:id="@+id/create_week"
-                    style="@style/edit"/>
+                    style="@style/SmallEditText"/>
             </LinearLayout>
 
             <LinearLayout
-                style="@style/layout_visit_stysle">
+                style="@style/LayoutAline">
 
                 <TextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/create_week_days"/>
 
                 <EditText
                     android:id="@+id/create_week_days"
-                    style="@style/edit"/>
+                    style="@style/SmallEditText"/>
             </LinearLayout>
 
             <LinearLayout
                 android:gravity="center_vertical"
-                style="@style/layout_visit_stysle">
+                style="@style/LayoutAline">
 
                 <TextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/is_high_risk"/>
 
                 <Spinner
@@ -96,15 +96,15 @@
             </LinearLayout>
 
             <LinearLayout
-                style="@style/layout_visit_stysle">
+                style="@style/LayoutAline">
 
                 <TextView
-                    style="@style/evnAqTextView"
+                    style="@style/SmallTextView"
                     android:text="@string/high_score"/>
 
                 <EditText
                     android:id="@+id/high_score"
-                    style="@style/edit"/>
+                    style="@style/SmallEditText"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
