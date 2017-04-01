@@ -16,6 +16,8 @@ import com.guc.visit.R;
 import com.guc.visit.base.BaseFragment;
 import com.guc.visit.utils.ToastUtils;
 
+import org.apache.commons.lang3.StringUtils;
+
 
 public class QueryFragment extends BaseFragment {
 
@@ -59,7 +61,7 @@ public class QueryFragment extends BaseFragment {
             default:
                 break;
         }
-        listView.setItemChecked(0,true);
+        listView.setItemChecked(0, true);
     }
 
     @Override
@@ -86,8 +88,8 @@ public class QueryFragment extends BaseFragment {
         switch (v.getId()) {
             case R.id.tv_search:
                 String content = content_input.getText().toString().trim();
-                content="王婷";
-                if (TextUtils.isEmpty(content)) {
+//                content="王婷";
+                if (StringUtils.isBlank(content)) {
                     ToastUtils.showLong(mActivity, R.string.input_content_not_null);
                     return;
                 }

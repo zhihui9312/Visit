@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/title_bar"
-        android:background="@drawable/sl_white"
+        android:background="@drawable/shape_login"
         android:orientation="vertical">
 
         <LinearLayout
@@ -40,7 +40,7 @@
                 android:hint="@string/number_hit"
                 android:inputType="phone"
                 android:maxLines="1"
-                android:textColor="@color/ivory_black"
+                android:textColor="@color/black"
                 android:textColorHint="@color/darker_gray"
                 android:textSize="@dimen/x14" />
         </LinearLayout>
@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/password"
-                android:textColor="@color/ivory_black"
+                android:textColor="@color/black"
                 android:textSize="@dimen/x14" />
 
             <EditText

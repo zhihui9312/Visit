@@ -1,1 +1,1 @@
-include ':app', ':datepicker', ':materialdialogs'
+include ':app', ':datepicker', ':materialdialogs', ':materialprogressbar'

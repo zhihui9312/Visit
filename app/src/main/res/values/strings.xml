@@ -4,7 +4,7 @@
     <string name="click_two_exit">再按一次退出程序</string>
     <string name="login">登录</string>
     <string name="phone_number">账号</string>
-    <string name="chanage_org">单位选择</string>
+    <string name="chose_unit">所属机构</string>
     <string name="register">注册</string>
     <string name="back">返回</string>
     <string name="unit_org_filter">单位过虑查询</string>
@@ -33,8 +33,7 @@
     <string name="new_user_register">新用户注册</string>
     <string name="un_org">未匹配到相关的单位</string>
     <string name="org_name">单位名称</string>
-    <string name="register_phonenumber">手机号码</string>
-    <string name="register_password">登陆密码</string>
+    <string name="phonenumber">手机号码</string>
     <string name="network_error">网络错误，请检查网络设置</string>
     <string name="server_error">服务器错误</string>
     <string name="search_content">请输入搜索内容</string>

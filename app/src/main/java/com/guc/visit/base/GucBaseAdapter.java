@@ -28,11 +28,11 @@ public class GucBaseAdapter extends BaseAdapter {
         return null;
     }
 
-    public void setBackground(View view, int position) {
-        if (position % 2 == 0) {
-            view.setBackgroundResource(R.color.item_back);
-        } else {
-            view.setBackgroundResource(R.color.white);
-        }
-    }
+//    public void setBackground(View view, int position) {
+//        if (position % 2 == 0) {
+//            view.setBackgroundResource(R.color.item_back);
+//        } else {
+//            view.setBackgroundResource(R.color.white);
+//        }
+//    }
 }

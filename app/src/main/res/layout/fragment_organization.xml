@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@color/aliceblue"
               android:orientation="vertical">
 
     <include
@@ -12,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/x45"
-        android:background="@color/blue_339ee2"
+        android:background="@color/holo_blue_bright"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 

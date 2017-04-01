@@ -146,7 +146,7 @@ public class PregnantAdd25Fragment extends BaseFragment implements View.OnTouchL
 
     private void updateUI(PregnantAddDTO dto) {
         name.setText(nameStr);
-        visit_date.setText(dto.getVisit_date());
+        visit_date.setText(getFormatDateStr(dto.getVisit_date()));
         birth_week.setText(dto.getBirth_week());
         birth_week_days.setText(dto.getBirth_week_days());
         chief_complaint.setText(dto.getChief_complaint());

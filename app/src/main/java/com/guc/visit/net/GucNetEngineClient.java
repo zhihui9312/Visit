@@ -408,7 +408,7 @@ public class GucNetEngineClient {
 
     public static Request<String> addMedicalEntry(String json, Listener<String> listener, ErrorListener errorListener) {
         String url = Constant.ADDMEDICALENTRY;
-        return post(url,json, listener, errorListener);
+        return post(url, json, listener, errorListener);
     }
 
 

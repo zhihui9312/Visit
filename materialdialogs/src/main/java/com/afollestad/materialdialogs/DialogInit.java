@@ -30,6 +30,9 @@ import com.afollestad.materialdialogs.internal.MDButton;
 import com.afollestad.materialdialogs.internal.MDRootLayout;
 import com.afollestad.materialdialogs.internal.MDTintHelper;
 import com.afollestad.materialdialogs.util.DialogUtils;
+import com.android.materialprogressbar.HorizontalProgressDrawable;
+import com.android.materialprogressbar.IndeterminateHorizontalProgressDrawable;
+import com.android.materialprogressbar.IndeterminateProgressDrawable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -85,7 +88,7 @@ class DialogInit {
     dialog.setCanceledOnTouchOutside(builder.canceledOnTouchOutside);
     if (builder.backgroundColor == 0)
       builder.backgroundColor = DialogUtils.resolveColor(builder.context, R.attr.md_background_color,
-          DialogUtils.resolveColor(dialog.getContext(), R.attr.colorBackgroundFloating));
+              DialogUtils.resolveColor(dialog.getContext(), R.attr.colorBackgroundFloating));
     if (builder.backgroundColor != 0) {
       GradientDrawable drawable = new GradientDrawable();
       drawable.setCornerRadius(builder.context.getResources().getDimension(R.dimen.md_bg_corner_radius));
@@ -300,7 +303,7 @@ class DialogInit {
           dialog.listType = MaterialDialog.ListType.REGULAR;
         }
         builder.adapter = new DefaultRvAdapter(dialog,
-            MaterialDialog.ListType.getLayoutForType(dialog.listType));
+                MaterialDialog.ListType.getLayoutForType(dialog.listType));
       } else if (builder.adapter instanceof MDAdapter) {
         // Notify simple list adapter of the dialog it belongs to
         ((MDAdapter) builder.adapter).setDialog(dialog);
@@ -339,12 +342,12 @@ class DialogInit {
           innerView.setPadding(framePadding, 0, framePadding, 0);
         }
         sv.addView(innerView, new ScrollView.LayoutParams(
-            ViewGroup.LayoutParams.MATCH_PARENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT));
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT));
         innerView = sv;
       }
       frame.addView(innerView, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-          ViewGroup.LayoutParams.WRAP_CONTENT));
+              ViewGroup.LayoutParams.WRAP_CONTENT));
     }
 
     // Setup user listeners
@@ -403,22 +406,22 @@ class DialogInit {
 
       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
         if (builder.indeterminateProgress) {
-//          if (builder.indeterminateIsHorizontalProgress) {
-//            IndeterminateHorizontalProgressDrawable d = new IndeterminateHorizontalProgressDrawable(builder.getContext());
-//            d.setTint(builder.widgetColor);
-//            dialog.progressBar.setProgressDrawable(d);
-//            dialog.progressBar.setIndeterminateDrawable(d);
-//          } else {
-//            IndeterminateProgressDrawable d = new IndeterminateProgressDrawable(builder.getContext());
-//            d.setTint(builder.widgetColor);
-//            dialog.progressBar.setProgressDrawable(d);
-//            dialog.progressBar.setIndeterminateDrawable(d);
-//          }
-//        } else {
-//          HorizontalProgressDrawable d = new HorizontalProgressDrawable(builder.getContext());
-//          d.setTint(builder.widgetColor);
-//          dialog.progressBar.setProgressDrawable(d);
-//          dialog.progressBar.setIndeterminateDrawable(d);
+          if (builder.indeterminateIsHorizontalProgress) {
+            IndeterminateHorizontalProgressDrawable d = new IndeterminateHorizontalProgressDrawable(builder.getContext());
+            d.setTint(builder.widgetColor);
+            dialog.progressBar.setProgressDrawable(d);
+            dialog.progressBar.setIndeterminateDrawable(d);
+          } else {
+            IndeterminateProgressDrawable d = new IndeterminateProgressDrawable(builder.getContext());
+            d.setTint(builder.widgetColor);
+            dialog.progressBar.setProgressDrawable(d);
+            dialog.progressBar.setIndeterminateDrawable(d);
+          }
+        } else {
+          HorizontalProgressDrawable d = new HorizontalProgressDrawable(builder.getContext());
+          d.setTint(builder.widgetColor);
+          dialog.progressBar.setProgressDrawable(d);
+          dialog.progressBar.setIndeterminateDrawable(d);
         }
       } else {
         MDTintHelper.setTint(dialog.progressBar, builder.widgetColor);
@@ -442,7 +445,7 @@ class DialogInit {
           if (builder.showMinMax) {
             dialog.progressMinMax.setVisibility(View.VISIBLE);
             dialog.progressMinMax.setText(String.format(builder.progressNumberFormat,
-                0, builder.progressMax));
+                    0, builder.progressMax));
             ViewGroup.MarginLayoutParams lp = (ViewGroup.MarginLayoutParams) dialog.progressBar.getLayoutParams();
             lp.leftMargin = 0;
             lp.rightMargin = 0;
@@ -477,7 +480,7 @@ class DialogInit {
     if (builder.inputType != -1) {
       dialog.input.setInputType(builder.inputType);
       if (builder.inputType != InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD &&
-          (builder.inputType & InputType.TYPE_TEXT_VARIATION_PASSWORD) == InputType.TYPE_TEXT_VARIATION_PASSWORD) {
+              (builder.inputType & InputType.TYPE_TEXT_VARIATION_PASSWORD) == InputType.TYPE_TEXT_VARIATION_PASSWORD) {
         // If the flags contain TYPE_TEXT_VARIATION_PASSWORD, apply the password transformation method automatically
         dialog.input.setTransformationMethod(PasswordTransformationMethod.getInstance());
       }
@@ -486,7 +489,7 @@ class DialogInit {
     dialog.inputMinMax = (TextView) dialog.view.findViewById(R.id.md_minMax);
     if (builder.inputMinLength > 0 || builder.inputMaxLength > -1) {
       dialog.invalidateInputMinMaxIndicator(dialog.input.getText().toString().length(),
-          !builder.inputAllowEmpty);
+              !builder.inputAllowEmpty);
     } else {
       dialog.inputMinMax.setVisibility(View.GONE);
       dialog.inputMinMax = null;

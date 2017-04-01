@@ -8,6 +8,8 @@ public class MedicalEntry extends BaseDTO {
     private String data_type;
     private String cr_time;
     private String cr_operator;
+    private String cr_org_code;
+    private String cr_org_name;
     private String record_code;
     private String mtest_date;
     private String doctor_name;
@@ -70,6 +72,22 @@ public class MedicalEntry extends BaseDTO {
     private String toxicant_other_protect;
     private String toxicant_other_abn;
     private String db_id;
+
+    public String getCr_org_code() {
+        return cr_org_code;
+    }
+
+    public void setCr_org_code(String cr_org_code) {
+        this.cr_org_code = cr_org_code;
+    }
+
+    public String getCr_org_name() {
+        return cr_org_name;
+    }
+
+    public void setCr_org_name(String cr_org_name) {
+        this.cr_org_name = cr_org_name;
+    }
 
     public String getDb_id() {
         return db_id;

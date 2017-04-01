@@ -7,7 +7,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/x10"
         android:orientation="vertical">
         <!-- 姓名、性别、出生日期-->
 
@@ -19,8 +18,7 @@
 
             <EditText
                 android:id="@+id/name"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
 
             <include layout="@layout/layout_interval" />
 
@@ -30,8 +28,7 @@
 
             <EditText
                 android:id="@+id/sex"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
 
             <include layout="@layout/layout_interval" />
 
@@ -41,8 +38,7 @@
 
             <EditText
                 android:id="@+id/birth_date"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
         </LinearLayout>
 
         <LinearLayout style="@style/LayoutAline">
@@ -53,8 +49,7 @@
 
             <EditText
                 android:id="@+id/birth_week"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
 
             <include layout="@layout/layout_interval" />
 
@@ -64,8 +59,7 @@
 
             <EditText
                 android:id="@+id/birth_week_days"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
         </LinearLayout>
 
         <LinearLayout style="@style/LayoutAline">
@@ -76,8 +70,7 @@
 
             <EditText
                 android:id="@+id/bodylong"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
 
             <include layout="@layout/layout_interval" />
 
@@ -87,8 +80,7 @@
 
             <EditText
                 android:id="@+id/born_weight"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
         </LinearLayout>
 
         <LinearLayout style="@style/LayoutAline">
@@ -99,8 +91,7 @@
 
             <EditText
                 android:id="@+id/father_name"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
 
             <include layout="@layout/layout_interval" />
 
@@ -110,8 +101,7 @@
 
             <EditText
                 android:id="@+id/father_telephone"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
         </LinearLayout>
 
         <LinearLayout style="@style/LayoutAline">
@@ -122,8 +112,7 @@
 
             <EditText
                 android:id="@+id/mother_name"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
 
             <include layout="@layout/layout_interval" />
 
@@ -133,8 +122,7 @@
 
             <EditText
                 android:id="@+id/mother_telephone"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
         </LinearLayout>
 
         <LinearLayout style="@style/LayoutAline">
@@ -145,8 +133,7 @@
 
             <EditText
                 android:id="@+id/address_str"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

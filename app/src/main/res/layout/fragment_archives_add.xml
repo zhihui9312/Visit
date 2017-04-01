@@ -50,8 +50,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/birth_date"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!-- 身份证号-->
             <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
@@ -117,8 +116,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/org_code"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!-- 户籍   民族-->
             <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
@@ -140,8 +138,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/nation_code"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!-- 血型 rh阴阳性-->
             <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
@@ -238,8 +235,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/irritability"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
 
                 <include layout="@layout/layout_interval" />
 
@@ -260,7 +256,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/expose"
-                    style="@style/SmallEditText"/>
+                    style="@style/SmallEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
             <!--疾病1 -->
@@ -283,8 +279,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/disease1_time"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
@@ -312,7 +307,6 @@
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/disease2"
                     style="@style/evnSpinner"
-                    android:editable="false"
                     android:entries="@array/array_disease" />
 
                 <include layout="@layout/layout_interval" />
@@ -323,8 +317,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/disease2_time"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
@@ -352,7 +345,6 @@
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/disease3"
                     style="@style/evnSpinner"
-                    android:editable="false"
                     android:entries="@array/array_disease" />
 
                 <include layout="@layout/layout_interval" />
@@ -363,8 +355,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/disease3_time"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
@@ -392,7 +383,6 @@
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/disease4"
                     style="@style/evnSpinner"
-                    android:editable="false"
                     android:entries="@array/array_disease" />
 
                 <include layout="@layout/layout_interval" />
@@ -403,8 +393,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/disease4_time"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
@@ -431,7 +420,6 @@
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/disease5"
                     style="@style/evnSpinner"
-                    android:editable="false"
                     android:entries="@array/array_disease" />
 
                 <include layout="@layout/layout_interval" />
@@ -442,8 +430,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/disease5_time"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
@@ -471,7 +458,6 @@
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/disease6"
                     style="@style/evnSpinner"
-                    android:editable="false"
                     android:entries="@array/array_disease" />
 
                 <include layout="@layout/layout_interval" />
@@ -482,8 +468,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/disease6_time"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
@@ -510,7 +495,6 @@
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/operation1"
                     style="@style/evnSpinner"
-                    android:editable="false"
                     android:entries="@array/array_no_yes" />
 
                 <include layout="@layout/layout_interval" />
@@ -521,8 +505,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/operation1_time"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
@@ -546,7 +529,6 @@
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/operation2"
                     style="@style/evnSpinner"
-                    android:editable="false"
                     android:entries="@array/array_no_yes" />
 
                 <include layout="@layout/layout_interval" />
@@ -557,8 +539,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/operation2_time"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
@@ -583,7 +564,6 @@
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/trauma1"
                     style="@style/evnSpinner"
-                    android:editable="false"
                     android:entries="@array/array_no_yes" />
 
                 <include layout="@layout/layout_interval" />
@@ -594,8 +574,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/trauma1_time"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
@@ -620,7 +599,6 @@
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/trauma2"
                     style="@style/evnSpinner"
-                    android:editable="false"
                     android:entries="@array/array_no_yes" />
 
                 <include layout="@layout/layout_interval" />
@@ -631,8 +609,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/trauma2_time"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
@@ -657,7 +634,6 @@
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/transfuse1"
                     style="@style/evnSpinner"
-                    android:editable="false"
                     android:entries="@array/array_no_yes" />
 
                 <include layout="@layout/layout_interval" />
@@ -668,8 +644,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/transfuse1_time"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
@@ -693,7 +668,6 @@
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/transfuse2"
                     style="@style/evnSpinner"
-                    android:editable="false"
                     android:entries="@array/array_no_yes" />
 
                 <include layout="@layout/layout_interval" />
@@ -704,8 +678,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/transfuse2_time"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
 
@@ -730,8 +703,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/familys_f"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
 
                 <include layout="@layout/layout_interval" />
 
@@ -757,8 +729,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/familys_m"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
 
                 <include layout="@layout/layout_interval" />
 
@@ -784,8 +755,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/familys_s"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
 
                 <include layout="@layout/layout_interval" />
 
@@ -811,8 +781,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/familys_c"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
 
                 <include layout="@layout/layout_interval" />
 

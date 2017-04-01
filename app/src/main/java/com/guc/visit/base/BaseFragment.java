@@ -43,6 +43,7 @@ public abstract class BaseFragment extends Fragment implements OnClickListener, 
     protected LinearLayout ll_back;
     protected TextView tv_back;
     public ProgressDialog mProgressDialog;
+    protected MaterialDialog materialDialog;
 
     @Override
     public void onAttach(Context activity) {
@@ -128,17 +129,17 @@ public abstract class BaseFragment extends Fragment implements OnClickListener, 
         int year = calendar.get(Calendar.YEAR);
         picker.setRangeStart(year - 200, 01, 01);
         picker.setRangeEnd(year + 200, 01, 01);
-        String currentText=textView.getText().toString().trim();
-        if(StringUtils.isNoneBlank(currentText)){
-            SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
-           try {
-                Date date= simpleDateFormat.parse(currentText);
+        String currentText = textView.getText().toString().trim();
+        if (StringUtils.isNoneBlank(currentText)) {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            try {
+                Date date = simpleDateFormat.parse(currentText);
                 calendar.setTime(date);
-                picker.setSelectedItem(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH)+1, calendar.get(Calendar.DAY_OF_MONTH));
-         } catch (ParseException e) {
-               e.printStackTrace();
-           }
-       }
+                picker.setSelectedItem(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
         picker.setOnDatePickListener(new DatePicker.OnYearMonthDayPickListener() {
             @Override
             public void onDatePicked(String year, String month, String day) {
@@ -316,4 +317,14 @@ public abstract class BaseFragment extends Fragment implements OnClickListener, 
         builder.neutralText("清除");
         builder.show();
     }
+
+    public MaterialDialog showIndeterminateProgressDialog(@StringRes int contentRes) {
+        MaterialDialog materialDialog = new MaterialDialog.Builder(mActivity)
+                .content(contentRes)
+                .progress(true, 0)
+                .progressIndeterminateStyle(false)
+                .show();
+        return materialDialog;
+    }
+
 }

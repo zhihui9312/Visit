@@ -109,9 +109,8 @@ public class LoginFragment extends BaseFragment implements OnCheckedChangeListen
         //password = "superman12345";
         //account = "13800138000";
 
-        //
-        account = "13400134000";
 
+        account = "13400134000";
         password = "12345";
         if (TextUtils.isEmpty(account)) {
             ToastUtils.showShort(mActivity, R.string.account_not_null);
@@ -121,12 +120,7 @@ public class LoginFragment extends BaseFragment implements OnCheckedChangeListen
             ToastUtils.showShort(mActivity, R.string.psssword_not_null);
             return;
         }
-        mProgressDialog.setMessage(getResources().getString(R.string.is_landing));
-        mProgressDialog.show();
-
-//        showIndeterminateProgressDialog(R.string.is_landing,R.string.is_loading_please_waite);
-
-
+        materialDialog = showIndeterminateProgressDialog(R.string.is_landing);
         GucNetEngineClient.checkLimit(account, new Listener<String>() {
 
             @Override
@@ -136,17 +130,18 @@ public class LoginFragment extends BaseFragment implements OnCheckedChangeListen
                 if (errInfo == null) {
                     getDbid();
                 } else {
-                    mProgressDialog.dismiss();
+                    materialDialog.dismiss();
                     ToastUtils.showLong(mActivity, errInfo);
                 }
             }
         }, new ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                mProgressDialog.dismiss();
+                materialDialog.dismiss();
             }
         });
     }
+
 
     private void getDbid() {
         GucNetEngineClient.getDbid(account, new Listener<String>() {
@@ -160,7 +155,7 @@ public class LoginFragment extends BaseFragment implements OnCheckedChangeListen
                     GucNetEngineClient.DBID = dbid;
                     getDoctorInfo();
                 } else {
-                    mProgressDialog.dismiss();
+                    materialDialog.dismiss();
                     ToastUtils.showLong(mActivity, errInfo);
                 }
             }
@@ -168,7 +163,7 @@ public class LoginFragment extends BaseFragment implements OnCheckedChangeListen
 
             @Override
             public void onErrorResponse(VolleyError error) {
-                mProgressDialog.dismiss();
+                materialDialog.dismiss();
             }
         });
     }
@@ -177,7 +172,7 @@ public class LoginFragment extends BaseFragment implements OnCheckedChangeListen
         GucNetEngineClient.getDoctorInfo(account, password, new Listener<String>() {
             @Override
             public void onResponse(String response) {
-                mProgressDialog.dismiss();
+                materialDialog.dismiss();
                 JSONObject jsonObject = JSON.parseObject(response);
                 JSONObject json_res = jsonObject.getJSONObject("getDoctorInfoResult");
                 String errInfo = json_res.getString("errInfo");
@@ -187,7 +182,7 @@ public class LoginFragment extends BaseFragment implements OnCheckedChangeListen
                     GucApplication.cr_org_name = json_info.getString("orgName");
                     GucApplication.loginUserCode = json_info.getString("login_user_code");
                     GucApplication.visit_doctor = json_info.getString("doctorName");
-                    GucApplication. doctorCode = json_info.getString("doctorCode");
+                    GucApplication.doctorCode = json_info.getString("doctorCode");
 //                    String doctorName = json_info.getString("doctorName");
 //                    String orgName = json_info.getString("orgName");
 //                    String login_user_code = json_info.getString("login_user_code");
@@ -195,7 +190,7 @@ public class LoginFragment extends BaseFragment implements OnCheckedChangeListen
                     saveSharData();
                     mActivity.replace("mainfragment", MainFragment.newInstance(), false);
                 } else {
-                    mProgressDialog.dismiss();
+                    materialDialog.dismiss();
                     ToastUtils.showLong(mActivity, errInfo);
                 }
             }
@@ -203,7 +198,7 @@ public class LoginFragment extends BaseFragment implements OnCheckedChangeListen
 
             @Override
             public void onErrorResponse(VolleyError error) {
-                mProgressDialog.dismiss();
+                materialDialog.dismiss();
                 ToastUtils.showLong(mActivity, error.toString());
             }
         });

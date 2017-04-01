@@ -22,7 +22,6 @@ import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.apkfuns.logutils.LogUtils;
 import com.guc.visit.R;
 import com.guc.visit.application.GucApplication;
 import com.guc.visit.base.BaseFragment;
@@ -635,7 +634,6 @@ public class MentalAddFragment extends BaseFragment implements View.OnTouchListe
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        LogUtils.e(jsonObject.toString());
         return jsonObject.toString();
     }
 

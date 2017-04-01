@@ -53,7 +53,7 @@ public class MainActivity extends BaseActivity {
             public void run() {
                 checkUpdate();
             }
-        }, 2000);
+        }, 3000);
     }
 
     @Override

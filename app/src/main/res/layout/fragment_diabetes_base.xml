@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="@dimen/x10">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="@dimen/x10">
+        android:orientation="vertical">
 
         <!-- 姓名、性别、出生日期-->
 
@@ -19,8 +19,7 @@
 
             <EditText
                 android:id="@+id/name"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
 
             <include layout="@layout/layout_interval" />
 
@@ -30,8 +29,7 @@
 
             <EditText
                 android:id="@+id/sex"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
 
             <include layout="@layout/layout_interval" />
 
@@ -46,8 +44,7 @@
 
             <EditText
                 android:id="@+id/birth_date"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
         </LinearLayout>
         <!-- 疾病状态、地址-->
         <LinearLayout style="@style/LayoutAline">
@@ -58,8 +55,7 @@
 
             <EditText
                 android:id="@+id/disease_status"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
 
 
         </LinearLayout>
@@ -72,8 +68,7 @@
 
             <EditText
                 android:id="@+id/address_str"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
         </LinearLayout>
         <!-- 病例来源 -->
 
@@ -85,8 +80,7 @@
 
             <EditText
                 android:id="@+id/diagnose_date"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
 
             <TextView
                 style="@style/SmallTextView"
@@ -94,8 +88,7 @@
 
             <EditText
                 android:id="@+id/source_flag"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
         </LinearLayout>
         <!-- 病例种类、身高 -->
 
@@ -107,8 +100,7 @@
 
             <EditText
                 android:id="@+id/diabetes_type"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
 
             <TextView
                 style="@style/SmallTextView"
@@ -117,8 +109,7 @@
 
             <EditText
                 android:id="@+id/height"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
         </LinearLayout>
         <!-- 糖尿病家族史 -->
 
@@ -130,8 +121,7 @@
 
             <EditText
                 android:id="@+id/family_diabetes"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
         </LinearLayout>
         <!-- 建卡登记时血糖水平 -->
 
@@ -143,8 +133,7 @@
 
             <EditText
                 android:id="@+id/blood_sugar"
-                style="@style/SmallEditText"
-                android:editable="false" />
+                style="@style/SmallDisableEditText" />
         </LinearLayout>
     </LinearLayout>
 

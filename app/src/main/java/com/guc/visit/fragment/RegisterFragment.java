@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -25,7 +26,7 @@ import java.util.HashMap;
 
 
 public class RegisterFragment extends BaseFragment {
-    private TextView tv_organization;
+    private EditText tv_organization;
     private TextView tv_register;
     private EditText input_moblie;
     private EditText input_password;
@@ -93,9 +94,6 @@ public class RegisterFragment extends BaseFragment {
             case R.id.ll_back:
                 mActivity.popBackStack(1);
                 break;
-            case R.id.tv_organization:
-                mActivity.replace("organizationFragment", OrganizationFragment.newInstance(this,0), true);
-                break;
             case R.id.tv_register:
                 checkData();
                 break;
@@ -162,13 +160,23 @@ public class RegisterFragment extends BaseFragment {
     @Override
     protected void setListeners() {
         ll_back.setOnClickListener(this);
-        tv_organization.setOnClickListener(this);
+        tv_organization.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (v.getId() == R.id.tv_organization) {
+                        mActivity.replace("organizationFragment", OrganizationFragment.newInstance(RegisterFragment.this, 0), true);
+                    }
+                }
+                return false;
+            }
+        });
         tv_register.setOnClickListener(this);
     }
 
     @Override
     protected void initWidget(View view) {
-        tv_organization = (TextView) view.findViewById(R.id.tv_organization);
+        tv_organization = (EditText) view.findViewById(R.id.tv_organization);
         input_moblie = (EditText) view.findViewById(R.id.input_moblie);
         input_password = (EditText) view.findViewById(R.id.input_password);
         tv_register = (TextView) view.findViewById(R.id.tv_register);

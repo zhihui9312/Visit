@@ -12,12 +12,17 @@
         android:orientation="vertical"
         android:padding="@dimen/x10">
 
-        <EditText
-            android:id="@+id/content_input"
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/search_content"
-            android:textSize="@dimen/x13" />
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/content_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/search_content"
+                android:textSize="@dimen/x13" />
+        </android.support.design.widget.TextInputLayout>
 
         <ListView
             android:id="@+id/listView"

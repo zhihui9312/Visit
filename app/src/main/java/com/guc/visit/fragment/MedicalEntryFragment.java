@@ -112,6 +112,7 @@ public class MedicalEntryFragment extends BaseFragment implements View.OnTouchLi
     protected void initData() {
         controlBar(R.string.medicalEntry, R.string.back, true, true);
         tv_right.setText(R.string.commint);
+        doctor_name.setText(GucApplication.visit_doctor);
     }
 
     @Override
@@ -203,6 +204,8 @@ public class MedicalEntryFragment extends BaseFragment implements View.OnTouchLi
         dto.setCr_operator(GucApplication.loginUserCode);
         dto.setRecord_code("");
         dto.setDb_id(GucNetEngineClient.DBID);
+        dto.setCr_org_code(GucNetEngineClient.ORG_CODE);
+        dto.setCr_org_name(GucApplication.cr_org_name);
         dto.setMtest_date(getToTrim(mtest_date));
         dto.setDoctor_name(getToTrim(doctor_name));
         dto.setSymptom(StrUtil.getString(symptom_code));

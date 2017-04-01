@@ -658,10 +658,12 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
     }
 
     private void submit() {
+        showDialog(R.string.isSubmitting);
         String json = buildJson();
         GucNetEngineClient.archivesAdd(json, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                dismiss();
                 JSONObject jsonObject = JSON.parseObject(response);
                 JSONObject objResult = jsonObject.getJSONObject("hrPersonBaseRegisterResult");//
                 String errInfo = objResult.getString("errInfo");
@@ -674,6 +676,7 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                dismiss();
             }
         });
     }
