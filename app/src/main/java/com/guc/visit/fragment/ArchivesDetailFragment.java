@@ -44,17 +44,19 @@ public class ArchivesDetailFragment extends BaseFragment {
         ArchivesQueryInDTO inDTO = (ArchivesQueryInDTO) bundle.getSerializable("data");
         searchType = bundle.getInt("searchType");
         content = bundle.getString("content");
-        tv_name.setText(inDTO.getName());
-        tv_census_register.setText(inDTO.getCensus_register());
-        tv_ehr_id.setText(inDTO.getEhr_id());
-        tv_crid_code.setText(inDTO.getCrid_code());
-        tv_work_unit.setText(inDTO.getWork_unit());
-        tv_address.setText(inDTO.getAddress_str());
-        tv_telephone.setText(inDTO.getTelephone());
-        tv_cr_org_code.setText(inDTO.getCr_org_code());
-        ehr_id=inDTO.getEhr_id();
-        setType(inDTO);
-        controlBar(inDTO.getName(), R.string.back, true, false);
+        if(inDTO!=null){
+            tv_name.setText(inDTO.getName());
+            tv_census_register.setText(inDTO.getCensus_register());
+            tv_ehr_id.setText(inDTO.getEhr_id());
+            tv_crid_code.setText(inDTO.getCrid_code());
+            tv_work_unit.setText(inDTO.getWork_unit());
+            tv_address.setText(inDTO.getAddress_str());
+            tv_telephone.setText(inDTO.getTelephone());
+            tv_cr_org_code.setText(inDTO.getCr_org_code());
+            ehr_id=inDTO.getEhr_id();
+            setType(inDTO);
+            controlBar(inDTO.getName(), R.string.back, true, false);
+        }
     }
 
     private void setType(ArchivesQueryInDTO inDTO) {

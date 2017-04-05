@@ -116,9 +116,16 @@ public class VisitFragment extends BaseFragment {
     @Override
     protected void initData() {
         updateUI();
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
         if(postion!=0){
-            //switchToHistoryTab();
-            //tabLayout
+            switchToHistoryTab();
+            tabLayout.setScrollPosition(0, 1F, false);
+            tabLayout.getTabAt(1).select();
         }else{
             updateUI();
         }

@@ -175,7 +175,11 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
     public void onCreate(@Nullable Bundle savedInstanceState) {
         nationStr = "汉族";
         nationCode = "01";
-        nations.addAll(getFromAssets("nation.json"));
+        List<Nation> temp = getFromAssets("nation.json");
+        if (temp != null) {
+            nations.addAll(temp);
+        }
+
         super.onCreate(savedInstanceState);
     }
 
@@ -191,13 +195,12 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
         try {
             InputStreamReader inputReader = new InputStreamReader(getResources().getAssets().open(fileName));
             BufferedReader bufReader = new BufferedReader(inputReader);
-            String line = "";
+            String line;
             String result = "";
             while ((line = bufReader.readLine()) != null) {
                 result += line;
             }
-            List<Nation> nations = JSON.parseArray(result, Nation.class);
-            return nations;
+            return JSON.parseArray(result, Nation.class);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -666,13 +669,14 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
                     showToast(errInfo);
                 }
             }
-        }, null,materialDialog);
+        }, null, materialDialog);
     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1000 && resultCode == 1001) {
+            @SuppressWarnings("unchecked")
             HashMap<String, String> map = (HashMap<String, String>) data.getSerializableExtra("map");
             organizationId = map.get("organizationId");
             orgName = map.get("orgName");
@@ -680,9 +684,7 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
     }
 
     public static ArchivesAddFragment newInstance() {
-
         Bundle args = new Bundle();
-
         ArchivesAddFragment fragment = new ArchivesAddFragment();
         fragment.setArguments(args);
         return fragment;
