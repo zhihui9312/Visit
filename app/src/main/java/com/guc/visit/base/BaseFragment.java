@@ -2,9 +2,6 @@ package com.guc.visit.base;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.os.IBinder;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
@@ -14,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
@@ -211,74 +207,191 @@ public abstract class BaseFragment extends Fragment implements OnClickListener, 
         return value;
     }
 
-    public void multiChoiceDialog2(int arrayId, final TextView textView, final StringBuilder code) {
-        final String[] stringArray = mActivity.getResources().getStringArray(arrayId);
-        final int lengthArray = stringArray.length;
+//    public void multiChoiceDialog2(int arrayId, final TextView textView, final StringBuilder code) {
+//        final String[] stringArray = mActivity.getResources().getStringArray(arrayId);
+//        final int lengthArray = stringArray.length;
+//
+//        MaterialDialog.Builder builder = new MaterialDialog.Builder(mActivity);
+//        builder.items(arrayId);
+//        builder.itemsCallbackMultiChoice(null, new MaterialDialog.ListCallbackMultiChoice() {
+//            @Override
+//            public boolean onSelection(MaterialDialog dialog, Integer[] which, CharSequence[] text) {
+//                int length = which.length;
+//                if (length > 1 && which[length - 1] == lengthArray - 1) {
+//                    Integer[] array = new Integer[1];
+//                    array[0] = lengthArray - 1;
+//                    dialog.setSelectedIndices(array);
+//                } else if (length > 1 && which[0] == lengthArray - 1) {
+//                    Integer[] array = new Integer[1];
+//                    array[0] = which[1];
+//                    dialog.setSelectedIndices(array);
+//                }
+//                return true;
+//            }
+//        });
+//        builder.onNeutral(new MaterialDialog.SingleButtonCallback() {
+//            @Override
+//            public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+//                dialog.clearSelectedIndices();
+//            }
+//        });
+//        builder.onPositive(new MaterialDialog.SingleButtonCallback() {
+//            @Override
+//            public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+//                Integer selectedArray[] = dialog.getSelectedIndices();
+//
+//                if (selectedArray != null && selectedArray.length > 0) {
+//                    int length = selectedArray.length;
+//                    StringBuilder tempStr = new StringBuilder("");
+//                    StringBuilder strCode = new StringBuilder("");
+//                    for (int i = 0; i < length; i++) {
+//                        tempStr.append(stringArray[selectedArray[i]] + ",");
+//                        strCode.append((selectedArray[i] + 1) + ",");
+//                    }
+//                    tempStr.deleteCharAt(tempStr.length() - 1);
+//                    strCode.deleteCharAt(strCode.length() - 1);
+//                    textView.setText(tempStr.toString());
+//                    code.append(strCode.toString());
+//                }
+//
+//                dialog.dismiss();
+//            }
+//        });
+//        builder.alwaysCallMultiChoiceCallback();
+//        builder.positiveText("确认");
+//        builder.autoDismiss(false);
+//        builder.neutralText("清除");
+//        builder.show();
+//
+//    }
 
-        MaterialDialog.Builder builder = new MaterialDialog.Builder(mActivity);
-        builder.items(arrayId);
-        builder.itemsCallbackMultiChoice(null, new MaterialDialog.ListCallbackMultiChoice() {
-            @Override
-            public boolean onSelection(MaterialDialog dialog, Integer[] which, CharSequence[] text) {
-                int length = which.length;
-                if (length > 1 && which[length - 1] == lengthArray - 1) {
-                    Integer[] array = new Integer[1];
-                    array[0] = lengthArray - 1;
-                    dialog.setSelectedIndices(array);
-                } else if (length > 1 && which[0] == lengthArray - 1) {
-                    Integer[] array = new Integer[1];
-                    array[0] = which[1];
-                    dialog.setSelectedIndices(array);
-                }
-                return true;
-            }
-        });
-        builder.onNeutral(new MaterialDialog.SingleButtonCallback() {
-            @Override
-            public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                dialog.clearSelectedIndices();
-            }
-        });
-        builder.onPositive(new MaterialDialog.SingleButtonCallback() {
-            @Override
-            public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                Integer selectedArray[] = dialog.getSelectedIndices();
-
-                if (selectedArray != null && selectedArray.length > 0) {
-                    int length = selectedArray.length;
-                    StringBuilder tempStr = new StringBuilder("");
-                    StringBuilder strCode = new StringBuilder("");
-                    for (int i = 0; i < length; i++) {
-                        tempStr.append(stringArray[selectedArray[i]] + ",");
-                        strCode.append((selectedArray[i] + 1) + ",");
-                    }
-                    tempStr.deleteCharAt(tempStr.length() - 1);
-                    strCode.deleteCharAt(strCode.length() - 1);
-                    textView.setText(tempStr.toString());
-                    code.append(strCode.toString());
-                }
-
-                dialog.dismiss();
-            }
-        });
-        builder.alwaysCallMultiChoiceCallback();
-        builder.positiveText("确认");
-        builder.autoDismiss(false);
-        builder.neutralText("清除");
-        builder.show();
-
-    }
+//    public void multiChoiceDialog3(int arrayId, final TextView textView, final StringBuilder code) {
+//        final String[] stringArray = mActivity.getResources().getStringArray(arrayId);
+//        final int lengthArray = stringArray.length;
+//
+//        MaterialDialog.Builder builder = new MaterialDialog.Builder(mActivity);
+//        builder.items(arrayId);
+//        builder.itemsCallbackMultiChoice(null, new MaterialDialog.ListCallbackMultiChoice() {
+//            @Override
+//            public boolean onSelection(MaterialDialog dialog, Integer[] which, CharSequence[] text) {
+//                int length = which.length;
+//                if (length > 1 && which[length - 1] == lengthArray - 1) {
+//                    Integer[] array = new Integer[1];
+//                    array[0] = lengthArray - 1;
+//                    dialog.setSelectedIndices(array);
+//                } else if (length > 1 && which[0] == lengthArray - 1) {
+//                    Integer[] array = new Integer[1];
+//                    array[0] = which[1];
+//                    dialog.setSelectedIndices(array);
+//                }
+//                return true;
+//            }
+//        });
+//        builder.onNeutral(new MaterialDialog.SingleButtonCallback() {
+//            @Override
+//            public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+//                dialog.clearSelectedIndices();
+//            }
+//        });
+//        builder.onPositive(new MaterialDialog.SingleButtonCallback() {
+//            @Override
+//            public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+//                Integer selectedArray[] = dialog.getSelectedIndices();
+//
+//                if (selectedArray != null && selectedArray.length > 0) {
+//                    int length = selectedArray.length;
+//                    StringBuilder tempStr = new StringBuilder("");
+//                    StringBuilder strCode = new StringBuilder("");
+//                    for (int i = 0; i < length; i++) {
+//                        tempStr.append(stringArray[selectedArray[i]] + ",");
+//                        strCode.append((selectedArray[i] + 1) + ",");
+//                    }
+//                    tempStr.deleteCharAt(tempStr.length() - 1);
+//                    strCode.deleteCharAt(strCode.length() - 1);
+//                    textView.setText(tempStr.toString());
+//                    code.append(strCode.toString());
+//                }
+//
+//                dialog.dismiss();
+//            }
+//        });
+//        builder.alwaysCallMultiChoiceCallback();
+//        builder.positiveText("确认");
+//        builder.autoDismiss(false);
+//        builder.neutralText("清除");
+//        builder.show();
+//
+//    }
 
     public String getFormatDateStr(String dateStr) {
         return dateStr.split("T")[0];
     }
 
-    public void multiChoiceDialog(int arrayId, final TextView textView, final StringBuilder code) {
-        final String[] stringArray = mActivity.getResources().getStringArray(arrayId);
+    public Integer[] getIntArray(StringBuilder stringBuilder) {
+        Integer[] temp = null;
+        if (stringBuilder.length() > 0) {
+            String[] integers = stringBuilder.toString().split(",");
+            int length = integers.length;
+            temp = new Integer[length];
+            for (int i = 0; i < length; i++) {
+                temp[i] = Integer.parseInt(integers[i]) - 1;
+            }
+        }
+        return temp;
+    }
 
+//    public void multiChoiceDialog(int arrayId, final TextView textView, final StringBuilder code) {
+//        final String[] stringArray = mActivity.getResources().getStringArray(arrayId);
+//
+//        MaterialDialog.Builder builder = new MaterialDialog.Builder(mActivity);
+//        builder.items(arrayId);
+//        builder.itemsCallbackMultiChoice(null, new MaterialDialog.ListCallbackMultiChoice() {
+//            @Override
+//            public boolean onSelection(MaterialDialog dialog, Integer[] which, CharSequence[] text) {
+//                return true;
+//            }
+//        });
+//        builder.onNeutral(new MaterialDialog.SingleButtonCallback() {
+//            @Override
+//            public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+//                dialog.clearSelectedIndices();
+//            }
+//        });
+//        builder.onPositive(new MaterialDialog.SingleButtonCallback() {
+//            @Override
+//            public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+//                Integer selectedArray[] = dialog.getSelectedIndices();
+//                if (selectedArray != null && selectedArray.length > 0) {
+//                    int length = selectedArray.length;
+//                    StringBuilder tempStr = new StringBuilder("");
+//                    StringBuilder strCode = new StringBuilder("");
+//
+//                    for (int i = 0; i < length; i++) {
+//                        tempStr.append(stringArray[selectedArray[i]] + ",");
+//                        strCode.append((selectedArray[i] + 1) + ",");
+//                    }
+//                    tempStr.deleteCharAt(tempStr.length() - 1);
+//                    strCode.deleteCharAt(strCode.length() - 1);
+//                    textView.setText(tempStr.toString());
+//                    code.append(strCode.toString());
+//                }
+//                dialog.dismiss();
+//            }
+//        });
+//        builder.alwaysCallMultiChoiceCallback();
+//        builder.positiveText("确认");
+//        builder.autoDismiss(false);
+//        builder.neutralText("清除");
+//        builder.show();
+//    }
+
+
+    public void multiChoiceDialog(@Nullable Integer[] selectedIndices, int arrayId, final TextView textView, final StringBuilder code) {
+        final String[] stringArray = mActivity.getResources().getStringArray(arrayId);
+        code.delete(0, code.length());
         MaterialDialog.Builder builder = new MaterialDialog.Builder(mActivity);
         builder.items(arrayId);
-        builder.itemsCallbackMultiChoice(null, new MaterialDialog.ListCallbackMultiChoice() {
+        builder.itemsCallbackMultiChoice(selectedIndices, new MaterialDialog.ListCallbackMultiChoice() {
             @Override
             public boolean onSelection(MaterialDialog dialog, Integer[] which, CharSequence[] text) {
                 return true;
@@ -298,7 +411,6 @@ public abstract class BaseFragment extends Fragment implements OnClickListener, 
                     int length = selectedArray.length;
                     StringBuilder tempStr = new StringBuilder("");
                     StringBuilder strCode = new StringBuilder("");
-
                     for (int i = 0; i < length; i++) {
                         tempStr.append(stringArray[selectedArray[i]] + ",");
                         strCode.append((selectedArray[i] + 1) + ",");
@@ -307,6 +419,8 @@ public abstract class BaseFragment extends Fragment implements OnClickListener, 
                     strCode.deleteCharAt(strCode.length() - 1);
                     textView.setText(tempStr.toString());
                     code.append(strCode.toString());
+                }else{
+                    textView.setText("");
                 }
                 dialog.dismiss();
             }

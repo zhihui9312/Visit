@@ -349,7 +349,6 @@
     <string name="job_type">职业</string>
     <string name="marriage_code">婚姻状况</string>
     <string name="pay_type">支付方式</string>
-    <string name="pay_type_str">支付说明</string>
     <string name="blood_rh">RH阴性</string>
     <string name="expose">暴露史</string>
     <string name="disease1">疾病一</string>
@@ -427,6 +426,36 @@
     <string name="chemicla">毒物种类</string>
     <string name="the_new_version_is_visible">发现新版本，请立即升级</string>
     <string name="ibm_unit">kg/m²</string>
+    <string-array name="array_hypertension_symptom">
+        <item>头痛</item>
+        <item>头晕</item>
+        <item>心悸</item>
+        <item>胸闷</item>
+        <item>胸痛</item>
+        <item>咳嗽</item>
+        <item>咳痰</item>
+        <item>呼吸困难</item>
+        <item>多饮</item>
+        <item>多尿</item>
+        <item>体重下降</item>
+        <item>乏力</item>
+        <item>关节肿痛</item>
+        <item>视力模糊</item>
+        <item>四肢麻木</item>
+        <item>消瘦</item>
+        <item>尿痛</item>
+        <item>便秘</item>
+        <item>腹泻</item>
+        <item>恶心呕吐</item>
+        <item>眼花</item>
+        <item>耳鸣</item>
+        <item>发热</item>
+        <item>鼻衄</item>
+        <item>浮肿</item>
+        <item>多食</item>
+        <item>皮疹</item>
+        <item>其他</item>
+    </string-array>
     <string-array name="array_drink_type">
         <item>白酒</item>
         <item>啤酒</item>

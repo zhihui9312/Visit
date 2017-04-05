@@ -76,7 +76,7 @@
 
                 <Spinner
                     android:id="@+id/danger_grade"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/danger_grade_array" />
 
                 <include layout="@layout/layout_interval" />
@@ -87,7 +87,7 @@
 
                 <Spinner
                     android:id="@+id/insight_appraise"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/insight_appraise_array" />
             </LinearLayout>
             <!-- 睡眠状况、饮食情况 -->
@@ -102,7 +102,7 @@
 
                 <Spinner
                     android:id="@+id/sleep_type"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_class" />
 
                 <include layout="@layout/layout_interval" />
@@ -113,7 +113,7 @@
 
                 <Spinner
                     android:id="@+id/diet_type"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_class" />
             </LinearLayout>
             <!-- 个人生活、家务劳动 -->
@@ -128,7 +128,7 @@
 
                 <Spinner
                     android:id="@+id/living"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_class" />
 
                 <include layout="@layout/layout_interval" />
@@ -139,7 +139,7 @@
 
                 <Spinner
                     android:id="@+id/housework"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_class" />
             </LinearLayout>
             <!-- 劳动工作、学习能力 -->
@@ -154,7 +154,7 @@
 
                 <Spinner
                     android:id="@+id/work"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_work" />
 
                 <include layout="@layout/layout_interval" />
@@ -165,7 +165,7 @@
 
                 <Spinner
                     android:id="@+id/study"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_class" />
             </LinearLayout>
             <!-- 社会人际交往 -->
@@ -180,7 +180,7 @@
 
                 <Spinner
                     android:id="@+id/sociality"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:layout_weight="1"
                     android:entries="@array/array_class" />
             </LinearLayout>
@@ -269,7 +269,7 @@
 
                 <Spinner
                     android:id="@+id/captivity"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_captivity" />
             </LinearLayout>
             <!-- 住院情况 -->
@@ -284,7 +284,7 @@
 
                 <Spinner
                     android:id="@+id/in_hospital"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_in_hospital" />
             </LinearLayout>
             <!-- 末次出院时间 -->
@@ -312,7 +312,7 @@
 
                 <Spinner
                     android:id="@+id/laboratory_abn"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
             </LinearLayout>
             <!-- 实验室检情况 -->
@@ -340,7 +340,7 @@
 
                 <Spinner
                     android:id="@+id/rule_dose"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_rule_dose" />
 
                 <TextView
@@ -349,7 +349,7 @@
 
                 <Spinner
                     android:id="@+id/drug_side_effect"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
             </LinearLayout>
             <!-- 药物不良反应说明 -->
@@ -377,7 +377,7 @@
 
                 <Spinner
                     android:id="@+id/anamnesis_tr_type"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_anamnesis_tr_type" />
 
                 <TextView
@@ -386,7 +386,7 @@
 
                 <Spinner
                     android:id="@+id/transfert"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
             </LinearLayout>
             <!-- 转诊科室 -->
@@ -493,7 +493,7 @@
 
                 <Spinner
                     android:id="@+id/drug2_dosage_unit"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/drug2_dosage_unit" />
             </LinearLayout>
             <!-- 药物3名称 -->
@@ -541,7 +541,7 @@
 
                 <Spinner
                     android:id="@+id/drug3_dosage_unit"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/drug2_dosage_unit" />
             </LinearLayout>
             <!-- 康复措施 -->
@@ -577,7 +577,7 @@
 
                 <Spinner
                     android:id="@+id/visit_class"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_visit_class" />
 
                 <TextView
@@ -598,7 +598,7 @@
 
                 <Spinner
                     android:id="@+id/cm_guidance"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
 
                 <TextView

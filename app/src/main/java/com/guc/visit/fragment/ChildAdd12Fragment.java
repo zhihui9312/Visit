@@ -418,10 +418,10 @@ public class ChildAdd12Fragment extends BaseFragment implements View.OnTouchList
             switch (v.getId()) {
                 case R.id.rachitis_sign:
                     //两位数
-                    multiChoiceDialog(R.array.array_rachitis_sign, rachitis_sign, rachitis_sign_mark);
+                    multiChoiceDialog(getIntArray(rachitis_sign_mark),R.array.array_rachitis_sign, rachitis_sign, rachitis_sign_mark);
                     break;
                 case R.id.guidance_con:
-                    multiChoiceDialog(R.array.array_guidance_con, guidance_con, guidance_mark);
+                    multiChoiceDialog(getIntArray(guidance_mark),R.array.array_guidance_con, guidance_con, guidance_mark);
                     break;
                 case R.id.visit_date:
                     showDatePicker(visit_date);

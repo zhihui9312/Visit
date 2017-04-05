@@ -160,7 +160,7 @@ public class PregnantAddAfter42Fragment extends BaseFragment implements View.OnT
                     showDatePicker(visit_date);
                     break;
                 case R.id.guidance:
-                    multiChoiceDialog(R.array.array_after42_guidance,guidance,guidance_code);
+                    multiChoiceDialog(getIntArray(guidance_code),R.array.array_after42_guidance,guidance,guidance_code);
                     break;
                 default:
                     break;

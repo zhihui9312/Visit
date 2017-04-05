@@ -50,7 +50,7 @@
 
                 <Spinner
                     android:id="@+id/current_agem"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_current_agem1" />
 
             </LinearLayout>
@@ -73,7 +73,7 @@
 
                 <Spinner
                     android:id="@+id/weight_grade"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_weight_grade" />
             </LinearLayout>
             <!-- 身高、身高等级 -->
@@ -95,7 +95,7 @@
 
                 <Spinner
                     android:id="@+id/height_grade"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_weight_grade" />
             </LinearLayout>
             <!-- 面色、其他 -->
@@ -107,7 +107,7 @@
 
                 <Spinner
                     android:id="@+id/complexion"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_complexion" />
 
                 <include layout="@layout/layout_interval" />
@@ -129,7 +129,7 @@
 
                 <Spinner
                     android:id="@+id/skin"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -148,7 +148,7 @@
 
                 <Spinner
                     android:id="@+id/fontanel_close"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_fontanel_close" />
 
                 <include layout="@layout/layout_interval" />
@@ -222,7 +222,7 @@
 
                 <Spinner
                     android:id="@+id/eye"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -241,7 +241,7 @@
 
                 <Spinner
                     android:id="@+id/ear"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -260,8 +260,8 @@
 
                 <Spinner
                     android:id="@+id/ear_result"
-                    style="@style/evnSpinner"
-                    android:entries="@array/array_exception" />
+                    style="@style/WrapSpinner"
+                    android:entries="@array/array_growth" />
             </LinearLayout>
 
             <LinearLayout style="@style/LayoutAline">
@@ -279,7 +279,7 @@
 
                 <Spinner
                     android:id="@+id/heart_lung"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -298,7 +298,7 @@
 
                 <Spinner
                     android:id="@+id/abdomen"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -317,7 +317,7 @@
 
                 <Spinner
                     android:id="@+id/limbs"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -336,7 +336,7 @@
 
                 <Spinner
                     android:id="@+id/gait"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -411,7 +411,7 @@
 
                 <Spinner
                     android:id="@+id/growth"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_growth" />
 
             </LinearLayout>
@@ -431,7 +431,7 @@
 
                 <Spinner
                     android:id="@+id/between_disease"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_between_disease" />
             </LinearLayout>
 

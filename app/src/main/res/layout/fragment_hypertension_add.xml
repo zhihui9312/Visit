@@ -55,8 +55,7 @@
 
                 <EditText
                     android:id="@+id/symptom"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
             </LinearLayout>
             <!-- 其他症状 -->
 
@@ -386,7 +385,7 @@
 
                 <Spinner
                     android:id="@+id/absorbsalt_case"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/absorbsalt_case"
                     android:prompt="@string/absorbsalt_case" />
 
@@ -395,7 +394,7 @@
 
                 <Spinner
                     android:id="@+id/absorbsalt_case_target"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/absorbsalt_case"
                     android:prompt="@string/absorbsalt_case" />
             </LinearLayout>
@@ -422,7 +421,7 @@
 
                 <Spinner
                     android:id="@+id/drug_side_effect"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_yes_no" />
             </LinearLayout>
             <!-- 药物不良反应内容 -->
@@ -452,7 +451,7 @@
 
                 <Spinner
                     android:id="@+id/mental_adjust"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_class" />
 
                 <include layout="@layout/layout_interval" />
@@ -463,7 +462,7 @@
 
                 <Spinner
                     android:id="@+id/compiance"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_class" />
             </LinearLayout>
             <!-- 服药依从、随访分类 -->
@@ -476,7 +475,7 @@
 
                 <Spinner
                     android:id="@+id/rule_dose"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_rule_dose" />
 
                 <include layout="@layout/layout_interval" />
@@ -487,7 +486,7 @@
 
                 <Spinner
                     android:id="@+id/visit_appraise"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_visit_appraise" />
             </LinearLayout>
             <!-- 药物1名称 -->
@@ -533,7 +532,7 @@
 
                 <Spinner
                     android:id="@+id/drug1_dosage_unit_code"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/drug2_dosage_unit" />
             </LinearLayout>
             <!-- 药物1 用法 -->
@@ -595,7 +594,7 @@
 
                 <Spinner
                     android:id="@+id/drug2_dosage_unit_code"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/drug2_dosage_unit" />
             </LinearLayout>
 
@@ -659,7 +658,7 @@
 
                 <Spinner
                     android:id="@+id/drug3_dosage_unit_code"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/drug2_dosage_unit" />
             </LinearLayout>
             <!-- 药物3用法 -->
@@ -725,7 +724,7 @@
 
                 <Spinner
                     android:id="@+id/visit_mode"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_visit_moding" />
 
                 <include layout="@layout/layout_interval" />
@@ -749,7 +748,7 @@
 
                 <Spinner
                     android:id="@+id/cm_guidance"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_yes_no" />
 
                 <include layout="@layout/layout_interval" />

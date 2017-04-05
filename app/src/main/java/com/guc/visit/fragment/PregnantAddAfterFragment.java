@@ -171,7 +171,7 @@ public class PregnantAddAfterFragment extends BaseFragment implements View.OnTou
                     showDatePicker(childbirth_date);
                     break;
                 case R.id.guidance:
-                    multiChoiceDialog(R.array.array_guidance_after, guidance, guidance_code);
+                    multiChoiceDialog(getIntArray(guidance_code),R.array.array_guidance_after, guidance, guidance_code);
                     break;
                 default:
                     break;

@@ -181,7 +181,7 @@ public class PregnantAdd25Fragment extends BaseFragment implements View.OnTouchL
         if (event.getAction() == MotionEvent.ACTION_UP) {
             switch (v.getId()) {
                 case R.id.guidance:
-                    multiChoiceDialog(R.array.array_guidance, guidance, guidance_code);
+                    multiChoiceDialog(getIntArray(guidance_code),R.array.array_guidance, guidance, guidance_code);
                     break;
                 case R.id.next_visit_date:
                     showDatePicker(next_visit_date);

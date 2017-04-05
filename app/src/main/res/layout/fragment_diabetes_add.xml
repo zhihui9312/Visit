@@ -399,7 +399,7 @@
 
                 <Spinner
                     android:id="@+id/mental_adjust"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:layout_width="fill_parent"
                     android:layout_weight="2"
                     android:entries="@array/array_class"/>
@@ -411,7 +411,7 @@
 
                 <Spinner
                     android:id="@+id/compiance"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:layout_width="fill_parent"
                     android:layout_marginRight="5dp"
                     android:layout_weight="2"
@@ -539,7 +539,7 @@
 
                 <Spinner
                     android:id="@+id/dorsalis_pedis"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/dorsalis_pedis_array"/>
 
                 <TextView
@@ -548,7 +548,7 @@
 
                 <Spinner
                     android:id="@+id/rule_dose"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:layout_width="0dp"
                     android:layout_weight="2"
                     android:entries="@array/array_rule_dose"/>
@@ -564,7 +564,7 @@
 
                 <Spinner
                     android:id="@+id/drug_side_effect"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:layout_width="0dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
@@ -593,7 +593,7 @@
 
                 <Spinner
                     android:id="@+id/glucopenia"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:layout_width="fill_parent"
                     android:layout_weight="2"
                     android:entries="@array/glucopenia"
@@ -606,7 +606,7 @@
 
                 <Spinner
                     android:id="@+id/visit_appraise"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:layout_width="fill_parent"
                     android:layout_marginRight="5dp"
                     android:layout_weight="2"
@@ -710,7 +710,7 @@
                 <Spinner
 
                     android:id="@+id/drug2_dosage_unit"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/drug2_dosage_unit"/>
             </LinearLayout>
             <!-- 药物3名称 -->
@@ -760,7 +760,7 @@
 
                 <Spinner
                     android:id="@+id/drug3_dosage_unit"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/drug2_dosage_unit"/>
             </LinearLayout>
             <!-- 胰岛素用药 -->
@@ -841,7 +841,7 @@
 
                 <Spinner
                     android:id="@+id/visit_mode"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_visit_moding"/>
             </LinearLayout>
             <!-- 中医指导、指导内容 -->
@@ -865,7 +865,7 @@
 
                 <Spinner
                     android:id="@+id/cm_guidance"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes"/>
             </LinearLayout>
         </LinearLayout>

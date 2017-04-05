@@ -134,7 +134,7 @@
 
                 <Spinner
                     android:id="@+id/fetal_position"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_fetal_position" />
 
             </LinearLayout>
@@ -261,7 +261,7 @@
 
                 <Spinner
                     android:id="@+id/visit_class"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
 
                 <include layout="@layout/layout_interval" />

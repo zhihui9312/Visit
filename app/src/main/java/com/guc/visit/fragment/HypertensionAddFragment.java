@@ -1,12 +1,11 @@
 package com.guc.visit.fragment;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -40,15 +39,7 @@ import java.util.Calendar;
 public class HypertensionAddFragment extends BaseFragment {
     private TextView visit_date;
     private TextView symptom;
-    public final static String[] SYMPTOM_TYPE = {"头痛", "头晕", "心悸", "胸闷", "胸痛",
-            "咳嗽", "咳痰", "呼吸困难", "多饮", "多尿", "体重下降", "乏力", "关节肿痛", "视力模糊",
-            "四肢麻木", "消瘦 ", "尿痛", "便秘", "腹泻", "恶心呕吐", "眼花", "耳鸣", "发热", "鼻衄",
-            "浮肿", "多食", "皮疹", "其他"};
-    public final static int[] SYMPTOM_TYPE_ID = {1, 2, 3, 4, 5, 6, 7, 8, 9,
-            10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-            27, 99};
-    public boolean[] symptom_flag;
-    private String symptom_code = "";
+    private StringBuilder symptom_code = new StringBuilder("");
     private EditText symptom_other;
     public final static String[] ABSORBSALT_CASE_TARGET = {"", "轻", "中", "重"};
     public final static String[] ZERO_TO_ONE = {"", "0", "1"};
@@ -216,7 +207,7 @@ public class HypertensionAddFragment extends BaseFragment {
             visit_doctor.setText(GucApplication.visit_doctor);
         } else {
             String record_code = bundle.getString("record_code");
-            String name_str=bundle.getString("name");
+            String name_str = bundle.getString("name");
             getHistoryHypertension(record_code);
             name.setText(name_str);
             controlBar(name_str, R.string.back, true, false);
@@ -250,9 +241,23 @@ public class HypertensionAddFragment extends BaseFragment {
     protected void setListeners() {
         ll_back.setOnClickListener(this);
         visit_date.setOnClickListener(this);
-        symptom.setOnClickListener(this);
         next_visit_date.setOnClickListener(this);
         right_layout.setOnClickListener(this);
+        symptom.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    switch (v.getId()) {
+                        case R.id.symptom:
+                            multiChoiceDialog(getIntArray(symptom_code), R.array.array_hypertension_symptom, symptom, symptom_code);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                return false;
+            }
+        });
         drug_side_effect.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -274,7 +279,7 @@ public class HypertensionAddFragment extends BaseFragment {
     protected void initWidget(View view) {
         ImageView iv_add = (ImageView) view.findViewById(R.id.iv_add);
         iv_add.setImageResource(R.mipmap.ic_menu);
-        linearLayout=(LinearLayout)view.findViewById(R.id.linearLayout);
+        linearLayout = (LinearLayout) view.findViewById(R.id.linearLayout);
         name = (EditText) view.findViewById(R.id.name);
         visit_date = (TextView) view.findViewById(R.id.visit_date);
         symptom = (TextView) view.findViewById(R.id.symptom);
@@ -364,9 +369,6 @@ public class HypertensionAddFragment extends BaseFragment {
                 break;
             case R.id.visit_date:
                 showDatePicker(visit_date);
-                break;
-            case R.id.symptom:
-                selectionSymptom();
                 break;
             case R.id.next_visit_date:
                 showDatePicker(next_visit_date);
@@ -464,10 +466,10 @@ public class HypertensionAddFragment extends BaseFragment {
 
         aid_mtest_result.setText(dto.getAid_mtest_result());
 
-        String drug_side_effect_str=dto.getDrug_side_effect();
-        if(!TextUtils.isEmpty(drug_side_effect_str)){
-            drug_side_effect.setSelection(drug_side_effect_str.endsWith("true")?1:2);
-        }else{
+        String drug_side_effect_str = dto.getDrug_side_effect();
+        if (!TextUtils.isEmpty(drug_side_effect_str)) {
+            drug_side_effect.setSelection(drug_side_effect_str.endsWith("true") ? 1 : 2);
+        } else {
             drug_side_effect.setSelection(0);
         }
 
@@ -516,11 +518,11 @@ public class HypertensionAddFragment extends BaseFragment {
         visit_doctor.setText(dto.getVisit_doctor());
 
         String cm_guidance_strr = dto.getCm_guidance();
-        if(cm_guidance_strr.equals("true")){
+        if (cm_guidance_strr.equals("true")) {
             cm_guidance.setSelection(1);
-        }else if(cm_guidance.equals("false")){
+        } else if (cm_guidance.equals("false")) {
             cm_guidance.setSelection(2);
-        }else{
+        } else {
             cm_guidance.setSelection(0);
         }
         cm_guidance_str.setText(dto.getCm_guidance_str());
@@ -588,7 +590,7 @@ public class HypertensionAddFragment extends BaseFragment {
         final JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("visit_date", StrUtil.getToTrim(visit_date));
-            jsonObject.put("symptom_code", StrUtil.getJsonString(symptom_code));
+            jsonObject.put("symptom_code", StrUtil.getString(symptom_code).replace("28", "99"));
             jsonObject.put("symptom", StrUtil.getToTrim(symptom));
             jsonObject.put("symptom_other", StrUtil.getToTrim(symptom_other));
             jsonObject.put("systolic_pressure", StrUtil.getToTrim(systolic_pressure));
@@ -692,41 +694,41 @@ public class HypertensionAddFragment extends BaseFragment {
         tv_submit.setOnClickListener(this);
     }
 
-    private void selectionSymptom() {
-        symptom_flag = new boolean[SYMPTOM_TYPE.length];
-        AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
-        builder.setMultiChoiceItems(SYMPTOM_TYPE, null, new DialogInterface.OnMultiChoiceClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-                symptom_flag[which] = isChecked;
-            }
-        });
-        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-
-        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                int length = symptom_flag.length;
-                String symptom_str = "";
-                for (int i = 0; i < length; i++) {
-                    if (symptom_flag[i]) {
-                        symptom_str += SYMPTOM_TYPE[i] + ",";
-                        symptom_code += SYMPTOM_TYPE_ID[i] + ",";
-                    }
-                }
-                symptom_str = symptom_str.substring(0, symptom_str.length() - 1);
-                symptom_code = symptom_code.substring(0, symptom_code.length() - 1);
-                symptom.setText(symptom_str);
-            }
-        });
-        builder.setTitle("选择症状");
-        builder.show();
-    }
+//    private void selectionSymptom() {
+//        symptom_flag = new boolean[SYMPTOM_TYPE.length];
+//        AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
+//        builder.setMultiChoiceItems(SYMPTOM_TYPE, null, new DialogInterface.OnMultiChoiceClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+//                symptom_flag[which] = isChecked;
+//            }
+//        });
+//        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//
+//            }
+//        });
+//
+//        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                int length = symptom_flag.length;
+//                String symptom_str = "";
+//                for (int i = 0; i < length; i++) {
+//                    if (symptom_flag[i]) {
+//                        symptom_str += SYMPTOM_TYPE[i] + ",";
+//                        symptom_code += SYMPTOM_TYPE_ID[i] + ",";
+//                    }
+//                }
+//                symptom_str = symptom_str.substring(0, symptom_str.length() - 1);
+//                symptom_code = symptom_code.substring(0, symptom_code.length() - 1);
+//                symptom.setText(symptom_str);
+//            }
+//        });
+//        builder.setTitle("选择症状");
+//        builder.show();
+//    }
 
     public static HypertensionAddFragment newInstance(HypertensionBaseDTO dto, int type) {
         Bundle args = new Bundle();
@@ -737,11 +739,11 @@ public class HypertensionAddFragment extends BaseFragment {
         return fragment;
     }
 
-    public static HypertensionAddFragment newInstance(String record_code, int type,String name) {
+    public static HypertensionAddFragment newInstance(String record_code, int type, String name) {
         Bundle args = new Bundle();
         args.putString("record_code", record_code);
         args.putInt("type", type);
-        args.putString("name",name);
+        args.putString("name", name);
         HypertensionAddFragment fragment = new HypertensionAddFragment();
         fragment.setArguments(args);
         return fragment;

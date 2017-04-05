@@ -73,27 +73,27 @@ public class QueryResultFragment extends BaseFragment {
         content = bundle.getString("content");
         switch (type) {
             case 0:
-                //content="王婷";
+                content="王婷";
                 getArchivesQuery(searchType, content);
                 break;
             case 1:
-                //content="李小光";
+                content="李小光";
                 getHypertension(searchType, content);
                 break;
             case 2:
-                //content="李长生";
+                content="李长生";
                 getDiabetes(searchType, content);
                 break;
             case 3:
-                //content="杨美术";
+                content="杨美术";
                 getMentalBaseInfo(searchType, content);
                 break;
             case 4:
-                //content="吴美丽";
+                content="吴美丽";
                 getPregnantInfo(searchType, content);
                 break;
             case 5:
-                //content="王婷";
+                content="王婷";
                 getChildInfo(searchType, content);
                 break;
             default:

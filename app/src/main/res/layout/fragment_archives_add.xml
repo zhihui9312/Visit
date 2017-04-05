@@ -38,7 +38,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/sex"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_sex" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!-- 出生日期 -->
@@ -127,7 +127,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/census_register"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_census_register" />
 
                 <include layout="@layout/layout_interval" />
@@ -149,7 +149,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/blood_type"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_blood_type" />
 
                 <include layout="@layout/layout_interval" />
@@ -160,7 +160,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/blood_rh"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_blood_rh" />
             </android.support.v7.widget.LinearLayoutCompat>
 
@@ -173,7 +173,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/education_code"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_education_code" />
 
 
@@ -187,7 +187,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/job_type"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_job_type" />
 
             </android.support.v7.widget.LinearLayoutCompat>
@@ -201,7 +201,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/marriage_code"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_marriage_code" />
 
                 <include layout="@layout/layout_interval" />
@@ -212,7 +212,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/pay_type"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_pay_type" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!--医疗费用支付方式 其他 -->
@@ -220,7 +220,7 @@
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
-                    android:text="@string/pay_type_str" />
+                    android:text="@string/other" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/pay_type_str"
@@ -256,7 +256,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/expose"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallDisableEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
             <!--疾病1 -->
@@ -268,7 +268,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/disease1"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_disease" />
 
                 <include layout="@layout/layout_interval" />
@@ -306,7 +306,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/disease2"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_disease" />
 
                 <include layout="@layout/layout_interval" />
@@ -344,7 +344,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/disease3"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_disease" />
 
                 <include layout="@layout/layout_interval" />
@@ -382,7 +382,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/disease4"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_disease" />
 
                 <include layout="@layout/layout_interval" />
@@ -419,7 +419,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/disease5"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_disease" />
 
                 <include layout="@layout/layout_interval" />
@@ -457,7 +457,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/disease6"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_disease" />
 
                 <include layout="@layout/layout_interval" />
@@ -494,7 +494,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/operation1"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
 
                 <include layout="@layout/layout_interval" />
@@ -528,7 +528,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/operation2"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
 
                 <include layout="@layout/layout_interval" />
@@ -563,7 +563,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/trauma1"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
 
                 <include layout="@layout/layout_interval" />
@@ -598,7 +598,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/trauma2"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
 
                 <include layout="@layout/layout_interval" />
@@ -633,7 +633,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/transfuse1"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
 
                 <include layout="@layout/layout_interval" />
@@ -667,7 +667,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/transfuse2"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
 
                 <include layout="@layout/layout_interval" />
@@ -807,7 +807,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/hinherit"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
 
                 <include layout="@layout/layout_interval" />
@@ -830,7 +830,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/deformity1"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_deformity" />
 
                 <include layout="@layout/layout_interval" />
@@ -853,7 +853,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/deformity2"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_deformity" />
 
                 <include layout="@layout/layout_interval" />
@@ -876,7 +876,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/deformity3"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_deformity" />
 
                 <include layout="@layout/layout_interval" />
@@ -899,7 +899,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/deformity4"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_deformity" />
 
                 <include layout="@layout/layout_interval" />
@@ -922,7 +922,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/deformity5"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_deformity" />
 
                 <include layout="@layout/layout_interval" />
@@ -945,7 +945,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/deformity6"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_deformity" />
 
                 <include layout="@layout/layout_interval" />
@@ -969,7 +969,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/exhaust_equipment"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exhaust_equipment" />
 
                 <include layout="@layout/layout_interval" />
@@ -980,7 +980,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/fuel_type"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_fuel_type" />
 
             </android.support.v7.widget.LinearLayoutCompat>
@@ -994,7 +994,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/drinking_water"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_drinking_water" />
 
                 <include layout="@layout/layout_interval" />
@@ -1005,7 +1005,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/livestock_column"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_livestock_column" />
 
             </android.support.v7.widget.LinearLayoutCompat>
@@ -1018,7 +1018,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/toilet"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_toilet" />
 
             </android.support.v7.widget.LinearLayoutCompat>

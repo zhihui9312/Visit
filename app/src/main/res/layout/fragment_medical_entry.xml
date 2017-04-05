@@ -74,7 +74,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/temperature"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberDecimalEditText" />
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
@@ -88,7 +88,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/pulse_rate"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberEditText" />
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
@@ -102,7 +102,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/breathing_fn"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberEditText" />
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
@@ -117,7 +117,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/blood_pressure_left"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberDecimalEditText" />
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
@@ -125,7 +125,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/diastolic_pressure_left"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberDecimalEditText" />
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
@@ -139,7 +139,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/blood_pressure_right"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberDecimalEditText" />
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
@@ -147,7 +147,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/diastolic_pressure_right"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberDecimalEditText" />
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
@@ -163,7 +163,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/height"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberDecimalEditText" />
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
@@ -177,7 +177,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/weight"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberDecimalEditText" />
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
@@ -192,7 +192,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/waistline"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberDecimalEditText" />
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
@@ -206,7 +206,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/bim"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberDecimalEditText" />
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
                     android:text="@string/ibm_unit" />
@@ -221,7 +221,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/old_health_status"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_old_health_status" />
 
                 <include layout="@layout/layout_interval" />
@@ -235,7 +235,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/old_lifeself"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_old_lifeself" />
             </android.support.v7.widget.LinearLayoutCompat>
 
@@ -248,7 +248,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/old_cognizefun"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_old_cognizefun" />
 
                 <include layout="@layout/layout_interval" />
@@ -259,7 +259,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/old_cognizefun_grade"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberDecimalEditText" />
 
             </android.support.v7.widget.LinearLayoutCompat>
             <!--老年人情感状态-->
@@ -271,7 +271,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/old_sensibility"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_old_sensibility" />
 
                 <include layout="@layout/layout_interval" />
@@ -282,7 +282,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/old_blahs_grade"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberDecimalEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!--锻炼频率、锻炼时间-->
             <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
@@ -293,7 +293,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/physical_exercise_fre"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_physical_exercise_fre" />
 
                 <include layout="@layout/layout_interval" />
@@ -304,7 +304,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/physical_exercise_minute"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberEditText" />
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
@@ -319,7 +319,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/physical_exercise_year"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberEditText" />
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
@@ -345,7 +345,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/diet_habit_abn"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_diet_habit_abn" />
 
                 <include layout="@layout/layout_interval" />
@@ -356,7 +356,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/smoke_situation"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_smoke_situation" />
 
             </android.support.v7.widget.LinearLayoutCompat>
@@ -369,7 +369,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/smoke_qty"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberEditText" />
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
@@ -383,7 +383,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/begin_smoke_age"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberEditText" />
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
@@ -398,7 +398,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/stop_smoke_age"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberEditText" />
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
@@ -412,7 +412,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/drink_frequency"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_drink_frequency" />
 
             </android.support.v7.widget.LinearLayoutCompat>
@@ -426,7 +426,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/drink_measure_day"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberEditText" />
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
@@ -440,7 +440,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/if_stopdrink_flage"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_if_stopdrink_flage" />
 
                 <include layout="@layout/layout_interval" />
@@ -480,7 +480,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/in_one_year_intoxication"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_in_one_year_intoxication" />
 
             </android.support.v7.widget.LinearLayoutCompat>
@@ -513,7 +513,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/job_mark"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_yes_no" />
 
                 <include layout="@layout/layout_interval" />
@@ -534,7 +534,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/job_year"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberEditText" />
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
@@ -560,7 +560,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/dust_protect"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
 
             </android.support.v7.widget.LinearLayoutCompat>
@@ -596,7 +596,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/ray_protect"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
 
             </android.support.v7.widget.LinearLayoutCompat>
@@ -632,7 +632,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/pest_protect"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
 
             </android.support.v7.widget.LinearLayoutCompat>
@@ -666,7 +666,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/chemicla_protect"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
 
             </android.support.v7.widget.LinearLayoutCompat>
@@ -700,7 +700,7 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/toxicant_other_protect"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
 
             </android.support.v7.widget.LinearLayoutCompat>

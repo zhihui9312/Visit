@@ -207,7 +207,7 @@
 
                 <Spinner
                     android:id="@+id/visit_class"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_after42_transfert_mark" />
 
                 <include layout="@layout/layout_interval" />
@@ -253,7 +253,7 @@
 
                 <Spinner
                     android:id="@+id/transfert_mark"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_deal_with" />
             </LinearLayout>
             <!-- 转诊 转诊科别-->

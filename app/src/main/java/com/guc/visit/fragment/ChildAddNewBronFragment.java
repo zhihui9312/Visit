@@ -470,7 +470,7 @@ public class ChildAddNewBronFragment extends BaseFragment implements View.OnTouc
         if (event.getAction() == MotionEvent.ACTION_UP) {
             switch (v.getId()) {
                 case R.id.guidance_memo:
-                    multiChoiceDialog(R.array.array_guidance_memo, guidance_memo, guidance_mark);
+                    multiChoiceDialog(getIntArray(guidance_mark),R.array.array_guidance_memo, guidance_memo, guidance_mark);
                     break;
                 case R.id.next_visit_date:
                     showDatePicker(next_visit_date);

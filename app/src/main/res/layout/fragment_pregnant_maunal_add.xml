@@ -92,7 +92,7 @@
                 <Spinner
                     android:entries="@array/array_yes_no"
                     android:id="@+id/is_high_risk"
-                    style="@style/evnSpinner"/>
+                    style="@style/WrapSpinner"/>
             </LinearLayout>
 
             <LinearLayout

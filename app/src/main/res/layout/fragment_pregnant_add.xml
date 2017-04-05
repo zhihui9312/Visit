@@ -243,7 +243,7 @@
 
                 <Spinner
                     android:id="@+id/gynaecology_operation_mark"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:layout_weight="0"
                     android:entries="@array/array_no_yes"/>
 
@@ -415,7 +415,7 @@
 
                 <Spinner
                     android:id="@+id/heart_result"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception"/>
             </LinearLayout>
 
@@ -440,7 +440,7 @@
 
                 <Spinner
                     android:id="@+id/lung_result"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception"/>
             </LinearLayout>
 
@@ -465,7 +465,7 @@
 
                 <Spinner
                     android:id="@+id/pudendum_result"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception"/>
             </LinearLayout>
 
@@ -490,7 +490,7 @@
 
                 <Spinner
                     android:id="@+id/cunt_result"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception"/>
             </LinearLayout>
 
@@ -515,7 +515,7 @@
 
                 <Spinner
                     android:id="@+id/cervical_result"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception"/>
             </LinearLayout>
 
@@ -540,7 +540,7 @@
 
                 <Spinner
                     android:id="@+id/uterus_result"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception"/>
             </LinearLayout>
 
@@ -565,7 +565,7 @@
 
                 <Spinner
                     android:id="@+id/appendage_result"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception"/>
             </LinearLayout>
 
@@ -689,7 +689,7 @@
 
                 <Spinner
                     android:id="@+id/qualitative_name"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_qualitative_name"/>
             </LinearLayout>
             <!--尿潜血、尿常规-其它 -->
@@ -702,7 +702,7 @@
 
                 <Spinner
                     android:id="@+id/occultblood_name"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_occultblood_name"/>
 
                 <include layout="@layout/layout_interval"/>
@@ -830,7 +830,7 @@
 
                 <Spinner
                     android:id="@+id/hbs_ag"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_masculine"/>
             </LinearLayout>
             <!--乙型肝炎表面抗体、乙型肝炎e抗原 -->
@@ -843,7 +843,7 @@
 
                 <Spinner
                     android:id="@+id/hbs_ab"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_masculine"/>
 
                 <include layout="@layout/layout_interval"/>
@@ -854,7 +854,7 @@
 
                 <Spinner
                     android:id="@+id/hbe_ag"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_masculine"/>
             </LinearLayout>
             <!--乙型肝炎e抗体、乙型肝炎核心抗体 -->
@@ -867,7 +867,7 @@
 
                 <Spinner
                     android:id="@+id/hbe_ab"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_masculine"/>
 
                 <include layout="@layout/layout_interval"/>
@@ -878,7 +878,7 @@
 
                 <Spinner
                     android:id="@+id/hbc_ab"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_masculine"/>
             </LinearLayout>
             <!--阴道清洁度 -->
@@ -891,7 +891,7 @@
 
                 <Spinner
                     android:id="@+id/cunt_secretion"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_cunt_secretion"/>
                 <TextView
                     style="@style/SmallTextView"
@@ -899,7 +899,7 @@
 
                 <Spinner
                     android:id="@+id/vagina_cleanliness"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_vagina_cleanliness"/>
             </LinearLayout>
             <!--阴道分泌物其它 -->
@@ -924,7 +924,7 @@
 
                 <Spinner
                     android:id="@+id/syphilis_serology"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_masculine"/>
 
                 <include layout="@layout/layout_interval"/>
@@ -935,7 +935,7 @@
 
                 <Spinner
                     android:id="@+id/hiv"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_masculine"/>
             </LinearLayout>
             <!--、B超 -->
@@ -960,7 +960,7 @@
 
                 <Spinner
                     android:id="@+id/evaluate_mark"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception"/>
             </LinearLayout>
             <!--、总体评估 -->

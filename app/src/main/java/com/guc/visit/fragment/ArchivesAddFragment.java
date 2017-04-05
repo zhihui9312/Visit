@@ -450,22 +450,22 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
                     }).positiveText(R.string.ok).show();
                     break;
                 case R.id.irritability:
-                    multiChoiceDialog(R.array.array_irritability, irritability, irritability_code);
+                    multiChoiceDialog(getIntArray(irritability_code), R.array.array_irritability, irritability, irritability_code);
                     break;
                 case R.id.expose:
-                    multiChoiceDialog(R.array.array_expose, expose, expose_code);
+                    multiChoiceDialog(getIntArray(expose_code), R.array.array_expose, expose, expose_code);
                     break;
                 case R.id.familys_f:
-                    multiChoiceDialog(R.array.array_familys, familys_f, familys_f_code);
+                    multiChoiceDialog(getIntArray(familys_f_code), R.array.array_familys, familys_f, familys_f_code);
                     break;
                 case R.id.familys_m:
-                    multiChoiceDialog(R.array.array_familys, familys_m, familys_m_code);
+                    multiChoiceDialog(getIntArray(familys_m_code), R.array.array_familys, familys_m, familys_m_code);
                     break;
                 case R.id.familys_s:
-                    multiChoiceDialog(R.array.array_familys, familys_s, familys_s_code);
+                    multiChoiceDialog(getIntArray(familys_s_code), R.array.array_familys, familys_s, familys_s_code);
                     break;
                 case R.id.familys_c:
-                    multiChoiceDialog(R.array.array_familys, familys_c, familys_c_code);
+                    multiChoiceDialog(getIntArray(familys_c_code), R.array.array_familys, familys_c, familys_c_code);
                     break;
                 case R.id.disease1_time:
                     showDatePicker(disease1_time);

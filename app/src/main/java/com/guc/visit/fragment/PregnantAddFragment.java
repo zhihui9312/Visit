@@ -51,13 +51,13 @@ public class PregnantAddFragment extends BaseFragment implements View.OnTouchLis
     private EditText birth_week;
     private EditText birth_week_days;
     private EditText anamnesis;
-    private StringBuilder anamnesis_code;
+    private StringBuilder anamnesis_code=new StringBuilder("");
     private EditText anamnesis_other;
     private EditText family_disease;
-    private StringBuilder family_disease_code;
+    private StringBuilder family_disease_code= new StringBuilder("");;
     private EditText family_disease_other;
     private EditText personal_history;
-    private StringBuilder personal_history_code;
+    private StringBuilder personal_history_code=new StringBuilder("");
     private EditText personal_history_other;
     private Spinner gynaecology_operation_mark;
     private EditText gynaecology_operation;
@@ -116,7 +116,7 @@ public class PregnantAddFragment extends BaseFragment implements View.OnTouchLis
     private Spinner evaluate_mark;
     private EditText evaluate;
     private EditText health_guide_str;
-    private StringBuilder health_guide_code;
+    private StringBuilder health_guide_code = new StringBuilder("");;
     private EditText health_guide_other;
     private Spinner transfert_mark;
     private EditText transfert_dept;
@@ -302,20 +302,16 @@ public class PregnantAddFragment extends BaseFragment implements View.OnTouchLis
         if (event.getAction() == MotionEvent.ACTION_UP) {
             switch (v.getId()) {
                 case R.id.health_guide_str:
-                    health_guide_code = new StringBuilder("");
-                    multiChoiceDialog(R.array.array_health_guide, health_guide_str, health_guide_code);
+                    multiChoiceDialog(getIntArray(health_guide_code),R.array.array_health_guide, health_guide_str, health_guide_code);
                     break;
                 case R.id.anamnesis:
-                    anamnesis_code = new StringBuilder("");
-                    multiChoiceDialog2(R.array.array_anamnesis, anamnesis, anamnesis_code);
+                    multiChoiceDialog(getIntArray(anamnesis_code),R.array.array_anamnesis, anamnesis, anamnesis_code);
                     break;
                 case R.id.family_disease:
-                    family_disease_code = new StringBuilder("");
-                    multiChoiceDialog2(R.array.array_family_disease, family_disease, family_disease_code);
+                    multiChoiceDialog(getIntArray(family_disease_code),R.array.array_family_disease, family_disease, family_disease_code);
                     break;
                 case R.id.personal_history:
-                    personal_history_code = new StringBuilder("");
-                    multiChoiceDialog2(R.array.array_personal_history, personal_history, personal_history_code);
+                    multiChoiceDialog(getIntArray(personal_history_code),R.array.array_personal_history, personal_history, personal_history_code);
                     break;
                 case R.id.visit_date:
                     showDatePicker(visit_date);
@@ -436,117 +432,6 @@ public class PregnantAddFragment extends BaseFragment implements View.OnTouchLis
                 break;
         }
     }
-//
-//    private void selectAnamnesis() {
-//        final boolean anamnesis_flag[] = new boolean[array_anamnesis.length];
-//        anamnesis_code = "";
-//        AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
-//        builder.setMultiChoiceItems(array_anamnesis, null, new DialogInterface.OnMultiChoiceClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-//                anamnesis_flag[which] = isChecked;
-//            }
-//        });
-//        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//
-//            }
-//        });
-//
-//        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//                int length = anamnesis_flag.length;
-//                String anamnesis_str = "";
-//                for (int i = 0; i < length; i++) {
-//                    if (anamnesis_flag[i]) {
-//                        anamnesis_str += array_anamnesis[i] + ",";
-//                        anamnesis_code += (i + 1) + ",";
-//                    }
-//                }
-//                anamnesis_str = anamnesis_str.substring(0, anamnesis_str.length() - 1);
-//                anamnesis_code = anamnesis_code.substring(0, anamnesis_code.length() - 1);
-//                anamnesis.setText(anamnesis_str);
-//            }
-//        });
-//        builder.setTitle("选择症状");
-//        builder.show();
-//    }
-
-//    private void selectFamilyDisease() {
-//        final boolean family_disease_flag[] = new boolean[array_family_disease.length];
-//        family_disease_code = "";
-//        AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
-//        builder.setMultiChoiceItems(array_family_disease, null, new DialogInterface.OnMultiChoiceClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-//                family_disease_flag[which] = isChecked;
-//            }
-//        });
-//        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//
-//            }
-//        });
-//
-//        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//                int length = family_disease_flag.length;
-//                String family_disease_str = "";
-//                for (int i = 0; i < length; i++) {
-//                    if (family_disease_flag[i]) {
-//                        family_disease_str += array_family_disease[i] + ",";
-//                        family_disease_code += (i + 1) + ",";
-//                    }
-//                }
-//                family_disease_str = family_disease_str.substring(0, family_disease_str.length() - 1);
-//                family_disease_code = family_disease_code.substring(0, family_disease_code.length() - 1);
-//                anamnesis.setText(family_disease_str);
-//            }
-//        });
-//        builder.setTitle("选择症状");
-//        builder.show();
-//    }
-
-//    private void selectPersonalHistory() {
-//        final boolean array_personal_history_flag[] = new boolean[array_personal_history.length];
-//        personal_history_code = "";
-//        AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
-//        builder.setMultiChoiceItems(array_family_disease, null, new DialogInterface.OnMultiChoiceClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-//                array_personal_history_flag[which] = isChecked;
-//            }
-//        });
-//        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//
-//            }
-//        });
-
-//        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//                int length = array_personal_history_flag.length;
-//                String personal_history_str = "";
-//                for (int i = 0; i < length; i++) {
-//                    if (array_personal_history_flag[i]) {
-//                        personal_history_str += array_family_disease[i] + ",";
-//                        personal_history_code += (i + 1) + ",";
-//                    }
-//                }
-//                personal_history_str = personal_history_str.substring(0, personal_history_str.length() - 1);
-//                personal_history_code = personal_history_code.substring(0, personal_history_code.length() - 1);
-//                anamnesis.setText(personal_history_str);
-//            }
-//        });
-//        builder.setTitle("选择症状");
-//        builder.show();
-//    }
 
     private String buildJson() {
         PregnantAddDTO dto = new PregnantAddDTO();
@@ -671,14 +556,6 @@ public class PregnantAddFragment extends BaseFragment implements View.OnTouchLis
             }
         });
     }
-//
-//    public static PregnantAddFragment newInstance(String record_code) {
-//        Bundle args = new Bundle();
-//        args.putString("record_code", "record_code");
-//        PregnantAddFragment fragment = new PregnantAddFragment();
-//        fragment.setArguments(args);
-//        return fragment;
-//    }
 
     public static PregnantAddFragment newInstance(HashMap<String, String> map) {
         Bundle args = new Bundle();

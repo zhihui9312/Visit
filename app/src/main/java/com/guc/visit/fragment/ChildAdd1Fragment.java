@@ -356,14 +356,14 @@ public class ChildAdd1Fragment extends BaseFragment implements View.OnTouchListe
         if (event.getAction() == MotionEvent.ACTION_UP) {
             switch (v.getId()) {
                 case R.id.rachitis_symptom:
-                    multiChoiceDialog(R.array.array_rachitis_symptom, rachitis_symptom, rachitis_symptom_mark);
+                    multiChoiceDialog(getIntArray(rachitis_symptom_mark),R.array.array_rachitis_symptom, rachitis_symptom, rachitis_symptom_mark);
                     break;
                 case R.id.rachitis_sign:
                     //两位数
-                    multiChoiceDialog(R.array.array_rachitis_sign, rachitis_sign, rachitis_sign_mark);
+                    multiChoiceDialog(getIntArray(rachitis_sign_mark),R.array.array_rachitis_sign, rachitis_sign, rachitis_sign_mark);
                     break;
                 case R.id.guidance_con:
-                    multiChoiceDialog(R.array.array_guidance_con, guidance_con, guidance_mark);
+                    multiChoiceDialog(getIntArray(guidance_mark),R.array.array_guidance_con, guidance_con, guidance_mark);
                     break;
                 default:
                     break;

@@ -38,7 +38,7 @@
 
                 <Spinner
                     android:id="@+id/current_agey"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_current_agey" />
 
             </LinearLayout>
@@ -61,7 +61,7 @@
 
                 <Spinner
                     android:id="@+id/weight_grade"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_weight_grade" />
             </LinearLayout>
             <!-- 身高、身高等级 -->
@@ -83,7 +83,7 @@
 
                 <Spinner
                     android:id="@+id/height_grade"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_weight_grade" />
             </LinearLayout>
             <!-- 体格发育评价 -->
@@ -157,8 +157,8 @@
 
                 <Spinner
                     android:id="@+id/ear_result"
-                    style="@style/evnSpinner"
-                    android:entries="@array/array_exception" />
+                    style="@style/WrapSpinner"
+                    android:entries="@array/array_growth" />
             </LinearLayout>
 
             <LinearLayout style="@style/LayoutAline">
@@ -176,7 +176,7 @@
 
                 <Spinner
                     android:id="@+id/complexion"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_complexion36" />
 
                 <include layout="@layout/layout_interval" />
@@ -198,7 +198,7 @@
 
                 <Spinner
                     android:id="@+id/gait"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -217,7 +217,7 @@
 
                 <Spinner
                     android:id="@+id/eye"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -236,7 +236,7 @@
 
                 <Spinner
                     android:id="@+id/ear"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -255,7 +255,7 @@
 
                 <Spinner
                     android:id="@+id/heart_lung"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -274,7 +274,7 @@
 
                 <Spinner
                     android:id="@+id/liver_spleen"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -293,7 +293,7 @@
 
                 <Spinner
                     android:id="@+id/growth_action"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -312,7 +312,7 @@
 
                 <Spinner
                     android:id="@+id/growth_gam"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -341,7 +341,7 @@
 
                 <Spinner
                     android:id="@+id/irritability"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
             </LinearLayout>
 

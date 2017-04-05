@@ -133,13 +133,13 @@ public class ChildAdd36Fragment extends BaseFragment implements View.OnTouchList
         if (event.getAction() == MotionEvent.ACTION_UP) {
             switch (v.getId()) {
                 case R.id.physique:
-                    multiChoiceDialog(R.array.array_physique, physique, physique_mark);
+                    multiChoiceDialog(getIntArray(physique_mark),R.array.array_physique, physique, physique_mark);
                     break;
                 case R.id.pneumonia_memo:
-                    multiChoiceDialog(R.array.array_pneumonia_memo, pneumonia_memo, pneumonia_mark);
+                    multiChoiceDialog(getIntArray(pneumonia_mark),R.array.array_pneumonia_memo, pneumonia_memo, pneumonia_mark);
                     break;
                 case R.id.guidance_con:
-                    multiChoiceDialog(R.array.array_guidance_con, guidance_con, guidance_mark);
+                    multiChoiceDialog(getIntArray(guidance_mark),R.array.array_guidance_con, guidance_con, guidance_mark);
                     break;
                 default:
                     break;

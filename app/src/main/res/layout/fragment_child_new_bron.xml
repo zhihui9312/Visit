@@ -26,7 +26,7 @@
 
                 <Spinner
                     android:id="@+id/gdisease"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_gdisease" />
             </LinearLayout>
             <!-- 其他 -->
@@ -49,7 +49,7 @@
 
                 <Spinner
                     android:id="@+id/asphyxia"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
 
                 <include layout="@layout/layout_interval" />
@@ -60,7 +60,7 @@
 
                 <Spinner
                     android:id="@+id/grade"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_grade" />
             </LinearLayout>
             <!-- 是否有畸形 -->
@@ -72,7 +72,7 @@
 
                 <Spinner
                     android:id="@+id/deformity"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
             </LinearLayout>
             <!-- 有畸形 -->
@@ -95,7 +95,7 @@
 
                 <Spinner
                     android:id="@+id/left_hearing_screen"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_hearing_screen" />
 
                 <include layout="@layout/layout_interval" />
@@ -106,7 +106,7 @@
 
                 <Spinner
                     android:id="@+id/right_hearing_screen"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_hearing_screen" />
             </LinearLayout>
             <!-- 新生儿筛查 -->
@@ -118,7 +118,7 @@
 
                 <Spinner
                     android:id="@+id/illness_screen"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_hearing_screen" />
             </LinearLayout>
             <!-- 新生儿筛查其他 -->
@@ -155,7 +155,7 @@
 
                 <Spinner
                     android:id="@+id/feed_manner_code"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_feed_manner_code" />
             </LinearLayout>
             <!-- 吃奶量、吃奶次数 -->
@@ -196,7 +196,7 @@
 
                 <Spinner
                     android:id="@+id/puke"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
             </LinearLayout>
             <!-- 大便、大便次数 -->
@@ -208,7 +208,7 @@
 
                 <Spinner
                     android:id="@+id/defecate"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_defecate" />
 
                 <include layout="@layout/layout_interval" />
@@ -277,7 +277,7 @@
 
                 <Spinner
                     android:id="@+id/jaundice_part"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_jaundice_part" />
 
             </LinearLayout>
@@ -290,7 +290,7 @@
 
                 <Spinner
                     android:id="@+id/complexion"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_complexion" />
 
                 <include layout="@layout/layout_interval" />
@@ -333,7 +333,7 @@
 
                 <Spinner
                     android:id="@+id/fontanel_status"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_fontanel_status" />
 
                 <include layout="@layout/layout_interval" />
@@ -355,7 +355,7 @@
 
                 <Spinner
                     android:id="@+id/eye"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -374,7 +374,7 @@
 
                 <Spinner
                     android:id="@+id/ear"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -393,7 +393,7 @@
 
                 <Spinner
                     android:id="@+id/nose"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -412,7 +412,7 @@
 
                 <Spinner
                     android:id="@+id/nonnasality"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -431,7 +431,7 @@
 
                 <Spinner
                     android:id="@+id/heart_lung"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -450,7 +450,7 @@
 
                 <Spinner
                     android:id="@+id/abdomen"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -469,7 +469,7 @@
 
                 <Spinner
                     android:id="@+id/limbs"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -488,7 +488,7 @@
 
                 <Spinner
                     android:id="@+id/neck"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -507,7 +507,7 @@
 
                 <Spinner
                     android:id="@+id/skin"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -526,7 +526,7 @@
 
                 <Spinner
                     android:id="@+id/anus"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -545,7 +545,7 @@
 
                 <Spinner
                     android:id="@+id/genitalia"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -564,7 +564,7 @@
 
                 <Spinner
                     android:id="@+id/backbone"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 
@@ -583,7 +583,7 @@
 
                 <Spinner
                     android:id="@+id/umbilical"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_exception" />
             </LinearLayout>
 

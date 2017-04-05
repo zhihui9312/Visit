@@ -272,11 +272,14 @@ public class MedicalEntryFragment extends BaseFragment implements View.OnTouchLi
     }
 
     private void submit() {
+        materialDialog = showIndeterminateProgressDialog(R.string.isSubmitting);
         String json = buildJson();
+
         GucNetEngineClient.addMedicalEntry(json, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.e("TAG", response);
+                materialDialog.dismiss();
+                //Log.e("TAG", response);
                 // {"UploadMsPhysicalExaminationResult":{"result":"CPE20170000166242","errInfo":null}}
                 JSONObject jsonObject = JSON.parseObject(response);
                 JSONObject objResult = jsonObject.getJSONObject("UploadMsPhysicalExaminationResult");
@@ -290,7 +293,7 @@ public class MedicalEntryFragment extends BaseFragment implements View.OnTouchLi
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                materialDialog.dismiss();
             }
         });
     }
@@ -315,10 +318,10 @@ public class MedicalEntryFragment extends BaseFragment implements View.OnTouchLi
         if (event.getAction() == MotionEvent.ACTION_UP) {
             switch (v.getId()) {
                 case R.id.symptom:
-                    multiChoiceDialog2(R.array.array_symptom, symptom, symptom_code);
+                    multiChoiceDialog(getIntArray(symptom_code),R.array.array_symptom, symptom, symptom_code);
                     break;
                 case R.id.drink_type:
-                    multiChoiceDialog2(R.array.array_drink_type, drink_type, drink_type_abn);
+                    multiChoiceDialog(getIntArray(drink_type_abn),R.array.array_drink_type, drink_type, drink_type_abn);
                     break;
                 case R.id.mtest_date:
                     showDatePicker(mtest_date);

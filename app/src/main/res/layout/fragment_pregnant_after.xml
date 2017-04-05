@@ -240,7 +240,7 @@
 
                 <Spinner
                     android:id="@+id/visit_class"
-                    style="@style/evnSpinner"
+                    style="@style/WrapSpinner"
                     android:entries="@array/array_no_yes" />
 
                 <include layout="@layout/layout_interval" />
