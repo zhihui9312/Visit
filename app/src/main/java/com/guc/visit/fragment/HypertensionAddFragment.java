@@ -217,6 +217,7 @@ public class HypertensionAddFragment extends BaseFragment {
     }
 
     private void getHistoryHypertension(final String record_code) {
+       materialDialog= showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getHistoryHypertension(record_code, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -229,12 +230,7 @@ public class HypertensionAddFragment extends BaseFragment {
                     updateUI(hypertensionAddDTO);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-            }
-        });
+        }, null,materialDialog);
     }
 
     @Override
@@ -392,6 +388,7 @@ public class HypertensionAddFragment extends BaseFragment {
     }
 
     private void getLastData(String ehr_id) {
+        materialDialog= showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getLastHypertension(ehr_id, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -405,12 +402,7 @@ public class HypertensionAddFragment extends BaseFragment {
                     updateUI(dto);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-            }
-        });
+        },null,materialDialog);
     }
 
     private void updateUI(HypertensionAddDTO dto) {
@@ -666,6 +658,7 @@ public class HypertensionAddFragment extends BaseFragment {
     }
 
     private void addHypertension(final String json) {
+        materialDialog=showIndeterminateProgressDialog(R.string.isSubmitting);
         GucNetEngineClient.addHypertension(json, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -678,7 +671,7 @@ public class HypertensionAddFragment extends BaseFragment {
                     ToastUtils.showLong(mActivity, R.string.add_success);
                 }
             }
-        }, new DefaultErrorListener());
+        },null,materialDialog);
     }
 
     public void popWindows(View parent) {

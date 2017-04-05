@@ -2,27 +2,21 @@ package com.guc.visit.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatSpinner;
 import android.support.v7.widget.LinearLayoutCompat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.guc.visit.R;
 import com.guc.visit.application.GucApplication;
 import com.guc.visit.base.BaseFragment;
@@ -658,14 +652,13 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
     }
 
     private void submit() {
-        showDialog(R.string.isSubmitting);
+        materialDialog = showIndeterminateProgressDialog(R.string.isSubmitting);
         String json = buildJson();
         GucNetEngineClient.archivesAdd(json, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                dismiss();
                 JSONObject jsonObject = JSON.parseObject(response);
-                JSONObject objResult = jsonObject.getJSONObject("hrPersonBaseRegisterResult");//
+                JSONObject objResult = jsonObject.getJSONObject("hrPersonBaseRegisterResult");
                 String errInfo = objResult.getString("errInfo");
                 if (StringUtils.isBlank(errInfo)) {
                     showToast(R.string.add_success);
@@ -673,12 +666,7 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                dismiss();
-            }
-        });
+        }, null,materialDialog);
     }
 
     @Override

@@ -38,14 +38,12 @@ public abstract class BaseFragment extends Fragment implements OnClickListener, 
     protected TextView tv_title;
     protected LinearLayout ll_back;
     protected TextView tv_back;
-    public ProgressDialog mProgressDialog;
     protected MaterialDialog materialDialog;
 
     @Override
     public void onAttach(Context activity) {
         super.onAttach(activity);
         mActivity = (BaseActivity) activity;
-        mProgressDialog = new ProgressDialog(activity);
     }
 
     protected View initView(LayoutInflater inflater, ViewGroup container, int layout) {
@@ -55,17 +53,6 @@ public abstract class BaseFragment extends Fragment implements OnClickListener, 
         setListeners();
         initData();
         return view;
-    }
-
-    public void showDialog(int str) {
-        mProgressDialog.setMessage(getResources().getString(str));
-        mProgressDialog.show();
-    }
-
-    public void dismiss() {
-        if (mProgressDialog.isShowing()) {
-            mProgressDialog.dismiss();
-        }
     }
 
     private void initBar(View view) {

@@ -211,12 +211,11 @@ public class PregnantAddAfter42Fragment extends BaseFragment implements View.OnT
         return JSON.toJSONString(dto);
     }
     private void submit(){
+        materialDialog= showIndeterminateProgressDialog(R.string.isSubmitting);
         String json=buildJson();
-        showDialog(R.string.isSubmitting);
         GucNetEngineClient.addMaternalAfter42(json, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                dismiss();
                 //{"UploadMaternalAfter42DayResult":{"result":true,"errInfo":null}}
                 JSONObject jsonObject=JSON.parseObject(response);
                 JSONObject objResult=jsonObject.getJSONObject("UploadMaternalAfter42DayResult");
@@ -227,12 +226,7 @@ public class PregnantAddAfter42Fragment extends BaseFragment implements View.OnT
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                dismiss();
-            }
-        });
+        }, null,materialDialog);
     }
 
     public static PregnantAddAfter42Fragment newInstance(HashMap<String, String> map) {

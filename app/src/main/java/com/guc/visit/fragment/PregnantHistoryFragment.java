@@ -29,8 +29,7 @@ import java.util.List;
 public class PregnantHistoryFragment extends BaseFragment {
     private ListView listView;
     private ArrayList<PregnantBaseDTO<JSONObject>> data;
-    private ArrayList<PregnantInDTO> pregnant_detail_data = new ArrayList<>();
-    private HashMap<String,String> map;
+    private HashMap<String, String> map;
 
     @Nullable
     @Override
@@ -40,8 +39,8 @@ public class PregnantHistoryFragment extends BaseFragment {
 
     @Override
     protected void initData() {
-        Bundle bundle=getArguments();
-        map=(HashMap<String,String>)bundle.getSerializable("map");
+        Bundle bundle = getArguments();
+        map = (HashMap<String, String>) bundle.getSerializable("map");
         data = (ArrayList<PregnantBaseDTO<JSONObject>>) bundle.getSerializable("data");
         PregnantHistoryAdapter adapter = new PregnantHistoryAdapter(data, R.layout.layout_item_pregnant_history);
         listView.setAdapter(adapter);
@@ -52,12 +51,12 @@ public class PregnantHistoryFragment extends BaseFragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                JSONObject jsonObject = (JSONObject) data.get(position).getVisitList();
+                PregnantBaseDTO pregnantBaseDTO=data.get(position);
+                JSONObject jsonObject = (JSONObject) pregnantBaseDTO.getVisitList();
                 JSONArray jsonArray = jsonObject.getJSONArray("visitList");
                 List<PregnantInDTO> temp = JSON.parseArray(jsonArray.toJSONString(), PregnantInDTO.class);
-                pregnant_detail_data.clear();
-                pregnant_detail_data.addAll(temp);
-                mActivity.replace("pregnanHistoryDetailFragment", PregnantHistoryDetailFragment.newInstance(pregnant_detail_data,map), true);
+                map.put("record_code", pregnantBaseDTO.getRecord_code());
+                mActivity.replace("pregnantHistoryDetailFragment", PregnantHistoryDetailFragment.newInstance((ArrayList<PregnantInDTO>) temp, map), true);
             }
         });
     }
@@ -72,10 +71,10 @@ public class PregnantHistoryFragment extends BaseFragment {
 
     }
 
-    public static PregnantHistoryFragment newInstance(ArrayList<PregnantBaseDTO<JSONObject>> data, HashMap<String,String> map) {
+    public static PregnantHistoryFragment newInstance(ArrayList<PregnantBaseDTO<JSONObject>> data, HashMap<String, String> map) {
         Bundle args = new Bundle();
         args.putSerializable("data", data);
-        args.putSerializable("map",map);
+        args.putSerializable("map", map);
         PregnantHistoryFragment fragment = new PregnantHistoryFragment();
         fragment.setArguments(args);
         return fragment;

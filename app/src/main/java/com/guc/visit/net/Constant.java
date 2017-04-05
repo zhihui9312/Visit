@@ -30,7 +30,7 @@ public class Constant {
     public static final String MENTALINFO = "/restful/publichealth/Service/getMentalRecord/";
     public static final String PREGNANTQUERY = "/restful/publichealth/Service/getMaternalInfo/";
     public static final String ADDMAUNAL = "/restful/publichealth/Service/UploadMaternalRegister";
-    public static final String MATERNALBEFOREONE = "/restful/publichealth/Service/UploadMaternalBeforeOne/";
+    public static final String MATERNALBEFOREONE = "/restful/publichealth/Service/UploadMaternalBeforeOne";
     public static final String MATERNALBEFOREFIVE = "/restful/publichealth/Service/UploadMaternalBeforeFive";
     public static final String MATERNALAFTER = "/restful/publichealth/Service/UploadMaternalAfter";
     public static final String MATERNALAFTER42 = "/restful/publichealth/Service/UploadMaternalAfter42Day";

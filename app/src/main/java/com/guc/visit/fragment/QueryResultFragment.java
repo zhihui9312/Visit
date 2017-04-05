@@ -73,27 +73,27 @@ public class QueryResultFragment extends BaseFragment {
         content = bundle.getString("content");
         switch (type) {
             case 0:
-                content="王婷";
+                content = "王婷";
                 getArchivesQuery(searchType, content);
                 break;
             case 1:
-                content="李小光";
+                content = "李小光";
                 getHypertension(searchType, content);
                 break;
             case 2:
-                content="李长生";
+                content = "李长生";
                 getDiabetes(searchType, content);
                 break;
             case 3:
-                content="杨美术";
+                content = "杨美术";
                 getMentalBaseInfo(searchType, content);
                 break;
             case 4:
-                content="吴美丽";
+                content = "吴美丽";
                 getPregnantInfo(searchType, content);
                 break;
             case 5:
-                content="王婷";
+                content = "王婷";
                 getChildInfo(searchType, content);
                 break;
             default:
@@ -104,7 +104,6 @@ public class QueryResultFragment extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        Log.e("TAG", "onCreateView");
         return initView(inflater, container, R.layout.fragment_archives_result);
     }
 
@@ -153,11 +152,10 @@ public class QueryResultFragment extends BaseFragment {
      * @param content
      */
     private void getArchivesQuery(int searchType, String content) {
-        showDialog(R.string.is_loading_please_waite);
+        materialDialog = showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getArchivesQuery(searchType, content, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                dismiss();
                 JSONObject jsonObject = JSON.parseObject(response);
                 JSONObject obj_res = jsonObject.getJSONObject("getPersonBaseInfoResult");
                 String errInfo = obj_res.getString("errInfo");
@@ -177,20 +175,11 @@ public class QueryResultFragment extends BaseFragment {
                     } else {
                         showToast(R.string.not_find);
                     }
-//                    List<ArchivesQueryOutDTO<ArchivesQueryInDTO>> temp = JSON.parseObject(jsonArray.toJSONString(), new TypeReference<List<ArchivesQueryOutDTO<ArchivesQueryInDTO>>>() {
-//                    });
-//                    dataArchives.addAll(temp);
-//                    adapter.notifyDataSetChanged();
                 } else {
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                dismiss();
-            }
-        });
+        }, null, materialDialog);
     }
 
 
@@ -201,11 +190,10 @@ public class QueryResultFragment extends BaseFragment {
      * @param content
      */
     private void getHypertension(int searchType, String content) {
-        showDialog(R.string.is_loading_please_waite);
+        materialDialog = showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getHypertension(searchType, content, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                dismiss();
                 JSONObject jsonObject = JSON.parseObject(response);
                 JSONObject jsonObject_base = jsonObject.getJSONObject("getHypertensionInfoResult");
                 String errInfo = jsonObject_base.getString("errInfo");
@@ -234,12 +222,7 @@ public class QueryResultFragment extends BaseFragment {
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                dismiss();
-            }
-        });
+        }, null, materialDialog);
     }
 
     /**
@@ -249,11 +232,10 @@ public class QueryResultFragment extends BaseFragment {
      * @param content
      */
     private void getDiabetes(int searchType, String content) {
-        showDialog(R.string.is_loading_please_waite);
+        materialDialog = showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getDiabetes(searchType, content, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                dismiss();
                 JSONObject jsonObject = JSON.parseObject(response);
                 JSONObject getDiabetesInfoResult = jsonObject.getJSONObject("getDiabetesInfoResult");
                 String errInfo = getDiabetesInfoResult.getString("errInfo");
@@ -281,34 +263,8 @@ public class QueryResultFragment extends BaseFragment {
                 } else {
                     showToast(errInfo);
                 }
-//                    ToastUtils.showLong(mActivity, errInfo);
-//                    return;
-//                }
-//                JSONArray jsonArray = getDiabetesInfoResult.getJSONArray("personList");
-//                if (jsonArray.size() <= 0) {
-//                    ToastUtils.showLong(mActivity, R.string.not_find);
-//                    return;
-//                }
-//                JSONObject jsonObject1 = jsonArray.getJSONObject(0);
-//
-//                JSONObject obj_history = jsonObject1.getJSONObject("visitRecord2");
-//                JSONArray array_visitList = obj_history.getJSONArray("visitList");
-//
-//                List<HypertensionHistoryDTO> temp = JSON.parseArray(array_visitList.toJSONString(), HypertensionHistoryDTO.class);
-//                data.addAll(temp);
-//
-//                JSONObject diabetesBase2 = jsonObject1.getJSONObject("diabetesBase2");
-//                JSONObject obj_diabetesBase = diabetesBase2.getJSONObject("diabetesBase");
-//                diabetesDTO = JSON.parseObject(obj_diabetesBase.toJSONString(), DiabetesDTO.class);
-//                diabetesBaseFragment = DiabetesBaseFragment.newInstance(diabetesDTO);
-//                replace("diabetesBaseFragment", diabetesBaseFragment, false);
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                dismiss();
-            }
-        });
+        }, null, materialDialog);
     }
 
     /**
@@ -318,11 +274,10 @@ public class QueryResultFragment extends BaseFragment {
      * @param content
      */
     private void getMentalBaseInfo(int searchType, String content) {
-        showDialog(R.string.is_loading_please_waite);
+        materialDialog = showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getMentalBase(searchType, content, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                dismiss();
                 JSONObject jsonObject = JSON.parseObject(response);
                 JSONObject obj_res = jsonObject.getJSONObject("getMentalInfoResult");
                 String errInfo = obj_res.getString("errInfo");
@@ -347,29 +302,11 @@ public class QueryResultFragment extends BaseFragment {
                     } else {
                         showToast(R.string.not_find);
                     }
-//                    JSONObject obj_array0 = jsonArray.getJSONObject(0);
-//                    JSONObject obj_base = obj_array0.getJSONObject("mentalBase2");
-//                    JSONObject obj_base_info = obj_base.getJSONObject("mentalBase");
-//                    mentalBaseDTO = JSON.parseObject(obj_base_info.toJSONString(), MentalBaseDTO.class);
-//
-//                    mentalBaseInfoFragment = MentalBaseInfoFragment.newInstance(mentalBaseDTO);
-//                    replace("mentalBaseInfoFragment", mentalBaseInfoFragment, false);
-//
-//                    JSONObject obj_history = obj_array0.getJSONObject("visitRecord2");
-//                    JSONArray array_history = obj_history.getJSONArray("visitList");
-//
-//                    List<HypertensionHistoryDTO> temp = JSON.parseArray(array_history.toJSONString(), HypertensionHistoryDTO.class);
-//                    data.addAll(temp);
                 } else {
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                dismiss();
-            }
-        });
+        }, null, materialDialog);
     }
 
 
@@ -380,53 +317,39 @@ public class QueryResultFragment extends BaseFragment {
      * @param content
      */
     private void getPregnantInfo(int searchType, String content) {
-        showDialog(R.string.is_loading_please_waite);
+        materialDialog = showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getPregnantInfo(searchType, content, new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        dismiss();
-                        JSONObject jsonObject = JSON.parseObject(response);
-                        JSONObject obj_res = jsonObject.getJSONObject("getMaternalInfoResult");
-                        String errInfo = obj_res.getString("errInfo");
-                        if (StringUtils.isBlank(errInfo)) {
-                            JSONArray jsonArray = obj_res.getJSONArray("personList");
-                            if (jsonArray != null && jsonArray.size() >= 0) {
-                                int size = jsonArray.size();
-                                for (int i = 0; i < size; i++) {
+            @Override
+            public void onResponse(String response) {
+                JSONObject jsonObject = JSON.parseObject(response);
+                JSONObject obj_res = jsonObject.getJSONObject("getMaternalInfoResult");
+                String errInfo = obj_res.getString("errInfo");
+                if (StringUtils.isBlank(errInfo)) {
+                    JSONArray jsonArray = obj_res.getJSONArray("personList");
+                    if (jsonArray != null && jsonArray.size() >= 0) {
+                        int size = jsonArray.size();
+                        for (int i = 0; i < size; i++) {
+                            JSONObject objRubbish = jsonArray.getJSONObject(i);
+                            JSONObject objMaternalBase = objRubbish.getJSONObject("maternalBase");
+                            PregnantBaseDTO pregnantBaseDTO = JSON.parseObject(objMaternalBase.toJSONString(), PregnantBaseDTO.class);
 
+                            JSONArray arrayHistory = objRubbish.getJSONArray("registerList");
+                            QueryResult<PregnantBaseDTO> queryResult = new QueryResult<>();
+                            queryResult.setBaseInfo(pregnantBaseDTO);
+                            queryResult.setJsonArray(arrayHistory);
 
-                                    JSONObject objRubbish = jsonArray.getJSONObject(i);
-                                    JSONObject objMaternalBase = objRubbish.getJSONObject("maternalBase");
-                                    PregnantBaseDTO pregnantBaseDTO = JSON.parseObject(objMaternalBase.toJSONString(), PregnantBaseDTO.class);
-//
-//                                pregnantBaseInfoFragment = PregnantBaseInfoFragment.newInstance(pregnantBaseDTO);
-//                                replace("pregnantBaseInfoFragment", pregnantBaseInfoFragment, false);
-//
-                                    JSONArray arrayHistory = objRubbish.getJSONArray("registerList");
-                                    QueryResult<PregnantBaseDTO> queryResult = new QueryResult<>();
-                                    queryResult.setBaseInfo(pregnantBaseDTO);
-                                    queryResult.setJsonArray(arrayHistory);
-
-                                    dataPregnant.add(queryResult);
-                                }
-                                handler.sendEmptyMessage(1);
-//                                List<PregnantBaseDTO<JSONObject>> temp = JSON.parseObject(history_list.toJSONString(), new TypeReference<List<PregnantBaseDTO<JSONObject>>>() {
-//                                });
-//                                pregnant_data.addAll(temp);
-                            } else {
-                                showToast(R.string.not_find);
-                            }
-                        } else {
-                            showToast(errInfo);
+                            dataPregnant.add(queryResult);
                         }
+                        handler.sendEmptyMessage(1);
+
+                    } else {
+                        showToast(R.string.not_find);
                     }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        dismiss();
-                    }
+                } else {
+                    showToast(errInfo);
                 }
-        );
+            }
+        }, null, materialDialog);
     }
 
     /**
@@ -436,11 +359,10 @@ public class QueryResultFragment extends BaseFragment {
      * @param content
      */
     private void getChildInfo(int searchType, String content) {
-        showDialog(R.string.is_loading_please_waite);
+        materialDialog = showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getChildInfo(searchType, content, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                dismiss();
                 JSONObject jsonObject = JSON.parseObject(response);
                 JSONObject objResult = jsonObject.getJSONObject("getNewBronInfoResult");
                 String errInfo = objResult.getString("errInfo");
@@ -471,12 +393,7 @@ public class QueryResultFragment extends BaseFragment {
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                dismiss();
-            }
-        });
+        }, null, materialDialog);
 
     }
 

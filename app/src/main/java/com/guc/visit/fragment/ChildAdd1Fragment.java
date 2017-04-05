@@ -155,6 +155,7 @@ public class ChildAdd1Fragment extends BaseFragment implements View.OnTouchListe
     }
 
     private void getNetworkData(String record_code) {
+        materialDialog=showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getChildOneYear(record_code, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -170,12 +171,7 @@ public class ChildAdd1Fragment extends BaseFragment implements View.OnTouchListe
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e("TAG", error.toString());
-            }
-        });
+        }, null,materialDialog);
     }
     private void updateUI(ChildVisitAdd dto){
         current_doctor.setText(GucApplication.visit_doctor);
@@ -372,13 +368,12 @@ public class ChildAdd1Fragment extends BaseFragment implements View.OnTouchListe
         return false;
     }
     private void submit() {
-        showDialog(R.string.isSubmitting);
+        materialDialog= showIndeterminateProgressDialog(R.string.isSubmitting);
         String json = buildJson();
         GucNetEngineClient.addChildOneYear(json, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 //{"UploadNewBronOneYearResult":{"result":true,"errInfo":null}}
-                dismiss();
                 JSONObject jsonObject = JSON.parseObject(response);
                 JSONObject objResult = jsonObject.getJSONObject("UploadNewBronOneYearResult");
                 String errInfo = objResult.getString("errInfo");
@@ -388,12 +383,7 @@ public class ChildAdd1Fragment extends BaseFragment implements View.OnTouchListe
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                dismiss();
-            }
-        });
+        },null,materialDialog);
     }
 
     private String buildJson() {

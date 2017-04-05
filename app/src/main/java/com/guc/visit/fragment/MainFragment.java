@@ -49,8 +49,8 @@ public class MainFragment extends BaseFragment {
                 getResources().getString(R.string.pregnant_visit),
                 getResources().getString(R.string.child_visit),
                 getResources().getString(R.string.task_remind), getResources().getString(R.string.workload_statistics), getResources().getString(R.string.archives_entry)};
-        int[] images = new int[]{R.mipmap.ic_home_x1, R.mipmap.ic_home_x2, R.mipmap.ic_home_x3, R.mipmap.ic_home_x4, R.mipmap.ic_home_x5, R.mipmap.ic_home_x6, R.mipmap.ic_home_x7, R.mipmap.ic_home_x8,R.mipmap.ic_home_x8};
-        int length=images.length;
+        int[] images = new int[]{R.mipmap.ic_home_x1, R.mipmap.ic_home_x2, R.mipmap.ic_home_x3, R.mipmap.ic_home_x4, R.mipmap.ic_home_x5, R.mipmap.ic_home_x6, R.mipmap.ic_home_x7, R.mipmap.ic_home_x8, R.mipmap.ic_home_x8};
+        int length = images.length;
         for (int i = 0; i < length; i++) {
             HomeItemDTO dto = new HomeItemDTO();
             dto.setLable(titles[i]);
@@ -73,11 +73,7 @@ public class MainFragment extends BaseFragment {
             @Override
             public void onResponse(String response) {
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-            }
-        });
+        }, null);
     }
 
     @Override

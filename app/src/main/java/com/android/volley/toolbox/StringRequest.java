@@ -16,8 +16,7 @@
 
 package com.android.volley.toolbox;
 
-import android.app.ProgressDialog;
-
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -39,10 +38,10 @@ public class StringRequest extends Request<String> {
     private static final String PROTOCOL_CONTENT_TYPE =
         String.format("application/json; charset=%s", PROTOCOL_CHARSET);
 
-	private ProgressDialog progressDialog;
+	private MaterialDialog progressDialog;
 	/**
 	 * Creates a new request with the given method.
-	 *
+	 *M
 	 * @param method
 	 *            the request {@link Method} to use
 	 * @param url
@@ -58,11 +57,11 @@ public class StringRequest extends Request<String> {
 		this.mRequestBody = mRequestBody;
 	}
 
-	public ProgressDialog getProgressDialog() {
+	public MaterialDialog getProgressDialog() {
 		return progressDialog;
 	}
 
-	public void setProgressDialog(ProgressDialog progressDialog) {
+	public void setProgressDialog(MaterialDialog progressDialog) {
 		this.progressDialog = progressDialog;
 	}
 

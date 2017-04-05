@@ -576,12 +576,10 @@ public class DiabetesAddFragment extends BaseFragment implements View.OnTouchLis
     }
 
     private void getLast(String ehrId) {
-        showDialog(R.string.is_loading_please_waite);
+        materialDialog=showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getDiabetesLast(ehrId, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.e("TAG", response);
-                dismiss();
                 JSONObject jsonObject = JSON.parseObject(response);
                 JSONObject obj_res = jsonObject.getJSONObject("getLastDiabetesRecordResult");
                 String errInfo = obj_res.getString("errInfo");
@@ -591,20 +589,14 @@ public class DiabetesAddFragment extends BaseFragment implements View.OnTouchLis
                     upadteUI(dto);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                dismiss();
-            }
-        });
+        }, null,materialDialog);
     }
 
     private void addDiabetes(String json) {
-        showDialog(R.string.is_loading_please_waite);
+        materialDialog=showIndeterminateProgressDialog(R.string.isSubmitting);
         GucNetEngineClient.addDiabetes(json, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                dismiss();
                 JSONObject jsonObject = JSON.parseObject(response);
                 JSONObject obj_res = jsonObject.getJSONObject("UploadDiabetesVisitResult");
                 String errInfo = obj_res.getString("errInfo");
@@ -614,20 +606,14 @@ public class DiabetesAddFragment extends BaseFragment implements View.OnTouchLis
                     ToastUtils.showLong(mActivity, errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                dismiss();
-            }
-        });
+        }, null,materialDialog);
     }
 
     public void getDiabetesByRecordCode(String recordCode) {
-        showDialog(R.string.is_loading_please_waite);
+        materialDialog=showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getDiabetesRecord(recordCode, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                dismiss();
                 JSONObject jsonObject = JSON.parseObject(response);
                 JSONObject obj_res = jsonObject.getJSONObject("getDiabetesRecordResult");
                 String errInfo = obj_res.getString("errInfo");
@@ -639,12 +625,7 @@ public class DiabetesAddFragment extends BaseFragment implements View.OnTouchLis
                     ToastUtils.showLong(mActivity, errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                dismiss();
-            }
-        });
+        }, null,materialDialog);
     }
 
     private void upadteUI(DiabetesAddDTO dto) {

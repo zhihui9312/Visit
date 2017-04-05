@@ -274,11 +274,9 @@ public class MedicalEntryFragment extends BaseFragment implements View.OnTouchLi
     private void submit() {
         materialDialog = showIndeterminateProgressDialog(R.string.isSubmitting);
         String json = buildJson();
-
         GucNetEngineClient.addMedicalEntry(json, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                materialDialog.dismiss();
                 //Log.e("TAG", response);
                 // {"UploadMsPhysicalExaminationResult":{"result":"CPE20170000166242","errInfo":null}}
                 JSONObject jsonObject = JSON.parseObject(response);
@@ -290,12 +288,7 @@ public class MedicalEntryFragment extends BaseFragment implements View.OnTouchLi
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                materialDialog.dismiss();
-            }
-        });
+        }, null,materialDialog);
     }
 
 

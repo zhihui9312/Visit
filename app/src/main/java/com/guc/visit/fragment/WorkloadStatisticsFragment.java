@@ -66,11 +66,10 @@ public class WorkloadStatisticsFragment extends BaseFragment implements View.OnT
 
     private void getNetworkData(String startDate, String endDate) {
         data.clear();
-        showDialog(R.string.is_loading_please_waite);
+        materialDialog= showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getWorkloadStatistics(startDate, endDate, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                dismiss();
                 JSONObject jsonObject = JSON.parseObject(response);
                 JSONObject objResult = jsonObject.getJSONObject("getWorkmbbzResult");
                 String errInfo = objResult.getString("errInfo");
@@ -85,12 +84,7 @@ public class WorkloadStatisticsFragment extends BaseFragment implements View.OnT
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                dismiss();
-            }
-        });
+        }, null,materialDialog);
     }
 
     @Override

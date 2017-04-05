@@ -96,6 +96,7 @@ public class OrganizationFragment extends BaseFragment {
     }
 
     private void getOrganization() {
+        materialDialog= showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getOrganization(new Response.Listener<String>() {
 
             @Override
@@ -114,10 +115,11 @@ public class OrganizationFragment extends BaseFragment {
                     showToast(errInfo);
                 }
             }
-        }, new DefaultErrorListener());
+        }, null,materialDialog);
     }
 
     private void getArchivesOrganization() {
+        materialDialog= showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getArchivesOrganization(new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -136,12 +138,7 @@ public class OrganizationFragment extends BaseFragment {
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-            }
-        });
+        },null,materialDialog);
     }
 
     private void initIds() {

@@ -159,6 +159,7 @@ public class ChildAdd36Fragment extends BaseFragment implements View.OnTouchList
     }
 
     private void getNetworkData(String record_code) {
+        materialDialog=showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getChildThree(record_code, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -174,11 +175,7 @@ public class ChildAdd36Fragment extends BaseFragment implements View.OnTouchList
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-            }
-        });
+        }, null,materialDialog);
     }
 
     private void updateUI(ChildVisitAdd dto) {
@@ -337,6 +334,7 @@ public class ChildAdd36Fragment extends BaseFragment implements View.OnTouchList
     }
 
     private void submit() {
+        materialDialog=showIndeterminateProgressDialog(R.string.isSubmitting);
         String json = buildJson();
         GucNetEngineClient.addChildThreeYear(json, new Response.Listener<String>() {
             @Override
@@ -351,11 +349,7 @@ public class ChildAdd36Fragment extends BaseFragment implements View.OnTouchList
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-            }
-        });
+        }, null,materialDialog);
 
     }
 

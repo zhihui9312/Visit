@@ -51,13 +51,14 @@ public class PregnantAddFragment extends BaseFragment implements View.OnTouchLis
     private EditText birth_week;
     private EditText birth_week_days;
     private EditText anamnesis;
-    private StringBuilder anamnesis_code=new StringBuilder("");
+    private StringBuilder anamnesis_code = new StringBuilder("");
     private EditText anamnesis_other;
     private EditText family_disease;
-    private StringBuilder family_disease_code= new StringBuilder("");;
+    private StringBuilder family_disease_code = new StringBuilder("");
+    ;
     private EditText family_disease_other;
     private EditText personal_history;
-    private StringBuilder personal_history_code=new StringBuilder("");
+    private StringBuilder personal_history_code = new StringBuilder("");
     private EditText personal_history_other;
     private Spinner gynaecology_operation_mark;
     private EditText gynaecology_operation;
@@ -116,7 +117,8 @@ public class PregnantAddFragment extends BaseFragment implements View.OnTouchLis
     private Spinner evaluate_mark;
     private EditText evaluate;
     private EditText health_guide_str;
-    private StringBuilder health_guide_code = new StringBuilder("");;
+    private StringBuilder health_guide_code = new StringBuilder("");
+    ;
     private EditText health_guide_other;
     private Spinner transfert_mark;
     private EditText transfert_dept;
@@ -146,8 +148,8 @@ public class PregnantAddFragment extends BaseFragment implements View.OnTouchLis
         HashMap<String, String> map = (HashMap<String, String>) bundle.getSerializable("map");
         operation = map.get("operation");
         nameStr = map.get("name");
+        record_code = map.get("record_code");
         if (operation.equals("1")) {
-            record_code = map.get("record_code");
             getNetworkData(record_code);
         } else {
             ehr_id = map.get("ehr_id");
@@ -156,6 +158,7 @@ public class PregnantAddFragment extends BaseFragment implements View.OnTouchLis
     }
 
     private void getNetworkData(final String record_code) {
+        materialDialog = showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getPregnantOne(record_code, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -170,12 +173,7 @@ public class PregnantAddFragment extends BaseFragment implements View.OnTouchLis
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-            }
-        });
+        }, null, materialDialog);
     }
 
     private void updateUI(PregnantAddDTO dto) {
@@ -266,7 +264,7 @@ public class PregnantAddFragment extends BaseFragment implements View.OnTouchLis
     protected void initData() {
         if (operation.equals("0")) {
             initExisting();
-        }else{
+        } else {
             ViewUtils.setAllViewEnable(linearLayout);
         }
         controlBar(R.string.pregnant_one, R.string.back, true, true);
@@ -302,16 +300,16 @@ public class PregnantAddFragment extends BaseFragment implements View.OnTouchLis
         if (event.getAction() == MotionEvent.ACTION_UP) {
             switch (v.getId()) {
                 case R.id.health_guide_str:
-                    multiChoiceDialog(getIntArray(health_guide_code),R.array.array_health_guide, health_guide_str, health_guide_code);
+                    multiChoiceDialog(getIntArray(health_guide_code), R.array.array_health_guide, health_guide_str, health_guide_code);
                     break;
                 case R.id.anamnesis:
-                    multiChoiceDialog(getIntArray(anamnesis_code),R.array.array_anamnesis, anamnesis, anamnesis_code);
+                    multiChoiceDialog(getIntArray(anamnesis_code), R.array.array_anamnesis, anamnesis, anamnesis_code);
                     break;
                 case R.id.family_disease:
-                    multiChoiceDialog(getIntArray(family_disease_code),R.array.array_family_disease, family_disease, family_disease_code);
+                    multiChoiceDialog(getIntArray(family_disease_code), R.array.array_family_disease, family_disease, family_disease_code);
                     break;
                 case R.id.personal_history:
-                    multiChoiceDialog(getIntArray(personal_history_code),R.array.array_personal_history, personal_history, personal_history_code);
+                    multiChoiceDialog(getIntArray(personal_history_code), R.array.array_personal_history, personal_history, personal_history_code);
                     break;
                 case R.id.visit_date:
                     showDatePicker(visit_date);
@@ -416,7 +414,7 @@ public class PregnantAddFragment extends BaseFragment implements View.OnTouchLis
         education_prescribe = (EditText) view.findViewById(R.id.education_prescribe);
         tv_right = (TextView) view.findViewById(R.id.tv_right);
         view.findViewById(R.id.iv_add).setVisibility(View.GONE);
-        linearLayout=(LinearLayout) view.findViewById(R.id.linearLayout);
+        linearLayout = (LinearLayout) view.findViewById(R.id.linearLayout);
     }
 
     @Override
@@ -542,19 +540,22 @@ public class PregnantAddFragment extends BaseFragment implements View.OnTouchLis
     }
 
     private void submit() {
+        materialDialog = showIndeterminateProgressDialog(R.string.isSubmitting);
         String json = buildJson();
         GucNetEngineClient.addMaternalBeforeOne(json, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.e("TAG", response);
-
+                //{"UploadMaternalBeforeOneResult":{"result":false,"errInfo":"错误[B01],同一随访日期无法重复创建数据"}}
+                JSONObject jsonObject = JSON.parseObject(response);
+                JSONObject objResult = jsonObject.getJSONObject("UploadMaternalBeforeOneResult");
+                String errInfo = objResult.getString("errInfo");
+                if (StringUtils.isBlank(errInfo)) {
+                    showToast(R.string.add_success);
+                } else {
+                    showToast(errInfo);
+                }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e("TAG", error.toString());
-            }
-        });
+        }, null, materialDialog);
     }
 
     public static PregnantAddFragment newInstance(HashMap<String, String> map) {

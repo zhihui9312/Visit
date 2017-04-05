@@ -89,11 +89,10 @@ public class PregnantAddManualFragment extends BaseFragment implements View.OnTo
     }
 
     private void addManual(String json) {
-        showDialog(R.string.is_loading_please_waite);
+        materialDialog = showIndeterminateProgressDialog(R.string.isSubmitting);
         GucNetEngineClient.addMaunal(json, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                dismiss();
                 JSONObject jsonObject = JSON.parseObject(response);
                 JSONObject obj_res = jsonObject.getJSONObject("UploadMaternalRegisterResult");
                 String result = obj_res.getString("result");
@@ -105,12 +104,7 @@ public class PregnantAddManualFragment extends BaseFragment implements View.OnTo
                     ToastUtils.showLong(mActivity, errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                dismiss();
-            }
-        });
+        }, null, materialDialog);
     }
 
     @Override
@@ -146,7 +140,7 @@ public class PregnantAddManualFragment extends BaseFragment implements View.OnTo
 
     public static PregnantAddManualFragment newInstance(String ehrId) {
         Bundle args = new Bundle();
-        args.putString("ehrId",ehrId);
+        args.putString("ehrId", ehrId);
         PregnantAddManualFragment fragment = new PregnantAddManualFragment();
         fragment.setArguments(args);
         return fragment;

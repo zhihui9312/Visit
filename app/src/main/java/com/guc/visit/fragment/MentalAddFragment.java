@@ -358,11 +358,10 @@ public class MentalAddFragment extends BaseFragment implements View.OnTouchListe
     }
 
     private void addMental(String json) {
-        showDialog(R.string.isSubmitting);
+        materialDialog= showIndeterminateProgressDialog(R.string.isSubmitting);
         GucNetEngineClient.addMental(json, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                dismiss();
                 //{"UploadMentalVisitResult":{"result":false,"errInfo":"错误[B01],同一随访日期无法重复创建数据"}}
                 JSONObject jsonObject= JSON.parseObject(response);
                 JSONObject objResult=jsonObject.getJSONObject("UploadMentalVisitResult");
@@ -373,15 +372,11 @@ public class MentalAddFragment extends BaseFragment implements View.OnTouchListe
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                dismiss();
-            }
-        });
+        }, null,materialDialog);
     }
 
     private void getMental(String recordCode) {
+        materialDialog= showIndeterminateProgressDialog(R.string.is_loading_please_waite);
 
         GucNetEngineClient.getMental(recordCode, new Response.Listener<String>() {
             @Override
@@ -398,16 +393,11 @@ public class MentalAddFragment extends BaseFragment implements View.OnTouchListe
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-            }
-        });
+        }, null,materialDialog);
     }
 
     private void getLastInfo(final String ehr_id) {
-        showDialog(R.string.isSubmitting);
+         materialDialog=showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getLastMental(ehr_id, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -422,12 +412,7 @@ public class MentalAddFragment extends BaseFragment implements View.OnTouchListe
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-            }
-        });
+        },null,materialDialog);
     }
 
     private void updateUI(MentalDTO dto) {

@@ -79,8 +79,9 @@ public class PregnantAdd25Fragment extends BaseFragment implements View.OnTouchL
         HashMap<String, String> map = (HashMap<String, String>) bundle.getSerializable("map");
         operation = map.get("operation");
         nameStr = map.get("name");
+        record_code = map.get("record_code");
         if (operation.equals("1")) {
-            record_code = map.get("record_code");
+
             getNetworkData(record_code);
         } else {
             ehr_id = map.get("ehr_id");
@@ -97,9 +98,9 @@ public class PregnantAdd25Fragment extends BaseFragment implements View.OnTouchL
     @Override
     protected void initData() {
         controlBar(R.string.pregnant_25, R.string.back, true, true);
-        if(operation.equals("0")){
+        if (operation.equals("0")) {
             initExisting();
-        }else{
+        } else {
             ViewUtils.setAllViewEnable(linearLayout);
         }
     }
@@ -122,6 +123,7 @@ public class PregnantAdd25Fragment extends BaseFragment implements View.OnTouchL
     }
 
     private void getNetworkData(final String record_code) {
+        materialDialog = showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getPregnancyFive(record_code, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -134,14 +136,10 @@ public class PregnantAdd25Fragment extends BaseFragment implements View.OnTouchL
                     PregnantAddDTO dto = JSON.parseObject(objInfo.toJSONString(), PregnantAddDTO.class);
                     updateUI(dto);
                 } else {
-
+                    showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-            }
-        });
+        }, null, materialDialog);
     }
 
     private void updateUI(PregnantAddDTO dto) {
@@ -181,7 +179,7 @@ public class PregnantAdd25Fragment extends BaseFragment implements View.OnTouchL
         if (event.getAction() == MotionEvent.ACTION_UP) {
             switch (v.getId()) {
                 case R.id.guidance:
-                    multiChoiceDialog(getIntArray(guidance_code),R.array.array_guidance, guidance, guidance_code);
+                    multiChoiceDialog(getIntArray(guidance_code), R.array.array_guidance, guidance, guidance_code);
                     break;
                 case R.id.next_visit_date:
                     showDatePicker(next_visit_date);
@@ -229,7 +227,7 @@ public class PregnantAdd25Fragment extends BaseFragment implements View.OnTouchL
         stop_why = (EditText) view.findViewById(R.id.stop_why);
         tv_right = (TextView) view.findViewById(R.id.tv_right);
         view.findViewById(R.id.iv_add).setVisibility(View.GONE);
-        linearLayout=(LinearLayout) view.findViewById(R.id.linearLayout);
+        linearLayout = (LinearLayout) view.findViewById(R.id.linearLayout);
     }
 
     @Override
@@ -291,12 +289,11 @@ public class PregnantAdd25Fragment extends BaseFragment implements View.OnTouchL
     }
 
     private void submit() {
+        materialDialog = showIndeterminateProgressDialog(R.string.isSubmitting);
         String json = buildJson();
-        showDialog(R.string.isSubmitting);
         GucNetEngineClient.addMaternalBeforeFive(json, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                dismiss();
                 //{"UploadMaternalBeforeFiveResult":{"result":true,"errInfo":null}}
                 JSONObject jsonobject = JSON.parseObject(response);
                 JSONObject objResult = jsonobject.getJSONObject("UploadMaternalBeforeFiveResult");
@@ -307,12 +304,7 @@ public class PregnantAdd25Fragment extends BaseFragment implements View.OnTouchL
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                dismiss();
-            }
-        });
+        }, null, materialDialog);
     }
 
     public static PregnantAdd25Fragment newInstance(HashMap<String, String> map) {

@@ -130,6 +130,7 @@ public class ChildAdd12Fragment extends BaseFragment implements View.OnTouchList
     }
 
     private void getNetworkData(final String record_code) {
+        materialDialog = showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getChildOneTwo(record_code, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -138,18 +139,13 @@ public class ChildAdd12Fragment extends BaseFragment implements View.OnTouchList
                 String errInfo = objResult.getString("errInfo");
                 if (StringUtils.isBlank(errInfo)) {
                     JSONObject objInfo = objResult.getJSONObject("recordInfo");
-
                     ChildVisitAdd dto = JSON.parseObject(objInfo.toJSONString(), ChildVisitAdd.class);
                     updateUI(dto);
                 } else {
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-            }
-        });
+        }, null, materialDialog);
     }
 
     private void updateUI(ChildVisitAdd dto) {
@@ -186,7 +182,6 @@ public class ChildAdd12Fragment extends BaseFragment implements View.OnTouchList
         abdomen_abn.setText(dto.getAbdomen());
 
 
-
         limbs.setSelection(convertToInteger(dto.getLimbs()));
         limbs_abn.setText(dto.getLimbs_abn());
         gait.setSelection(convertToInteger(dto.getGait()));
@@ -214,7 +209,7 @@ public class ChildAdd12Fragment extends BaseFragment implements View.OnTouchList
         controlBar(R.string.child_2, R.string.back, true, true);
         if (operation.equals("0")) {
             initExisting();
-        }else{
+        } else {
             ViewUtils.setAllViewEnable(linearLayout);
         }
     }
@@ -308,7 +303,7 @@ public class ChildAdd12Fragment extends BaseFragment implements View.OnTouchList
         education_prescribe = (EditText) view.findViewById(R.id.education_prescribe);
         tv_right = (TextView) view.findViewById(R.id.tv_right);
         view.findViewById(R.id.iv_add).setVisibility(View.GONE);
-        linearLayout=(LinearLayout)view.findViewById(R.id.linearLayout);
+        linearLayout = (LinearLayout) view.findViewById(R.id.linearLayout);
     }
 
     @Override
@@ -386,12 +381,11 @@ public class ChildAdd12Fragment extends BaseFragment implements View.OnTouchList
     }
 
     private void submit() {
-        showDialog(R.string.isSubmitting);
+        materialDialog= showIndeterminateProgressDialog(R.string.isSubmitting);
         String json = buildJson();
         GucNetEngineClient.addChildTwoYear(json, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                dismiss();
                 //{"UploadNewBronOneTwoYearResult":{"result":true,"errInfo":null}}
                 JSONObject jsonOject = JSON.parseObject(response);
                 JSONObject objResult = jsonOject.getJSONObject("UploadNewBronOneTwoYearResult");
@@ -402,12 +396,7 @@ public class ChildAdd12Fragment extends BaseFragment implements View.OnTouchList
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                dismiss();
-            }
-        });
+        }, null,materialDialog);
 
     }
 
@@ -418,10 +407,10 @@ public class ChildAdd12Fragment extends BaseFragment implements View.OnTouchList
             switch (v.getId()) {
                 case R.id.rachitis_sign:
                     //两位数
-                    multiChoiceDialog(getIntArray(rachitis_sign_mark),R.array.array_rachitis_sign, rachitis_sign, rachitis_sign_mark);
+                    multiChoiceDialog(getIntArray(rachitis_sign_mark), R.array.array_rachitis_sign, rachitis_sign, rachitis_sign_mark);
                     break;
                 case R.id.guidance_con:
-                    multiChoiceDialog(getIntArray(guidance_mark),R.array.array_guidance_con, guidance_con, guidance_mark);
+                    multiChoiceDialog(getIntArray(guidance_mark), R.array.array_guidance_con, guidance_con, guidance_mark);
                     break;
                 case R.id.visit_date:
                     showDatePicker(visit_date);

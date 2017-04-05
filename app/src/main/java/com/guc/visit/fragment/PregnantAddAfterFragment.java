@@ -226,13 +226,12 @@ public class PregnantAddAfterFragment extends BaseFragment implements View.OnTou
     }
 
     private void submit() {
+        materialDialog=showIndeterminateProgressDialog(R.string.isSubmitting);
         String json = buildJson();
-        mProgressDialog.show();
         GucNetEngineClient.addMaternalAfter(json, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 //{"UploadMaternalAfterResult":{"result":true,"errInfo":null}}
-                mProgressDialog.dismiss();
                 JSONObject jsonObject = JSON.parseObject(response);
                 JSONObject objResult = jsonObject.getJSONObject("UploadMaternalAfterResult");
                 String errInfo = objResult.getString("errInfo");
@@ -241,15 +240,8 @@ public class PregnantAddAfterFragment extends BaseFragment implements View.OnTou
                 } else {
                     showToast(errInfo);
                 }
-                Log.e("TAG", response);
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e("TAG", error.toString());
-                mProgressDialog.dismiss();
-            }
-        });
+        },null,materialDialog);
     }
 
     public static PregnantAddAfterFragment newInstance(HashMap<String, String> map) {

@@ -138,6 +138,7 @@ public class ChildAddNewBronFragment extends BaseFragment implements View.OnTouc
     }
 
     private void getNetworkData(final String record_code) {
+        materialDialog= showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getChildNew(record_code, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -153,11 +154,7 @@ public class ChildAddNewBronFragment extends BaseFragment implements View.OnTouc
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-            }
-        });
+        },null,materialDialog);
     }
 
     private void updateUI(ChildVisitAdd dto) {
@@ -440,13 +437,11 @@ public class ChildAddNewBronFragment extends BaseFragment implements View.OnTouc
     }
 
     private void submit() {
-        showDialog(R.string.isSubmitting);
+        materialDialog= showIndeterminateProgressDialog(R.string.isSubmitting);
         String json = buildJson();
-
         GucNetEngineClient.addChildNew(json, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                dismiss();
                 //  {"UploadNewBronResult":{"result":true,"errInfo":null}}
                 JSONObject jsonOjbect = JSON.parseObject(response);
                 JSONObject objResult = jsonOjbect.getJSONObject("UploadNewBronResult");
@@ -457,12 +452,7 @@ public class ChildAddNewBronFragment extends BaseFragment implements View.OnTouc
                     showToast(errInfo);
                 }
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                dismiss();
-            }
-        });
+        },null,materialDialog);
     }
 
     @Override

@@ -138,8 +138,8 @@ public class RegisterFragment extends BaseFragment {
     }
 
     private void register(String mobile, String password) {
+        materialDialog= showIndeterminateProgressDialog(R.string.isSubmitting);
         GucNetEngineClient.register(organizationId, mobile, password, new Listener<String>() {
-
             @Override
             public void onResponse(String response) {
                 JSONObject jsonObject = JSON.parseObject(response);
@@ -154,7 +154,7 @@ public class RegisterFragment extends BaseFragment {
                     mActivity.popBackStack(1);
                 }
             }
-        }, new DefaultErrorListener());
+        }, null,materialDialog);
     }
 
     @Override

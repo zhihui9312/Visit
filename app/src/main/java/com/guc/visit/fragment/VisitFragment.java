@@ -284,8 +284,9 @@ public class VisitFragment extends BaseFragment {
                 break;
             case 4:
                 if (pregnantHistoryFragment == null) {
+
                     HashMap<String, String> map = new HashMap<>();
-                    map.put("record_code", pregnantBaseDTO.getRecord_code());
+
                     map.put("ehr_id", pregnantBaseDTO.getEhr_id());
                     map.put("name", pregnantBaseDTO.getName());
                     pregnantHistoryFragment = PregnantHistoryFragment.newInstance(dataHistoryPregnant, map);
