@@ -23,8 +23,7 @@
                 android:layout_width="@dimen/x120"
                 android:layout_height="wrap_content"
                 android:editable="false"
-                android:gravity="center"
-                android:text="2015-12-12" />
+                android:gravity="center" />
 
             <View
                 android:layout_width="@dimen/x30"
@@ -35,8 +34,7 @@
                 android:layout_width="@dimen/x120"
                 android:layout_height="wrap_content"
                 android:editable="false"
-                android:gravity="center"
-                android:text="2015-12-12" />
+                android:gravity="center" />
 
             <TextView
                 android:textSize="@dimen/x16"

@@ -215,6 +215,7 @@
                     style="@style/SmallTextView"
                     android:text="@string/heart_time_unit" />
 
+<!--
                 <include layout="@layout/layout_interval" />
 
                 <TextView
@@ -229,6 +230,7 @@
                 <TextView
                     style="@style/SmallTextView"
                     android:text="@string/heart_time_unit" />
+-->
 
             </LinearLayout>
             <!-- 其他体征 -->
@@ -422,7 +424,7 @@
                 <Spinner
                     android:id="@+id/drug_side_effect"
                     style="@style/WrapSpinner"
-                    android:entries="@array/array_yes_no" />
+                    android:entries="@array/array_no_yes" />
             </LinearLayout>
             <!-- 药物不良反应内容 -->
 
@@ -749,7 +751,7 @@
                 <Spinner
                     android:id="@+id/cm_guidance"
                     style="@style/WrapSpinner"
-                    android:entries="@array/array_yes_no" />
+                    android:entries="@array/array_yes_or_no" />
 
                 <include layout="@layout/layout_interval" />
 

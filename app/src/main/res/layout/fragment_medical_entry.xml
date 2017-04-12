@@ -28,8 +28,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/mtest_date"
-                    android:editable="false"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallDisableEditText" />
 
                 <include layout="@layout/layout_interval" />
 
@@ -50,8 +49,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/symptom"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText"/>
             </android.support.v7.widget.LinearLayoutCompat>
             <!--症状-->
             <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
@@ -207,6 +205,7 @@
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/bim"
                     style="@style/SmallNumberDecimalEditText" />
+
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
                     android:text="@string/ibm_unit" />
@@ -251,11 +250,14 @@
                     style="@style/WrapSpinner"
                     android:entries="@array/array_old_cognizefun" />
 
-                <include layout="@layout/layout_interval" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
-                    android:text="@string/total_score" />
+                    android:text="@string/old_cognizefun_total_score" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/old_cognizefun_grade"
@@ -274,16 +276,22 @@
                     style="@style/WrapSpinner"
                     android:entries="@array/array_old_sensibility" />
 
-                <include layout="@layout/layout_interval" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"
-                    android:text="@string/total_score" />
+                    android:text="@string/old_blahs_total_score" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/old_blahs_grade"
                     style="@style/SmallNumberDecimalEditText" />
+
             </android.support.v7.widget.LinearLayoutCompat>
+
+
             <!--锻炼频率、锻炼时间-->
             <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
 
@@ -481,7 +489,7 @@
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/in_one_year_intoxication"
                     style="@style/WrapSpinner"
-                    android:entries="@array/array_in_one_year_intoxication" />
+                    android:entries="@array/array_yes_or_no" />
 
             </android.support.v7.widget.LinearLayoutCompat>
             <!--饮酒种类-->
@@ -493,8 +501,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/drink_type"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
 
             <!--            <android.support.v7.widget.AppCompatTextView
@@ -514,7 +521,7 @@
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/job_mark"
                     style="@style/WrapSpinner"
-                    android:entries="@array/array_yes_no" />
+                    android:entries="@array/array_no_yes" />
 
                 <include layout="@layout/layout_interval" />
 
@@ -566,7 +573,6 @@
             </android.support.v7.widget.LinearLayoutCompat>
 
             <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
-
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"

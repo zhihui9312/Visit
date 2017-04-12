@@ -38,6 +38,8 @@ public class WorkloadStatisticsFragment extends BaseFragment implements View.OnT
     private TextView tvQuery;
     private EditText etStartDate;
     private EditText etendDate;
+    private String currentDateStr;
+
 
     private WorkloadStatisticsAdapter adapter;
     private ArrayList<WorkloadStatistics> data = new ArrayList<>();
@@ -59,14 +61,14 @@ public class WorkloadStatisticsFragment extends BaseFragment implements View.OnT
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
-        String dateStr = DateFormatUtils.format(Calendar.getInstance(), "yyyy-MM-dd");
-        getNetworkData(dateStr, dateStr);
+        currentDateStr = DateFormatUtils.format(Calendar.getInstance(), "yyyy-MM-dd");
+        getNetworkData(currentDateStr, currentDateStr);
         super.onCreate(savedInstanceState);
     }
 
     private void getNetworkData(String startDate, String endDate) {
         data.clear();
-        materialDialog= showIndeterminateProgressDialog(R.string.is_loading_please_waite);
+        materialDialog = showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getWorkloadStatistics(startDate, endDate, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -84,7 +86,7 @@ public class WorkloadStatisticsFragment extends BaseFragment implements View.OnT
                     showToast(errInfo);
                 }
             }
-        }, null,materialDialog);
+        }, null, materialDialog);
     }
 
     @Override
@@ -92,6 +94,8 @@ public class WorkloadStatisticsFragment extends BaseFragment implements View.OnT
         controlBar(R.string.workload_statistics, R.string.back, true, false);
         adapter = new WorkloadStatisticsAdapter(data, R.layout.layout_item_workload_statistics);
         listView.setAdapter(adapter);
+        etStartDate.setText(currentDateStr);
+        etendDate.setText(currentDateStr);
     }
 
     @Override

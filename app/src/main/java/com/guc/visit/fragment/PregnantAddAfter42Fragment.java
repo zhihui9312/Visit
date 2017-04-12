@@ -93,7 +93,6 @@ public class PregnantAddAfter42Fragment extends BaseFragment implements View.OnT
         String dateStr = DateFormatUtils.format(Calendar.getInstance(), "yyyy-MM-dd");
         visit_date.setText(dateStr);
         tv_right.setText(R.string.commint);
-
     }
 
     @Override
@@ -101,7 +100,6 @@ public class PregnantAddAfter42Fragment extends BaseFragment implements View.OnT
         visit_date.setOnTouchListener(this);
         ll_back.setOnClickListener(this);
         right_layout.setOnClickListener(this);
-
     }
 
     @Override
@@ -210,6 +208,7 @@ public class PregnantAddAfter42Fragment extends BaseFragment implements View.OnT
         dto.setStop_why(StrUtil.getToTrim(stop_why));
         return JSON.toJSONString(dto);
     }
+
     private void submit(){
         materialDialog= showIndeterminateProgressDialog(R.string.isSubmitting);
         String json=buildJson();

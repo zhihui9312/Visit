@@ -83,7 +83,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/telephone"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!-- 联系姓名-->
             <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
@@ -105,7 +105,7 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/telephone_no"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberEditText" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!-- 建党机构-->
             <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">

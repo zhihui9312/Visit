@@ -73,7 +73,7 @@ public class HypertensionAddFragment extends BaseFragment {
      * 心率
      */
     private EditText heart_rate;
-    private EditText heart_rate_target;
+ //   private EditText heart_rate_target;
     /**
      * 其他体征
      */
@@ -213,7 +213,6 @@ public class HypertensionAddFragment extends BaseFragment {
             controlBar(name_str, R.string.back, true, false);
             ViewUtils.setAllViewEnable(linearLayout);
         }
-
     }
 
     private void getHistoryHypertension(final String record_code) {
@@ -294,7 +293,7 @@ public class HypertensionAddFragment extends BaseFragment {
         BIM = (TextView) view.findViewById(R.id.BIM);
 
         heart_rate = (EditText) view.findViewById(R.id.heart_rate);
-        heart_rate_target = (EditText) view.findViewById(R.id.heart_rate_target);
+//        heart_rate_target = (EditText) view.findViewById(R.id.heart_rate_target);
 
         objective_sign_other = (EditText) view.findViewById(R.id.objective_sign_other);
 
@@ -423,7 +422,7 @@ public class HypertensionAddFragment extends BaseFragment {
         //  BIM .setText(dto.getB);
 
         heart_rate.setText(dto.getHeart_rate());
-        heart_rate_target.setText(dto.getHeart_rate_target());
+        //heart_rate_target.setText(dto.getHeart_rate_target());
 
         objective_sign_other.setText(dto.getObjective_sign_other());
 
@@ -593,7 +592,7 @@ public class HypertensionAddFragment extends BaseFragment {
             jsonObject.put("weight", StrUtil.getToTrim(weight));
             jsonObject.put("weight_target", StrUtil.getToTrim(weight_target));
             jsonObject.put("heart_rate", StrUtil.getToTrim(heart_rate));
-            jsonObject.put("heart_rate_target", StrUtil.getToTrim(heart_rate_target));
+            //jsonObject.put("heart_rate_target", StrUtil.getToTrim(heart_rate_target));
             jsonObject.put("objective_sign_other", StrUtil.getToTrim(objective_sign_other));
             jsonObject.put("smoking_dnum", StrUtil.getToTrim(smoking_dnum));
             jsonObject.put("smoking_dnum_target", StrUtil.getToTrim(smoking_dnum_target));

@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatSpinner;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -14,7 +13,6 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.guc.visit.R;
 import com.guc.visit.application.GucApplication;
 import com.guc.visit.base.BaseFragment;
@@ -69,7 +67,6 @@ public class MedicalEntryFragment extends BaseFragment implements View.OnTouchLi
     private AppCompatSpinner in_one_year_intoxication;
     private AppCompatEditText drink_type;
     private StringBuilder drink_type_abn = new StringBuilder("");
-
 
     private AppCompatSpinner job_mark;
     private AppCompatEditText job_occupation;
@@ -231,7 +228,8 @@ public class MedicalEntryFragment extends BaseFragment implements View.OnTouchLi
         dto.setPhysical_exercise_minute(getToTrim(physical_exercise_minute));
         dto.setPhysical_exercise_year(getToTrim(physical_exercise_year));
         dto.setExercise_way(getToTrim(exercise_way));
-        dto.setDiet_habit(getSpinnerValue1(diet_habit_abn));
+        dto.setDiet_habit(getResources().getStringArray(R.array.array_diet_habit_abn)[diet_habit_abn.getSelectedItemPosition()]);
+        dto.setDiet_habit_abn(getSpinnerValue1(diet_habit_abn)+",");
         dto.setSmoke_situation(getSpinnerValue1(smoke_situation));
         dto.setSmoke_qty(getToTrim(smoke_qty));
         dto.setBegin_smoke_age(getToTrim(begin_smoke_age));
@@ -249,23 +247,23 @@ public class MedicalEntryFragment extends BaseFragment implements View.OnTouchLi
         dto.setJob_year(getToTrim(job_year));
 
         dto.setDust(getToTrim(dust));
-        dto.setDust_protect(getSpinnerValue1(dust_protect));
+        dto.setDust_protect(getSpinnerValue(dust_protect));
         dto.setDust_abn(getToTrim(dust_abn));
 
         dto.setRay(getToTrim(ray));
-        dto.setRay_protect(getSpinnerValue1(ray_protect));
+        dto.setRay_protect(getSpinnerValue(ray_protect));
         dto.setRay_abn(getToTrim(ray_abn));
 
         dto.setPest(getToTrim(pest));
-        dto.setPest_protect(getSpinnerValue1(pest_protect));
+        dto.setPest_protect(getSpinnerValue(pest_protect));
         dto.setPest_abn(getToTrim(pest_abn));
 
         dto.setChemicla(getToTrim(chemicla));
-        dto.setChemicla_protect(getSpinnerValue1(chemicla_protect));
+        dto.setChemicla_protect(getSpinnerValue(chemicla_protect));
         dto.setChemicla_abn(getToTrim(chemicla_abn));
 
         dto.setToxicant_other(getToTrim(toxicant_other));
-        dto.setToxicant_other_protect(getSpinnerValue1(toxicant_other_protect));
+        dto.setToxicant_other_protect(getSpinnerValue(toxicant_other_protect));
         dto.setToxicant_other_abn(getToTrim(toxicant_other_abn));
 
         return JSON.toJSONString(dto);

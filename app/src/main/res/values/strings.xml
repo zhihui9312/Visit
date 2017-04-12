@@ -395,7 +395,8 @@
     <string name="old_health_status">老年人健康状态评估</string>
     <string name="old_lifeself">老年人生活自理能力评估</string>
     <string name="old_cognizefun">老年人认知功能</string>
-    <string name="total_score">总分</string>
+    <string name="old_cognizefun_total_score">总分</string>
+    <string name="old_blahs_total_score">总分</string>
     <string name="old_sensibility">老年人情感状态</string>
     <string name="physical_exercise_fre">锻炼频率</string>
     <string name="physical_exercise_minute">每次锻炼时间</string>
@@ -426,6 +427,28 @@
     <string name="chemicla">毒物种类</string>
     <string name="the_new_version_is_visible">发现新版本，请立即升级</string>
     <string name="ibm_unit">kg/m²</string>
+    <string-array name="array_mental_health_guide_adv">
+        <item>心里康复</item>
+        <item>生活劳动力</item>
+        <item>职业训练</item>
+        <item>学习能力</item>
+        <item>社会交往</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="array_mental_symptom">
+        <item>幻觉</item>
+        <item>交流困难</item>
+        <item>猜疑</item>
+        <item>喜怒无常</item>
+        <item>行为怪异</item>
+        <item>兴奋话多</item>
+        <item>伤人毁物</item>
+        <item>悲观厌世</item>
+        <item>无故外走</item>
+        <item>自语自笑</item>
+        <item>孤僻懒散</item>
+        <item>其他</item>
+    </string-array>
     <string-array name="array_hypertension_symptom">
         <item>头痛</item>
         <item>头晕</item>
@@ -490,7 +513,7 @@
         <item>乳房胀痛</item>
         <item>其他</item>
     </string-array>
-    <string-array name="array_in_one_year_intoxication">
+    <string-array name="array_yes_or_no">
         <item>是</item>
         <item>否</item>
     </string-array>
@@ -525,11 +548,11 @@
     </string-array>
     <string-array name="array_old_sensibility">
         <item>粗筛阴性</item>
-        <item>粗筛阳性</item>
+        <item>粗筛阳性，老年人抑郁评分检查</item>
     </string-array>
     <string-array name="array_old_cognizefun">
         <item>粗筛阴性</item>
-        <item>粗筛阳性</item>
+        <item>粗筛阳性，简易智力状态检查</item>
     </string-array>
     <string-array name="array_old_lifeself">
         <item>可自理（0~3分）</item>
@@ -677,7 +700,7 @@
         <item>B型</item>
         <item>O型</item>
         <item>AB型</item>
-        <item>未知</item>
+        <item>不详</item>
     </string-array>
     <string-array name="array_nation_code">
         <item>汉族</item>
@@ -974,7 +997,6 @@
         <item>门诊</item>
         <item>家庭</item>
         <item>电话</item>
-        <item>自测</item>
     </string-array>
     <string-array name="drug2_dosage_unit">
         <item></item>
@@ -983,11 +1005,11 @@
         <item>片</item>
         <item>粒</item>
     </string-array>
-    <string-array name="array_yes_no">
-        <item></item>
-        <item>有</item>
-        <item>无</item>
-    </string-array>
+    <!--<string-array name="array_yes_no">-->
+        <!--<item></item>-->
+        <!--<item>有</item>-->
+        <!--<item>无</item>-->
+    <!--</string-array>-->
     <string-array name="array_no_yes">
         <item></item>
         <item>无</item>

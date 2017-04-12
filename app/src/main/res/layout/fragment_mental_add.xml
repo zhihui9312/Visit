@@ -66,9 +66,7 @@
             </LinearLayout>
             <!-- 危险性、自知力 -->
 
-            <LinearLayout
-
-                style="@style/LayoutAline">
+            <LinearLayout style="@style/LayoutAline">
 
                 <TextView
                     style="@style/SmallTextView"
@@ -92,9 +90,7 @@
             </LinearLayout>
             <!-- 睡眠状况、饮食情况 -->
 
-            <LinearLayout
-
-                style="@style/LayoutAline">
+            <LinearLayout style="@style/LayoutAline">
 
                 <TextView
                     style="@style/SmallTextView"
@@ -118,9 +114,7 @@
             </LinearLayout>
             <!-- 个人生活、家务劳动 -->
 
-            <LinearLayout
-
-                style="@style/LayoutAline">
+            <LinearLayout style="@style/LayoutAline">
 
                 <TextView
                     style="@style/SmallTextView"
@@ -144,9 +138,7 @@
             </LinearLayout>
             <!-- 劳动工作、学习能力 -->
 
-            <LinearLayout
-
-                style="@style/LayoutAline">
+            <LinearLayout style="@style/LayoutAline">
 
                 <TextView
                     style="@style/SmallTextView"
@@ -170,9 +162,7 @@
             </LinearLayout>
             <!-- 社会人际交往 -->
 
-            <LinearLayout
-
-                style="@style/LayoutAline">
+            <LinearLayout style="@style/LayoutAline">
 
                 <TextView
                     style="@style/SmallTextView"
@@ -194,7 +184,7 @@
 
                 <EditText
                     android:id="@+id/affray"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberEditText" />
 
                 <TextView
                     style="@style/SmallTextView"
@@ -208,7 +198,7 @@
 
                 <EditText
                     android:id="@+id/cause_trouble"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberEditText" />
 
                 <TextView
                     style="@style/SmallTextView"
@@ -225,7 +215,7 @@
 
                 <EditText
                     android:id="@+id/disaster"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberEditText" />
 
                 <TextView
                     style="@style/SmallTextView"
@@ -239,7 +229,7 @@
 
                 <EditText
                     android:id="@+id/autolesion"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberEditText" />
 
                 <TextView
                     style="@style/SmallTextView"
@@ -255,7 +245,7 @@
 
                 <EditText
                     android:id="@+id/attempted_suicide"
-                    style="@style/SmallEditText" />
+                    style="@style/SmallNumberEditText" />
 
                 <TextView
                     style="@style/SmallTextView"
@@ -274,9 +264,7 @@
             </LinearLayout>
             <!-- 住院情况 -->
 
-            <LinearLayout
-
-                style="@style/LayoutAline">
+            <LinearLayout style="@style/LayoutAline">
 
                 <TextView
                     style="@style/SmallTextView"
@@ -297,14 +285,11 @@
 
                 <EditText
                     android:id="@+id/leave_hospital_time"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
             </LinearLayout>
             <!-- 实验室检查标志 -->
 
-            <LinearLayout
-
-                style="@style/LayoutAline">
+            <LinearLayout style="@style/LayoutAline">
 
                 <TextView
                     style="@style/SmallTextView"
@@ -330,9 +315,7 @@
                     style="@style/SmallEditText" />
             </LinearLayout>
             <!-- 服药依从、药物不良反应 -->
-            <LinearLayout
-
-                style="@style/LayoutAline">
+            <LinearLayout style="@style/LayoutAline">
 
                 <TextView
                     style="@style/SmallTextView"
@@ -367,9 +350,7 @@
             </LinearLayout>
 
             <!-- 治疗效果、转诊 -->
-            <LinearLayout
-
-                style="@style/LayoutAline">
+            <LinearLayout style="@style/LayoutAline">
 
                 <TextView
                     style="@style/SmallTextView"
@@ -424,16 +405,13 @@
 
                 <EditText
                     android:id="@+id/drug1_fn"
-                    style="@style/SmallEditText"
-                    android:inputType="number" />
+                    style="@style/SmallNumberEditText" />
 
                 <TextView
                     style="@style/SmallTextView"
                     android:text="@string/once" />
 
-                <View
-                    android:layout_width="@dimen/x20"
-                    android:layout_height="wrap_content" />
+                <include layout="@layout/layout_interval" />
 
                 <TextView
                     style="@style/SmallTextView"
@@ -441,8 +419,7 @@
 
                 <EditText
                     android:id="@+id/drug1_dosage_one"
-                    style="@style/SmallEditText"
-                    android:inputType="number" />
+                    style="@style/SmallNumberEditText" />
 
                 <Spinner
                     android:id="@+id/drug1_dosage_unit"
@@ -471,16 +448,13 @@
 
                 <EditText
                     android:id="@+id/drug2_fn"
-                    style="@style/SmallEditText"
-                    android:inputType="number" />
+                    style="@style/SmallNumberEditText" />
 
                 <TextView
                     style="@style/SmallTextView"
                     android:text="@string/once" />
 
-                <View
-                    android:layout_width="@dimen/x20"
-                    android:layout_height="wrap_content" />
+                <include layout="@layout/layout_interval" />
 
                 <TextView
                     style="@style/SmallTextView"
@@ -488,8 +462,7 @@
 
                 <EditText
                     android:id="@+id/drug2_dosage_one"
-                    style="@style/SmallEditText"
-                    android:inputType="number" />
+                    style="@style/SmallNumberEditText" />
 
                 <Spinner
                     android:id="@+id/drug2_dosage_unit"
@@ -518,26 +491,21 @@
 
                 <EditText
                     android:id="@+id/drug3_fn"
-                    style="@style/SmallEditText"
-                    android:inputType="number" />
+                    style="@style/SmallNumberEditText" />
 
                 <TextView
                     style="@style/SmallTextView"
                     android:text="@string/once" />
 
-                <View
-                    android:layout_width="@dimen/x20"
-                    android:layout_height="wrap_content" />
+                <include layout="@layout/layout_interval" />
 
                 <TextView
                     style="@style/SmallTextView"
-                    android:layout_marginLeft="5dp"
                     android:text="@string/drug1_dosage_one" />
 
                 <EditText
                     android:id="@+id/drug3_dosage_one"
-                    style="@style/SmallEditText"
-                    android:inputType="number" />
+                    style="@style/SmallNumberEditText" />
 
                 <Spinner
                     android:id="@+id/drug3_dosage_unit"
@@ -553,8 +521,7 @@
 
                 <EditText
                     android:id="@+id/health_guide_adv"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
             </LinearLayout>
             <!-- 下次随访日期 -->
             <LinearLayout style="@style/LayoutAline">
@@ -565,8 +532,7 @@
 
                 <EditText
                     android:id="@+id/next_visit_date"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
             </LinearLayout>
             <!-- 随访分类、随访医师 -->
             <LinearLayout style="@style/LayoutAline">
@@ -586,8 +552,7 @@
 
                 <EditText
                     android:id="@+id/visit_doctor"
-                    style="@style/SmallEditText"
-                    android:editable="false" />
+                    style="@style/SmallDisableEditText" />
             </LinearLayout>
             <!-- 中医指导、知道内容 -->
             <LinearLayout style="@style/LayoutAline">

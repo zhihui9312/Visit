@@ -179,7 +179,6 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
         if (temp != null) {
             nations.addAll(temp);
         }
-
         super.onCreate(savedInstanceState);
     }
 
@@ -584,27 +583,27 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
         dto.setDisease6_other(getToTrim(disease6_other));
         dto.setDisease6_time(getToTrim(disease6_time));
 
-        dto.setOperation1(getSpinnerValue1(operation1));
+        dto.setOperation1(getSpinnerValue(operation1));
         dto.setOperation1_name(getToTrim(operation1_name));
         dto.setOperation1_time(getToTrim(operation1_time));
 
-        dto.setOperation2(getSpinnerValue1(operation2));
+        dto.setOperation2(getSpinnerValue(operation2));
         dto.setOperation2_name(getToTrim(operation2_name));
         dto.setOperation2_time(getToTrim(operation2_time));
 
-        dto.setTrauma1(getSpinnerValue1(trauma1));
+        dto.setTrauma1(getSpinnerValue(trauma1));
         dto.setTrauma1_name(getToTrim(trauma1_name));
         dto.setTrauma1_time(getToTrim(trauma1_time));
 
-        dto.setTrauma2(getSpinnerValue1(trauma2));
+        dto.setTrauma2(getSpinnerValue(trauma2));
         dto.setTrauma2_name(getToTrim(trauma2_name));
         dto.setTrauma2_time(getToTrim(trauma2_time));
 
-        dto.setTransfuse1(getSpinnerValue1(transfuse1));
+        dto.setTransfuse1(getSpinnerValue(transfuse1));
         dto.setTransfuse1_name(getToTrim(transfuse1_name));
         dto.setTransfuse1_time(getToTrim(transfuse1_time));
 
-        dto.setTransfuse2(getSpinnerValue1(transfuse2));
+        dto.setTransfuse2(getSpinnerValue(transfuse2));
         dto.setTransfuse2_name(getToTrim(transfuse2_name));
         dto.setTransfuse2_time(getToTrim(transfuse2_time));
 

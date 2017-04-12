@@ -85,7 +85,6 @@ public class MentalBaseInfoFragment extends BaseFragment {
     }
 
     public static MentalBaseInfoFragment newInstance(MentalBaseDTO dto) {
-
         Bundle args = new Bundle();
         args.putSerializable("data", dto);
         MentalBaseInfoFragment fragment = new MentalBaseInfoFragment();

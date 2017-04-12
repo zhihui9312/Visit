@@ -163,9 +163,13 @@ public abstract class BaseFragment extends Fragment implements OnClickListener, 
         int position = spinner.getSelectedItemPosition();
         return (position + 1) + "";
     }
+//    public String getSpinnerValue1(Spinner spinner) {
+//        int position = spinner.getSelectedItemPosition();
+//        return (position + 1) + "";
+//    }
 
     public String getSpinnerValue01(Spinner spinner) {
-        int position = spinner.getSelectedItemPosition();
+        int position = spinner.getSelectedItemPosition()+1;
         NumberFormat nf = NumberFormat.getInstance();
         nf.setGroupingUsed(false);
         nf.setMaximumIntegerDigits(2);

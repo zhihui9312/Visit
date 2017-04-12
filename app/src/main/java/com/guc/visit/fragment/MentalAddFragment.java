@@ -1,7 +1,5 @@
 package com.guc.visit.fragment;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -21,7 +19,6 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.guc.visit.R;
 import com.guc.visit.application.GucApplication;
 import com.guc.visit.base.BaseFragment;
@@ -29,7 +26,6 @@ import com.guc.visit.domain.MentalBaseDTO;
 import com.guc.visit.domain.MentalDTO;
 import com.guc.visit.net.GucNetEngineClient;
 import com.guc.visit.utils.StrUtil;
-import com.guc.visit.utils.ToastUtils;
 import com.guc.visit.utils.ViewUtils;
 
 import org.apache.commons.lang3.StringUtils;
@@ -44,7 +40,7 @@ public class MentalAddFragment extends BaseFragment implements View.OnTouchListe
      * 症状
      */
     private TextView symptom;
-    private String symptom_code = "";
+    private StringBuilder symptom_code = new StringBuilder("");
     /**
      * 其它症状
      */
@@ -114,15 +110,15 @@ public class MentalAddFragment extends BaseFragment implements View.OnTouchListe
     private MentalBaseDTO dto;
     private PopupWindow popupWindow;
     public final static String[] UNIT_TYPE = {"", "mg", "mm", "片", "粒"};
-    public final static String[] SYMPTOM_ITEM = {"幻觉", "交流困难", "猜疑",
-            "喜怒无常", "行为怪异", "兴奋话多", "伤人毁物", "悲观厌世", "无故外走", "自语自笑", "孤僻懒散"};
-    private boolean symptom_flag[];
+//    public final static String[] SYMPTOM_ITEM = {"幻觉", "交流困难", "猜疑",
+//            "喜怒无常", "行为怪异", "兴奋话多", "伤人毁物", "悲观厌世", "无故外走", "自语自笑", "孤僻懒散"};
+//    private boolean symptom_flag[];
 
-    public final static String[] HEALTH_GUIDE_ADV_ITEM = {"心里康复", "生活劳动力",
-            "职业训练", "学习能力", "社会交往", "其他"};
-    public final static int[] HEALTH_GUIDE_ADV_ID = {1, 2, 3, 4, 5, 9};
-    private boolean health_flag[];
-    private String health_code = "";
+//    public final static String[] HEALTH_GUIDE_ADV_ITEM = {"心里康复", "生活劳动力",
+//            "职业训练", "学习能力", "社会交往", "其他"};
+//    public final static int[] HEALTH_GUIDE_ADV_ID = {1, 2, 3, 4, 5, 9};
+//    private boolean health_flag[];
+    private StringBuilder health_guide_code =new StringBuilder("") ;
     private LinearLayout linearLayout;
 
     @Nullable
@@ -176,7 +172,8 @@ public class MentalAddFragment extends BaseFragment implements View.OnTouchListe
         if (event.getAction() == MotionEvent.ACTION_UP) {
             switch (v.getId()) {
                 case R.id.symptom:
-                    selectionSymptom();
+                    multiChoiceDialog(getIntArray(symptom_code), R.array.array_mental_symptom, symptom, symptom_code);
+//                    selectionSymptom();
                     break;
                 case R.id.next_visit_date:
                     showDatePicker(next_visit_date);
@@ -188,7 +185,7 @@ public class MentalAddFragment extends BaseFragment implements View.OnTouchListe
                     showDatePicker(leave_hospital_time);
                     break;
                 case R.id.health_guide_adv:
-                    selectionHealth();
+                    multiChoiceDialog(getIntArray(health_guide_code), R.array.array_mental_health_guide_adv, health_guide_adv, health_guide_code);
                     break;
                 default:
                     break;
@@ -265,9 +262,6 @@ public class MentalAddFragment extends BaseFragment implements View.OnTouchListe
             case R.id.ll_back:
                 mActivity.popBackStack(1);
                 break;
-            case R.id.symptom:
-                selectionSymptom();
-                break;
             case R.id.right_layout:
                 popWindows(right_layout);
                 break;
@@ -284,99 +278,26 @@ public class MentalAddFragment extends BaseFragment implements View.OnTouchListe
         }
     }
 
-    private void selectionSymptom() {
-        symptom_flag = new boolean[SYMPTOM_ITEM.length];
-        symptom_code = "";
-        AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
-        builder.setMultiChoiceItems(SYMPTOM_ITEM, null, new DialogInterface.OnMultiChoiceClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-                symptom_flag[which] = isChecked;
-            }
-        });
-        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-
-        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                int length = symptom_flag.length;
-                String symptom_str = "";
-                for (int i = 0; i < length; i++) {
-                    if (symptom_flag[i]) {
-                        symptom_str += SYMPTOM_ITEM[i] + ",";
-                        symptom_code += (i + 1) + ",";
-                    }
-                }
-                symptom_str = symptom_str.substring(0, symptom_str.length() - 1);
-                symptom_code = symptom_code.substring(0, symptom_code.length() - 1);
-                symptom.setText(symptom_str);
-            }
-        });
-        builder.setTitle("选择症状");
-        builder.show();
-    }
-
-    private void selectionHealth() {
-        health_flag = new boolean[HEALTH_GUIDE_ADV_ITEM.length];
-        AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
-        builder.setMultiChoiceItems(HEALTH_GUIDE_ADV_ITEM, null, new DialogInterface.OnMultiChoiceClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-                health_flag[which] = isChecked;
-            }
-        });
-        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-
-        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                int length = health_flag.length;
-                String headth_str = "";
-                for (int i = 0; i < length; i++) {
-                    if (health_flag[i]) {
-                        headth_str += HEALTH_GUIDE_ADV_ITEM[i] + ",";
-                        health_code += HEALTH_GUIDE_ADV_ID[i] + ",";
-                    }
-                }
-                headth_str = headth_str.substring(0, headth_str.length() - 1);
-                health_code = health_code.substring(0, health_code.length() - 1);
-                health_guide_adv.setText(headth_str);
-            }
-        });
-        builder.setTitle("选择症状");
-        builder.show();
-    }
-
     private void addMental(String json) {
-        materialDialog= showIndeterminateProgressDialog(R.string.isSubmitting);
+        materialDialog = showIndeterminateProgressDialog(R.string.isSubmitting);
         GucNetEngineClient.addMental(json, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 //{"UploadMentalVisitResult":{"result":false,"errInfo":"错误[B01],同一随访日期无法重复创建数据"}}
-                JSONObject jsonObject= JSON.parseObject(response);
-                JSONObject objResult=jsonObject.getJSONObject("UploadMentalVisitResult");
-                String errInfo=objResult.getString("errInfo");
-                if(StringUtils.isBlank(errInfo)){
+                JSONObject jsonObject = JSON.parseObject(response);
+                JSONObject objResult = jsonObject.getJSONObject("UploadMentalVisitResult");
+                String errInfo = objResult.getString("errInfo");
+                if (StringUtils.isBlank(errInfo)) {
                     showToast(R.string.add_success);
-                }else{
+                } else {
                     showToast(errInfo);
                 }
             }
-        }, null,materialDialog);
+        }, null, materialDialog);
     }
 
     private void getMental(String recordCode) {
-        materialDialog= showIndeterminateProgressDialog(R.string.is_loading_please_waite);
+        materialDialog = showIndeterminateProgressDialog(R.string.is_loading_please_waite);
 
         GucNetEngineClient.getMental(recordCode, new Response.Listener<String>() {
             @Override
@@ -393,11 +314,11 @@ public class MentalAddFragment extends BaseFragment implements View.OnTouchListe
                     showToast(errInfo);
                 }
             }
-        }, null,materialDialog);
+        }, null, materialDialog);
     }
 
     private void getLastInfo(final String ehr_id) {
-         materialDialog=showIndeterminateProgressDialog(R.string.is_loading_please_waite);
+        materialDialog = showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getLastMental(ehr_id, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -412,7 +333,7 @@ public class MentalAddFragment extends BaseFragment implements View.OnTouchListe
                     showToast(errInfo);
                 }
             }
-        },null,materialDialog);
+        }, null, materialDialog);
     }
 
     private void updateUI(MentalDTO dto) {
@@ -514,7 +435,7 @@ public class MentalAddFragment extends BaseFragment implements View.OnTouchListe
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("visit_date", StrUtil.getToTrim(visit_date));
-            jsonObject.put("symptom_code", symptom_code);
+            jsonObject.put("symptom_code", symptom_code.toString().replace("12","99"));
             jsonObject.put("symptom", StrUtil.getToTrim(symptom));
             jsonObject.put("symptom_other", StrUtil.getToTrim(symptom_other));
 
@@ -593,7 +514,7 @@ public class MentalAddFragment extends BaseFragment implements View.OnTouchListe
             jsonObject.put("drug3_dosage_unit", StrUtil.getJsonString(UNIT_TYPE[drug3_dosage_unit.getSelectedItemPosition()]));
             jsonObject.put("drug3_dosage_one", StrUtil.getToTrim(drug3_dosage_one));
 
-            jsonObject.put("health_guide_adv", StrUtil.getJsonString(health_code));
+            jsonObject.put("health_guide_adv", StrUtil.getString(health_guide_code).replace("6","9"));
             jsonObject.put("health_guide_adv_str", StrUtil.getToTrim(health_guide_adv));
 
             jsonObject.put("next_visit_date", StrUtil.getToTrim(next_visit_date));

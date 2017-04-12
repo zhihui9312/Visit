@@ -1,9 +1,7 @@
 package com.guc.visit.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -13,12 +11,9 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.afollestad.materialdialogs.DialogAction;
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.guc.visit.R;
 import com.guc.visit.application.GucApplication;
 import com.guc.visit.base.BaseFragment;
@@ -149,13 +144,13 @@ public class ChildAdd1Fragment extends BaseFragment implements View.OnTouchListe
         controlBar(R.string.child_one, R.string.back, true, true);
         if (operation.equals("0")) {
             initExisting();
-        }else{
+        } else {
             ViewUtils.setAllViewEnable(linearLayout);
         }
     }
 
     private void getNetworkData(String record_code) {
-        materialDialog=showIndeterminateProgressDialog(R.string.is_loading_please_waite);
+        materialDialog = showIndeterminateProgressDialog(R.string.is_loading_please_waite);
         GucNetEngineClient.getChildOneYear(record_code, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -164,16 +159,17 @@ public class ChildAdd1Fragment extends BaseFragment implements View.OnTouchListe
                 JSONObject objResult = jsonObject.getJSONObject("getNewBronOneYearRecordResult");
                 String errInfo = objResult.getString("errInfo");
                 if (StringUtils.isBlank(errInfo)) {
-                    JSONObject objInfo=objResult.getJSONObject("recordInfo");
-                    ChildVisitAdd dto=JSON.parseObject(objInfo.toJSONString(),ChildVisitAdd.class);
+                    JSONObject objInfo = objResult.getJSONObject("recordInfo");
+                    ChildVisitAdd dto = JSON.parseObject(objInfo.toJSONString(), ChildVisitAdd.class);
                     updateUI(dto);
                 } else {
                     showToast(errInfo);
                 }
             }
-        }, null,materialDialog);
+        }, null, materialDialog);
     }
-    private void updateUI(ChildVisitAdd dto){
+
+    private void updateUI(ChildVisitAdd dto) {
         current_doctor.setText(GucApplication.visit_doctor);
         visit_date.setText(getFormatDateStr(dto.getVisit_date()));
         name.setText(nameStr);
@@ -329,7 +325,7 @@ public class ChildAdd1Fragment extends BaseFragment implements View.OnTouchListe
         education_prescribe = (EditText) view.findViewById(R.id.education_prescribe);
         tv_right = (TextView) view.findViewById(R.id.tv_right);
         view.findViewById(R.id.iv_add).setVisibility(View.GONE);
-        linearLayout=(LinearLayout) view.findViewById(R.id.linearLayout);
+        linearLayout = (LinearLayout) view.findViewById(R.id.linearLayout);
 
     }
 
@@ -352,14 +348,14 @@ public class ChildAdd1Fragment extends BaseFragment implements View.OnTouchListe
         if (event.getAction() == MotionEvent.ACTION_UP) {
             switch (v.getId()) {
                 case R.id.rachitis_symptom:
-                    multiChoiceDialog(getIntArray(rachitis_symptom_mark),R.array.array_rachitis_symptom, rachitis_symptom, rachitis_symptom_mark);
+                    multiChoiceDialog(getIntArray(rachitis_symptom_mark), R.array.array_rachitis_symptom, rachitis_symptom, rachitis_symptom_mark);
                     break;
                 case R.id.rachitis_sign:
                     //两位数
-                    multiChoiceDialog(getIntArray(rachitis_sign_mark),R.array.array_rachitis_sign, rachitis_sign, rachitis_sign_mark);
+                    multiChoiceDialog(getIntArray(rachitis_sign_mark), R.array.array_rachitis_sign, rachitis_sign, rachitis_sign_mark);
                     break;
                 case R.id.guidance_con:
-                    multiChoiceDialog(getIntArray(guidance_mark),R.array.array_guidance_con, guidance_con, guidance_mark);
+                    multiChoiceDialog(getIntArray(guidance_mark), R.array.array_guidance_con, guidance_con, guidance_mark);
                     break;
                 default:
                     break;
@@ -367,8 +363,9 @@ public class ChildAdd1Fragment extends BaseFragment implements View.OnTouchListe
         }
         return false;
     }
+
     private void submit() {
-        materialDialog= showIndeterminateProgressDialog(R.string.isSubmitting);
+        materialDialog = showIndeterminateProgressDialog(R.string.isSubmitting);
         String json = buildJson();
         GucNetEngineClient.addChildOneYear(json, new Response.Listener<String>() {
             @Override
@@ -383,7 +380,7 @@ public class ChildAdd1Fragment extends BaseFragment implements View.OnTouchListe
                     showToast(errInfo);
                 }
             }
-        },null,materialDialog);
+        }, null, materialDialog);
     }
 
     private String buildJson() {

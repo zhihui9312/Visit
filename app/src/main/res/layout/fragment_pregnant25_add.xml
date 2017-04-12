@@ -262,7 +262,7 @@
                 <Spinner
                     android:id="@+id/visit_class"
                     style="@style/WrapSpinner"
-                    android:entries="@array/array_no_yes" />
+                    android:entries="@array/array_exception" />
 
                 <include layout="@layout/layout_interval" />
 
