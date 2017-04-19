@@ -112,7 +112,7 @@
     <string name="case_type">病例种类</string>
     <string name="diabetes_family_history">糖尿病家族史</string>
     <string name="cards_blood_glucose_level">建卡时血糖水平</string>
-    <string name="not_find">没有找到该人员标识信息</string>
+    <string name="not_found">没有找到该人员标识信息</string>
     <string name="dorsalis_pedis">足背动脉博动</string>
     <string name="eday_main_food">主&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;食</string>
     <string name="eday_main_food_unit">克/日</string>
@@ -676,8 +676,8 @@
         <item>不便分类的其他从业人员</item>
     </string-array>
     <string-array name="array_blood_rh">
-        <item>否</item>
         <item>是</item>
+        <item>否</item>
         <item>未知</item>
     </string-array>
     <string-array name="array_marriage_code">

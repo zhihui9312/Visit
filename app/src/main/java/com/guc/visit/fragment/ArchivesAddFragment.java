@@ -6,6 +6,11 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatSpinner;
 import android.support.v7.widget.LinearLayoutCompat;
+import android.text.Editable;
+import android.text.InputFilter;
+import android.text.LoginFilter;
+import android.text.Spanned;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -23,6 +28,7 @@ import com.guc.visit.base.BaseFragment;
 import com.guc.visit.domain.ArchivesAddDTO;
 import com.guc.visit.domain.Nation;
 import com.guc.visit.net.GucNetEngineClient;
+import com.guc.visit.utils.IdcardValidator;
 import com.guc.visit.utils.StrUtil;
 
 import org.apache.commons.lang3.StringUtils;
@@ -157,6 +163,8 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
     private AppCompatSpinner livestock_column;
     private AppCompatSpinner toilet;
 
+    private LinearLayoutCompat layout_pay_type_str;
+
 
     private TextView tv_right;
     private String nationCode;
@@ -243,6 +251,36 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
 
         transfuse1_time.setOnTouchListener(this);
         transfuse2_time.setOnTouchListener(this);
+
+        pay_type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == pay_type.getCount() - 1) {
+                    layout_pay_type_str.setVisibility(View.VISIBLE);
+                } else {
+                    layout_pay_type_str.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+//        crid_code.setFilters(new InputFilter[]{new LoginFilter.UsernameFilterGMail(){
+//            @Override
+//            public boolean isAllowed(char c) {
+//                return !(c >= 0x4E00 &&  c <= 0x9FA5);
+//
+//                //return super.isAllowed(c);
+//            }
+//
+//            @Override
+//            public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
+//                return super.filter(source, start, end, dest, dstart, dend);
+//            }
+//        }});
+
     }
 
     @Override
@@ -303,6 +341,7 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
         job_type = (AppCompatSpinner) view.findViewById(R.id.job_type);
         marriage_code = (AppCompatSpinner) view.findViewById(R.id.marriage_code);
         pay_type = (AppCompatSpinner) view.findViewById(R.id.pay_type);
+        layout_pay_type_str = (LinearLayoutCompat) view.findViewById(R.id.layout_pay_type_str);
         pay_type_str = (AppCompatEditText) view.findViewById(R.id.pay_type_str);
         irritability = (AppCompatEditText) view.findViewById(R.id.irritability);
         irritability_other = (AppCompatEditText) view.findViewById(R.id.irritability_other);
@@ -403,6 +442,8 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
 
         tv_right = (TextView) view.findViewById(R.id.tv_right);
         view.findViewById(R.id.iv_add).setVisibility(View.GONE);
+
+        //
     }
 
     @Override
@@ -518,8 +559,8 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
             return;
         }
         String crid_codeStr = crid_code.getText().toString();
-        if (StringUtils.isBlank(crid_codeStr)) {
-            showToast("身份证号码不可以为空！");
+        if (!IdcardValidator.isValidatedAllIdcard(crid_codeStr)) {
+            showToast("身份证号码无效！");
             return;
         }
         if (StringUtils.isBlank(organizationId)) {
@@ -547,10 +588,10 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
         dto.setCr_org_code(GucNetEngineClient.ORG_CODE);
         dto.setCr_operator(GucApplication.loginUserCode);
         dto.setDb_id(GucNetEngineClient.DBID);
-        dto.setBlood_type(getSpinnerValue0(blood_type));
+        dto.setBlood_type(getSpinnerValue0(blood_type).replace("4", "5"));
         dto.setBlood_rh(getSpinnerValue1(blood_rh));
-        dto.setEducation_code(getSpinnerValue1(education_code));
-        dto.setMarriage_code(getSpinnerValue1(marriage_code));
+        dto.setEducation_code(getSpinnerValue1(education_code).replace("7", "99"));
+        dto.setMarriage_code(getSpinnerValue1(marriage_code).replace("5", "99"));
         dto.setJob_type(getSpinnerValue1(job_type));
         dto.setPay_type(getSpinnerValue1(pay_type));
         dto.setPay_type_str(getToTrim(pay_type_str));
@@ -558,6 +599,7 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
         dto.setIrritability_str(getToTrim(irritability));
         dto.setIrritability_other(getToTrim(irritability_other));
         dto.setExpose(StrUtil.getString(expose_code));
+//        dto.setE
 
         dto.setDisease1(getSpinnerValue01(disease1));
         dto.setDisease1_other(getToTrim(disease1_other));
@@ -623,7 +665,7 @@ public class ArchivesAddFragment extends BaseFragment implements View.OnTouchLis
         dto.setFamilys_c_str(getToTrim(familys_c));
         dto.setFamilys_cother(getToTrim(familys_cother));
 
-        dto.setHinherit(getSpinnerValue1(hinherit));
+        dto.setHinherit(getSpinnerValue(hinherit));
         dto.setHinherit_disease(getToTrim(hinherit_disease));
 
         dto.setExhaust_equipment(getSpinnerValue1(exhaust_equipment));

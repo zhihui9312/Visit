@@ -10,7 +10,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 
 import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.guc.visit.R;
 import com.guc.visit.adapter.MainAdapter;
 import com.guc.visit.application.GucApplication;

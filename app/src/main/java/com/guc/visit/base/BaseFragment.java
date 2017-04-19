@@ -151,7 +151,7 @@ public abstract class BaseFragment extends Fragment implements OnClickListener, 
 
     public String getSpinnerValue(Spinner spinner) {
         int position = spinner.getSelectedItemPosition();
-        return position == 0 ? null : (position + 1) + "";
+        return position == 0 ? null : position + "";
     }
 
     public String getSpinnerValue0(Spinner spinner) {
@@ -169,7 +169,7 @@ public abstract class BaseFragment extends Fragment implements OnClickListener, 
 //    }
 
     public String getSpinnerValue01(Spinner spinner) {
-        int position = spinner.getSelectedItemPosition()+1;
+        int position = spinner.getSelectedItemPosition() + 1;
         NumberFormat nf = NumberFormat.getInstance();
         nf.setGroupingUsed(false);
         nf.setMaximumIntegerDigits(2);
@@ -410,7 +410,7 @@ public abstract class BaseFragment extends Fragment implements OnClickListener, 
                     strCode.deleteCharAt(strCode.length() - 1);
                     textView.setText(tempStr.toString());
                     code.append(strCode.toString());
-                }else{
+                } else {
                     textView.setText("");
                 }
                 dialog.dismiss();

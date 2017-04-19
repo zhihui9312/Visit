@@ -13,7 +13,7 @@ public class Constant {
     public static final String CHECKLIMIT = "/publicservice/publicservice/checkLimit/" + APP_ID + "/";
     public static final String DOCTORINFO = "/restful/publichealth/Service/getDoctorInfo";
     public static final String ORGANIZATION = "/publicservice/publicservice/getOrganization/" + APP_ID;
-    public static final String REGISTER = "/restful/doctor/Service/Register/";
+    public static final String REGISTER = "/restful/publichealth/Service/Register/"+APP_ID+"/";
     public static final String LOGINLOG = "/publicservice/publicservice/saveLog/" + APP_ID + "/";
     public static final String ARCHIVESQUERY = "/restful/publichealth/Service/getPersonBaseInfo/";
     public static final String HYPERTENSION = "/restful/publichealth/Service/getHypertensionInfo/";

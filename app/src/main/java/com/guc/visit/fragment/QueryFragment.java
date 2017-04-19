@@ -88,7 +88,7 @@ public class QueryFragment extends BaseFragment {
         switch (v.getId()) {
             case R.id.tv_search:
                 String content = content_input.getText().toString().trim();
-                content="王婷";
+                //content="蓝铭英";
                 if (StringUtils.isBlank(content)) {
                     ToastUtils.showLong(mActivity, R.string.input_content_not_null);
                     return;

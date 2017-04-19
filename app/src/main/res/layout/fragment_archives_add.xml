@@ -61,7 +61,10 @@
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/crid_code"
-                    style="@style/SmallEditText" />
+                    android:maxLength="18"
+                    android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ"
+                    style="@style/SmallNumberEditText" />
+
             </android.support.v7.widget.LinearLayoutCompat>
             <!-- 工作单位-->
             <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
@@ -216,7 +219,10 @@
                     android:entries="@array/array_pay_type" />
             </android.support.v7.widget.LinearLayoutCompat>
             <!--医疗费用支付方式 其他 -->
-            <android.support.v7.widget.LinearLayoutCompat style="@style/LayoutAline">
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/layout_pay_type_str"
+                style="@style/LayoutAline"
+                android:visibility="gone">
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/SmallTextView"

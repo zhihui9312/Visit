@@ -242,7 +242,7 @@ public class MedicalEntryFragment extends BaseFragment implements View.OnTouchLi
         dto.setIn_one_year_intoxication(getSpinnerValue1(in_one_year_intoxication));
         dto.setDrink_type_abn(StrUtil.getString(drink_type_abn));
         dto.setDrink_type(getToTrim(drink_type));
-        dto.setJob_mark(getSpinnerValue1(job_mark));
+        dto.setJob_mark(getSpinnerValue(job_mark));
         dto.setJob_occupation(getToTrim(job_occupation));
         dto.setJob_year(getToTrim(job_year));
 

@@ -60,6 +60,7 @@ public class RegisterFragment extends BaseFragment {
 
     @Override
     public void onResume() {
+        tv_organization.setText(orgName);
         super.onResume();
     }
 
@@ -105,8 +106,8 @@ public class RegisterFragment extends BaseFragment {
     @Override
     protected void initData() {
         controlBar(R.string.register, R.string.back, true, false);
-        tv_organization.setText(orgName);
     }
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -149,7 +150,6 @@ public class RegisterFragment extends BaseFragment {
                 if (result.equals("false")) {
                     ToastUtils.showShort(mActivity.getApplicationContext(), errInfo);
                 } else {
-                    result.equals("true");
                     ToastUtils.showShort(mActivity.getApplicationContext(), R.string.register_success);
                     mActivity.popBackStack(1);
                 }

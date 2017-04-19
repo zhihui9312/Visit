@@ -46,7 +46,7 @@ public class GucNetEngineClient {
     }
 
     public static Request<String> register(String organizationId, String phoneNumber, String password, Listener<String> listener, ErrorListener errorListener, MaterialDialog materialDialog) {
-        String url = Constant.REGISTER + organizationId + "/07/" + phoneNumber + "/" + password;
+        String url = Constant.REGISTER + organizationId + "/" + phoneNumber + "/" + password;
         return get(url, null, listener, errorListener, materialDialog);
     }
 

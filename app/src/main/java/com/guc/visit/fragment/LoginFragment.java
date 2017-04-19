@@ -110,8 +110,11 @@ public class LoginFragment extends BaseFragment implements OnCheckedChangeListen
         //account = "13800138000";
 
 
-        account = "13400134000";
-        password = "12345";
+        //account = "13400134000";
+        //password = "12345";
+
+        account = "13500135000";
+        password = "guc258";
         if (TextUtils.isEmpty(account)) {
             ToastUtils.showShort(mActivity, R.string.account_not_null);
             return;
